@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} antialiased w-full`}>
+      <body className={`${roboto.className} antialiased mobile:px-5 w-full`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

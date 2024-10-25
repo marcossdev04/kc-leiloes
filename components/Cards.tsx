@@ -11,12 +11,12 @@ import {
 
 export function CarouselComponent() {
   return (
-    <div className="h-[100vh] mx-auto flex flex-col mt-40 gap-10  max-w-[1400px]">
+    <div className="h-[100vh] mobile:h-full mobile:w-full mx-auto flex flex-col mt-40 mobile:mt-10 gap-10  max-w-[1400px]">
       <div className="flex flex-col w-full gap-10">
-        <div className="text-4xl">
-          <span className="text-green-400">Leilões</span> em destaque
+        <div className="text-4xl mobile:text-center">
+          <span className="text-green-400">Leilões em destaquue</span>
         </div>
-        <div className="w-[1400px]">
+        <div className="w-[1400px] mobile:w-[80%] mobile:mx-auto">
           <Carousel
             opts={{
               align: 'start',
@@ -44,8 +44,10 @@ export function CarouselComponent() {
         </div>
       </div>
       <div className="flex flex-col w-full gap-10">
-        <div className="text-4xl">Passo a Passo</div>
-        <div className="w-[1400px]">
+        <div className="text-4xl mobile:text-center text-green-400">
+          Passo a Passo
+        </div>
+        <div className="w-[1400px] mobile:w-[80%] mobile:mx-auto">
           <Carousel
             opts={{
               align: 'start',
