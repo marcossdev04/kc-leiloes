@@ -7,9 +7,9 @@ import {
 
 export function Faq() {
   return (
-    <div className="w-[1400px] mobile:w-full mx-auto mt-10 mobile:mt-0 flex">
+    <div className="w-[1400px] laptop:w-[1200px] mobile:w-full mx-auto mobile:mt-0 flex">
       <div className="w-full h-full flex  flex-col gap-10 justify-between">
-        <div className="h-full text-4xl text-green-400 mobile:text-center">
+        <div className="h-full text-4xl text-[#dbc994] mobile:text-center">
           Perguntas Frequentes
         </div>
         <Accordion type="single" collapsible className="w-full">

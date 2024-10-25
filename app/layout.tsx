@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
-import { Roboto } from 'next/font/google'
+import { Barlow } from 'next/font/google'
 
 export const metadata: Metadata = {
   title: 'KC Leilões',
   description: 'Leilões online e presenciais',
 }
-const roboto = Roboto({
-  weight: '700',
+const barlow = Barlow({
+  weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
 })
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} antialiased mobile:px-5 w-full`}>
+      <body className={`${barlow.className} antialiased bg-zinc-900  w-full`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

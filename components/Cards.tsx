@@ -11,12 +11,12 @@ import {
 
 export function CarouselComponent() {
   return (
-    <div className="h-[100vh] mobile:h-full mobile:w-full mx-auto flex flex-col mt-40 mobile:mt-10 gap-10  max-w-[1400px]">
+    <div className="h-[100vh] justify-center mobile:h-full mobile:w-full mx-auto flex flex-col mt-40 mobile:mt-10 gap-10 laptop:max-w-[1200px] max-w-[1400px]">
       <div className="flex flex-col w-full gap-10">
         <div className="text-4xl mobile:text-center">
-          <span className="text-green-400">Leilões em destaquue</span>
+          <span className="text-[#dbc994]">Leilões em destaque</span>
         </div>
-        <div className="w-[1400px] mobile:w-[80%] mobile:mx-auto">
+        <div className="w-[1400px] laptop:w-[1200px] mobile:w-[80%] mx-auto">
           <Carousel
             opts={{
               align: 'start',
@@ -44,10 +44,10 @@ export function CarouselComponent() {
         </div>
       </div>
       <div className="flex flex-col w-full gap-10">
-        <div className="text-4xl mobile:text-center text-green-400">
+        <div className="text-4xl mobile:text-center text-[#dbc994]">
           Passo a Passo
         </div>
-        <div className="w-[1400px] mobile:w-[80%] mobile:mx-auto">
+        <div className="w-[1400px] laptop:w-[1200px] mobile:w-[80%] mx-auto">
           <Carousel
             opts={{
               align: 'start',
@@ -75,10 +75,10 @@ export function CarouselComponent() {
         </div>
       </div>
       <div className="flex w-full justify-evenly">
-        <div className="flex w-1/4 text-xl  justify-center py-2 rounded-xl text-black bg-green-400 hover:bg-opacity-80 transition-all hover:scale-105 duration-300">
+        <div className="flex w-1/4 text-xl  justify-center py-2 rounded-xl text-black bg-[#dbc994] hover:bg-opacity-80 transition-all hover:scale-105 duration-300">
           Link 1
         </div>
-        <div className="flex w-1/4 text-xl  justify-center py-2 rounded-xl text-black bg-green-400 hover:bg-opacity-80 transition-all hover:scale-105 duration-300">
+        <div className="flex w-1/4 text-xl  justify-center py-2 rounded-xl text-black bg-[#dbc994] hover:bg-opacity-80 transition-all hover:scale-105 duration-300">
           Link 2
         </div>
       </div>

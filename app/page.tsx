@@ -7,12 +7,14 @@ import { Tutorial } from '@/components/Tutorial'
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
-      <Hero />
-      <Register />
-      <CarouselComponent />
-      <Tutorial />
-      <Faq />
+    <div>
+      <div className="flex flex-col mobile:px-5">
+        <Hero />
+        <Register />
+        <CarouselComponent />
+        <Tutorial />
+        <Faq />
+      </div>
       <Footer />
     </div>
   )

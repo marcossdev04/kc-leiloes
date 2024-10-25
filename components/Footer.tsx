@@ -2,11 +2,11 @@ import wpp from '@/assets/whatsapp-svgrepo-com (1).svg'
 import insta from '@/assets/instagram-svgrepo-com.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import phone from '@/assets/phone.svg'
+import phone from '@/assets/phone-call.png'
 export function Footer() {
   return (
-    <footer className="flex flex-col py-10 mt-20 mobile:mt-10  mx-auto w-full">
-      <div className="w-[1400px] mobile:w-full flex items-center justify-center mx-auto">
+    <footer className="flex flex-col py-10 mobile:py-3 mt-20 mobile:mt-10 bg-[#dbc994]  mx-auto w-full">
+      <div className="w-[1400px] mobile:w-full text-zinc-900 flex items-center justify-center mx-auto">
         <div className="flex flex-col items-center gap-2 ">
           <div className="flex mobile:flex-col mobile:gap-1 items-center">
             <div className="text-2xl flex items-center mobile:text-xl">
