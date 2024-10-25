@@ -5,7 +5,7 @@ import clock from '@/assets/wall-clock.png'
 import Image from 'next/image'
 export function Register() {
   return (
-    <div className="flex w-full max-w-[1200px] mx-auto -mt-36">
+    <div className="flex w-full max-w-[1400px] mx-auto -mt-36">
       <div className="flex flex-col w-full gap-10">
         <div className="text-4xl">
           Faça <span className="text-green-400">seu cadastro</span>

@@ -1,38 +1,34 @@
 export function Hero() {
   return (
-    <div className="max-h-[1200px] -mt-10 h-[100vh] flex justify-center items-center">
-      <div className="flex w-[500px] flex-col gap-10 ">
-        <div className="flex justify-center items-center text-6xl">
-          KC LEILÕES
-        </div>
-        <div className="text-4xl">
-          Maximize seus <span className="text-green-400">lucros</span> com a KC
-          LEILÕES
-        </div>
+    <div className="max-h-[1400px] -mt-10 h-[100vh] flex justify-center items-center">
+      <div className="flex w-[600px] flex-col gap-10 ">
+        <div className="flex justify-center items-center text-6xl">LOGO</div>
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-3">
             <div className="w-5 h-5 rounded-full bg-green-400 flex justify-center items-center">
               <div className=" bg-black h-2 w-2 rounded-full"></div>
             </div>
-            <div>Valor abaixo do mercado</div>
+            <div className="text-xl">Valor abaixo do mercado</div>
           </div>
           <div className="flex items-center gap-3">
             <div className="w-5 h-5 rounded-full bg-green-400 flex justify-center items-center">
               <div className=" bg-black h-2 w-2 rounded-full"></div>
             </div>
-            <div>Oportunidades de Negócio Exclusivas</div>
+            <div className="text-xl">Oportunidades de Negócio Exclusivas</div>
           </div>
           <div className="flex items-center gap-3">
             <div className="w-5 h-5 rounded-full bg-green-400 flex justify-center items-center">
               <div className=" bg-black h-2 w-2 rounded-full"></div>
             </div>
-            <div>Variedade de Bens</div>
+            <div className="text-xl">Variedade de Bens</div>
           </div>
           <div className="flex items-center gap-3">
             <div className="w-5 h-5 rounded-full bg-green-400 flex justify-center items-center">
               <div className=" bg-black h-2 w-2 rounded-full"></div>
             </div>
-            <div>Processo Transparente e Seguridade Jurídica</div>
+            <div className="text-xl">
+              Processo Transparente e Seguridade Jurídica
+            </div>
           </div>
         </div>
         <div className="flex flex-col items-center gap-3">
@@ -49,7 +45,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div className="flex w-[700px] "></div>
+      <div className="flex w-[800px] "></div>
     </div>
   )
 }
