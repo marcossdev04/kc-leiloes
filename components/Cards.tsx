@@ -11,9 +11,12 @@ import {
 
 export function CarouselComponent() {
   return (
-    <div className="h-[100vh] justify-center mobile:h-full mobile:w-full mx-auto flex flex-col mt-40 mobile:mt-10 gap-10 laptop:max-w-[1200px] max-w-[1400px]">
-      <div className="flex flex-col w-full gap-10">
-        <div className="text-4xl mobile:text-center text-[#dbc994]">
+    <div
+      id="passo-a-passo"
+      className="h-[100vh] mobile:px-5 mt-20 justify-center mobile:h-full mobile:w-full mx-auto flex flex-col mobile:mt-10 gap-10 laptop:max-w-[1200px] max-w-[1400px]"
+    >
+      <div className="flex flex-col w-full gap-5">
+        <div className="text-4xl laptop:text-3xl mobile:text-center text-[#dbc994]">
           Passo a Passo
         </div>
         <div className="w-[1400px] laptop:w-[1200px] mobile:w-[80%] mx-auto">
@@ -43,8 +46,8 @@ export function CarouselComponent() {
           </Carousel>
         </div>
       </div>
-      <div className="flex flex-col w-full gap-10">
-        <div className="text-4xl mobile:text-center">
+      <div className="flex flex-col w-full gap-5">
+        <div className="text-4xl laptop:text-3xl mobile:text-center">
           <span className="text-[#dbc994]">Leilões em destaque</span>
         </div>
         <div className="w-[1400px] laptop:w-[1200px] mobile:w-[80%] mx-auto">
