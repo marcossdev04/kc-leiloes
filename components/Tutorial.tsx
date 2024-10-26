@@ -6,7 +6,7 @@ import macbook from '@/assets/macbook.svg'
 
 export function Tutorial() {
   return (
-    <div className="w-[1400px]  h-[100vh]  laptop:w-[1200px] mobile:w-full items-center mx-auto flex mobile:flex-col">
+    <div className="w-[1400px]  h-[100vh] mt-20  laptop:w-[1200px] mobile:w-full items-center mx-auto flex mobile:flex-col">
       <div className="w-1/2 mobile:w-full h-full flex justify-center gap-10 mobile:mt-16 flex-col ">
         <div className="mobile:text-center text-4xl laptop:text-3xl text-[#dbc994]">
           Nossa mídias

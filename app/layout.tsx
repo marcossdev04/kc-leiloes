@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${barlow.className} antialiased bg-zinc-900  w-full`}>
+      <body className={`${barlow.className} antialiased  w-full`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

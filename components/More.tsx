@@ -9,10 +9,11 @@ export function More() {
       section.scrollIntoView({ behavior: 'smooth' })
     }
   }
+
   return (
     <button
       onClick={scrollToSection}
-      className="bg-[#dbc994] text-black  pt-2 mobile:-mt-[110px] -mt-[87px] w-full flex justify-center"
+      className="fixed bottom-0 left-1/2 transform z-50 -translate-x-1/2 text-[#dbc994] pt-2 w-full max-w-[200px] flex justify-center rounded-full"
     >
       <ChevronsDown className="animate-bounce" size={50} />
     </button>

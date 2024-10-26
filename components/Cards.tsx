@@ -78,7 +78,7 @@ export function CarouselComponent() {
         </div>
       </div>
 
-      <div className="flex w-full justify-evenly">
+      <div className="flex w-full justify-evenly z-50">
         <div className="flex w-1/4 text-xl  justify-center py-2 rounded-xl text-black bg-[#dbc994] hover:bg-opacity-80 transition-all hover:scale-105 duration-300">
           Link 1
         </div>
