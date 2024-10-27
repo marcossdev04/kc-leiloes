@@ -7,7 +7,7 @@ import {
 
 export function Faq() {
   return (
-    <div className="w-[1400px] mobile:px-5 h-[100vh] laptop:w-[1200px] mobile:w-full mx-auto mobile:mt-0 flex">
+    <div className="w-[1600px] mobile:px-5 h-[100vh] laptop:w-[1200px] mobile:w-full mx-auto mobile:mt-0 flex">
       <div className="w-full h-full flex  flex-col gap-10 justify-center">
         <div className="text-4xl laptop:text-3xl text-[#dbc994] mobile:text-center">
           Perguntas Frequentes

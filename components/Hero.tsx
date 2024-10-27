@@ -1,6 +1,6 @@
 export function Hero() {
   return (
-    <div className="max-w-[1400px] mobile:px-5 mb-10 desktop:mx-auto laptop:mx-auto laptop:max-w-[1200px] mobile:w-full h-[100vh] flex mobile:flex-col mobile:h-[100vh] mobile:mt-5 justify-center items-center">
+    <div className="max-w-[1600px] mobile:px-5 mb-10 desktop:mx-auto laptop:mx-auto laptop:max-w-[1200px] mobile:w-full h-[100vh] flex mobile:flex-col mobile:h-[100vh] mobile:mt-5 justify-center items-center">
       <div className="flex w-[600px] laptop:w-[500px] mobile:w-full flex-col gap-10 ">
         <div className="flex justify-center items-center text-6xl">LOGO</div>
         <div className="flex flex-col gap-2">

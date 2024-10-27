@@ -15,14 +15,20 @@ export default function Home() {
         <div>
           <More />
         </div>
-        <div className="bg-gradient-to-b from-[#1d1d1d] to-[#111111]">
+        <div
+          id="passo-a-passo"
+          className="bg-gradient-to-b from-[#1d1d1d] to-[#111111]"
+        >
           <CarouselComponent />
         </div>
 
-        <div className="bg-gradient-to-b from-[#111111] to-[#080808]">
+        <div
+          id="tutorial"
+          className="bg-gradient-to-b from-[#111111] to-[#080808]"
+        >
           <Tutorial />
         </div>
-        <div className="bg-gradient-to-b from-[#080808] to-[#000000]">
+        <div id="faq" className="bg-gradient-to-b from-[#080808] to-[#000000]">
           <Faq />
         </div>
       </div>

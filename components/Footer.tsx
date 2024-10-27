@@ -5,8 +5,8 @@ import Link from 'next/link'
 import phone from '@/assets/phone-call.png'
 export function Footer() {
   return (
-    <footer className="flex py-6 mobile:py-3 mt-20 mobile:mt-10 bg-[#dbc994]  mx-auto w-full">
-      <div className="w-[1400px] mobile:w-full text-zinc-900 flex items-center justify-center mx-auto">
+    <footer className="flex py-6 mobile:py-3 mobile:mt-10 bg-[#dbc994]  mx-auto w-full">
+      <div className="w-[1600px] mobile:w-full text-zinc-900 flex items-center justify-center mx-auto">
         <div className="flex mobile:grid mobile:grid-cols-1 mobile:gap-0 justify-between w-full px-24 desktop:px-0 mobile:px-0 items-center gap-2 ">
           <div className="flex text-xl mobile:pb-2 justify-center items-center">
             Termos de uso

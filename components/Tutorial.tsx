@@ -2,11 +2,11 @@ import youtube from '@/assets/youtube.png'
 import insta from '@/assets/instagram-svgrepo-com.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import macbook from '@/assets/macbook.svg'
+import macbook from '@/assets/macbook.png'
 
 export function Tutorial() {
   return (
-    <div className="w-[1400px]  h-[100vh] mt-20  laptop:w-[1200px] mobile:w-full items-center mx-auto flex mobile:flex-col">
+    <div className="w-[1600px]  h-[100vh] mt-20  laptop:w-[1200px] mobile:w-full items-center mx-auto flex mobile:flex-col">
       <div className="w-1/2 mobile:w-full h-full flex justify-center gap-10 mobile:mt-16 flex-col ">
         <div className="mobile:text-center text-4xl laptop:text-3xl text-[#dbc994]">
           Nossa mídias
@@ -33,10 +33,10 @@ export function Tutorial() {
         </div>
       </div>
       <div className="w-full mobile:px-10 relative flex justify-end">
-        <Image src={macbook} alt="laptop" />
-        <div className="absolute top-[194px] mobile:top-[85px] laptop:left-[94px] left-[228px] mobile:left-[80px] z-10">
+        <Image src={macbook} className="w-full" alt="laptop" />
+        <div className="absolute z-30 top-[263px] mobile:top-[76px] laptop:left-[97px] laptop:top-[196px] left-[130px] mobile:left-[77px] ">
           <iframe
-            className="w-[612px] mobile:w-[270px] h-[388px] mobile:h-[169px]"
+            className="w-[812px] mobile:w-[237px] laptop:w-[609px] laptop:h-[384px] h-[510px] mobile:h-[149px]"
             src="https://www.youtube.com/embed/QthVD2DND1o"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
