@@ -29,7 +29,10 @@ export default function Home() {
         >
           <Tutorial />
         </div>
-        <div id="form" className="bg-gradient-to-b from-[#191919] to-[#131313]">
+        <div
+          id="form"
+          className="bg-gradient-to-b  from-[#191919] to-[#131313]"
+        >
           <FormComponent />
         </div>
         <div id="faq" className="bg-gradient-to-b from-[#131313] to-[#000000]">
