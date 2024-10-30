@@ -2,7 +2,6 @@ import youtube from '@/assets/youtube.png'
 import insta from '@/assets/instagram-svgrepo-com.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import macbook from '@/assets/macbook.png'
 
 export function Tutorial() {
   return (
@@ -32,17 +31,7 @@ export function Tutorial() {
           </div>
         </div>
       </div>
-      <div className="w-full mobile:px-10 relative flex justify-end">
-        <Image src={macbook} className="w-full" alt="laptop" />
-        <div className="absolute z-30 top-[263px] mobile:top-[76px] laptop:left-[97px] laptop:top-[196px] left-[130px] mobile:left-[77px] ">
-          <iframe
-            className="w-[812px] mobile:w-[237px] laptop:w-[609px] laptop:h-[384px] h-[510px] mobile:h-[149px]"
-            src="https://www.youtube.com/embed/QthVD2DND1o"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </div>
+      <div></div>
     </div>
   )
 }

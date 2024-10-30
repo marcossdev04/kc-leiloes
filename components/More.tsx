@@ -3,7 +3,7 @@ import { ChevronsDown } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 export function More() {
-  const sections = ['passo-a-passo', 'tutorial', 'faq']
+  const sections = ['passo-a-passo', 'tutorial', 'form', 'faq']
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
