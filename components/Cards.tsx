@@ -1,5 +1,5 @@
+'use client'
 import * as React from 'react'
-
 import { Card, CardContent } from '@/components/ui/card'
 import {
   Carousel,
@@ -8,8 +8,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export function CarouselComponent() {
+  React.useEffect(() => {
+    AOS.init({ duration: 1200 }) // Configure a duração da animação
+  }, [])
   return (
     <div
       id="passo-a-passo"
@@ -20,14 +25,13 @@ export function CarouselComponent() {
           Passo a Passo
         </div>
         <div className="w-[1600px] laptop:w-[1200px] mobile:w-[80%] mx-auto">
-          <Carousel
-            opts={{
-              align: 'start',
-            }}
-            className="w-full"
-          >
+          <Carousel opts={{ align: 'start' }} className="w-full">
             <CarouselContent>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem
+                data-aos="zoom-in-right"
+                data-aos-delay="0"
+                className="md:basis-1/2 lg:basis-1/3"
+              >
                 <div className="p-1">
                   <Card>
                     <CardContent className="h-52 w-full flex aspect-square p-6">
@@ -46,7 +50,11 @@ export function CarouselComponent() {
                   </Card>
                 </div>
               </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem
+                data-aos="zoom-in-right"
+                data-aos-delay="600"
+                className="md:basis-1/2 lg:basis-1/3"
+              >
                 <div className="p-1">
                   <Card>
                     <CardContent className="h-52 w-full flex aspect-square p-6">
@@ -65,7 +73,11 @@ export function CarouselComponent() {
                   </Card>
                 </div>
               </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem
+                data-aos="zoom-in-right"
+                data-aos-delay="1200"
+                className="md:basis-1/2 lg:basis-1/3"
+              >
                 <div className="p-1">
                   <Card>
                     <CardContent className="h-52 w-full flex aspect-square p-6">
@@ -103,7 +115,12 @@ export function CarouselComponent() {
           >
             <CarouselContent>
               {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem
+                  data-aos="fade-down"
+                  data-aos-delay={`${index === 0 ? '0' : index === 1 ? '600' : '1200'}`}
+                  key={index}
+                  className="md:basis-1/2 lg:basis-1/3"
+                >
                   <div className="p-1">
                     <Card>
                       <CardContent className="flex aspect-square items-center justify-center p-6">
@@ -123,10 +140,18 @@ export function CarouselComponent() {
       </div>
 
       <div className="flex w-full justify-evenly z-50">
-        <div className="flex w-1/4 text-xl  justify-center py-2 rounded-xl text-black bg-[#dbc994] hover:bg-opacity-80 transition-all hover:scale-105 duration-300">
+        <div
+          data-aos="zoom-out-up"
+          data-aos-delay="0"
+          className="flex w-1/4 text-xl  justify-center py-2 rounded-xl text-black bg-[#dbc994] hover:bg-opacity-80 transition-all hover:scale-105 duration-300"
+        >
           Link 1
         </div>
-        <div className="flex w-1/4 text-xl  justify-center py-2 rounded-xl text-black bg-[#dbc994] hover:bg-opacity-80 transition-all hover:scale-105 duration-300">
+        <div
+          data-aos="zoom-out-up"
+          data-aos-delay="0"
+          className="flex w-1/4 text-xl  justify-center py-2 rounded-xl text-black bg-[#dbc994] hover:bg-opacity-80 transition-all hover:scale-105 duration-300"
+        >
           Link 2
         </div>
       </div>

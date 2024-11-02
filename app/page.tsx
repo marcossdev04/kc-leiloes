@@ -35,7 +35,10 @@ export default function Home() {
         >
           <FormComponent />
         </div>
-        <div id="faq" className="bg-gradient-to-b from-[#131313] to-[#000000]">
+        <div
+          id="faq"
+          className="bg-gradient-to-b from-[#131313] to-[#000000] overflow-y-hidden"
+        >
           <Faq />
         </div>
       </div>

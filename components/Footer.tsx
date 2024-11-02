@@ -1,11 +1,23 @@
+'use client'
 import wpp from '@/assets/whatsapp-svgrepo-com (1).svg'
 import insta from '@/assets/instagram-svgrepo-com.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import phone from '@/assets/phone-call.png'
+import React from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export function Footer() {
+  React.useEffect(() => {
+    AOS.init({ duration: 1200, once: false })
+  }, [])
   return (
-    <footer className="flex py-6 mobile:py-3 mobile:mt-10 bg-[#dbc994]  mx-auto w-full">
+    <footer
+      data-aos="fade-up"
+      data-aos-delay="0"
+      className="flex py-6 mobile:py-3 mobile:mt-10 bg-[#dbc994]  mx-auto w-full"
+    >
       <div className="w-[1600px] mobile:w-full text-zinc-900 flex items-center justify-center mx-auto">
         <div className="flex mobile:grid mobile:grid-cols-1 mobile:gap-0 justify-between w-full px-24 desktop:px-0 mobile:px-0 items-center gap-2 ">
           <div className="flex text-xl mobile:pb-2 justify-center items-center">
