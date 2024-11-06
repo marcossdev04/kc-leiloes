@@ -8,39 +8,37 @@ import { Tutorial } from '@/components/Tutorial'
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
-      <div className="flex w-[100vw] flex-col">
-        <div className="bg-gradient-to-b from-[#2b2b2b] to-[#313131]">
-          <Hero />
-        </div>
-        <div>
-          <More />
-        </div>
-        <div
-          id="passo-a-passo"
-          className="bg-gradient-to-b from-[#313131] to-[#222222]"
-        >
-          <CarouselComponent />
-        </div>
+    <div className="flex w-full flex-col">
+      <div className="bg-gradient-to-b from-[#2b2b2b] to-[#313131]">
+        <Hero />
+      </div>
+      <div>
+        <More />
+      </div>
+      <div
+        id="passo-a-passo"
+        className="bg-gradient-to-b from-[#313131] to-[#222222]"
+      >
+        <CarouselComponent />
+      </div>
 
-        <div
-          id="tutorial"
-          className="bg-gradient-to-b from-[#222222] to-[#191919]"
-        >
-          <Tutorial />
-        </div>
-        <div
-          id="form"
-          className="bg-gradient-to-b  from-[#191919] to-[#131313]"
-        >
-          <FormComponent />
-        </div>
-        <div
-          id="faq"
-          className="bg-gradient-to-b from-[#131313] to-[#000000] overflow-y-hidden"
-        >
-          <Faq />
-        </div>
+      <div
+        id="tutorial"
+        className="bg-gradient-to-b from-[#222222] to-[#191919] overflow-hidden relative"
+      >
+        <Tutorial />
+      </div>
+      <div
+        id="form"
+        className="bg-gradient-to-b  from-[#191919] to-[#151515] overflow-hidden relative"
+      >
+        <FormComponent />
+      </div>
+      <div
+        id="faq"
+        className="bg-gradient-to-b from-[#151515] to-[#000000] overflow-y-hidden"
+      >
+        <Faq />
       </div>
       <Footer />
     </div>

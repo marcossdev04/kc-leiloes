@@ -14,7 +14,7 @@ export function Faq() {
     AOS.init({ duration: 1200, once: false })
   }, [])
   return (
-    <div className="w-[1600px] h-[120vh] mobile:h-[150vh] laptop:w-[1200px] mobile:w-full mx-auto mobile:mt-0 flex">
+    <div className="w-[1600px] h-full mobile:h-full laptop:w-[1200px] mobile:w-full mx-auto mobile:mt-0 flex">
       <div className="w-full h-full flex  flex-col gap-10 justify-center">
         <div className="text-4xl laptop:text-3xl text-[#dbc994] mobile:text-center">
           Perguntas Frequentes

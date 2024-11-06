@@ -18,7 +18,7 @@ export function CarouselComponent() {
   return (
     <div
       id="passo-a-passo"
-      className="h-[100vh] mobile:px-5 mt-20 justify-center mobile:h-full mobile:w-full mx-auto flex flex-col mobile:mt-10 gap-10 laptop:max-w-[1200px] max-w-[1600px]"
+      className="h-full mobile:px-5 mt-20 justify-center mobile:h-full mobile:w-full mx-auto flex flex-col mobile:mt-10 gap-10 laptop:max-w-[1200px] max-w-[1600px]"
     >
       <div className="flex flex-col w-full gap-5">
         <div className="text-4xl laptop:text-3xl mobile:text-center text-[#dbc994]">

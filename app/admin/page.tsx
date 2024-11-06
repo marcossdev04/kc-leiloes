@@ -29,7 +29,7 @@ export default function LoginForm5() {
 
   return (
     <div
-      className={`relative flex h-[100vh] w-full items-center justify-center mobile:h-[90vh]`}
+      className={`relative flex h-full w-full items-center justify-center mobile:h-[90vh]`}
     >
       <Card
         ref={formRef}

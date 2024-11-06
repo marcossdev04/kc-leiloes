@@ -5,6 +5,8 @@ import { Input } from './ui/input'
 import { LoaderCircle } from 'lucide-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import newsImage from '@/assets/newsImage.svg'
+import Image from 'next/image'
 
 export function FormComponent() {
   const [email, setEmail] = useState('')
@@ -23,12 +25,20 @@ export function FormComponent() {
     AOS.init({ duration: 1200, once: false })
   }, [])
   return (
-    <div className="w-[1600px] gap-5 h-[100vh] laptop:w-[1200px] mobile:w-full items-center mx-auto flex mobile:flex-col">
-      <div className="w-full mobile:px-10 relative flex justify-start"></div>
+    <div className="w-[1600px] gap-5 h-full laptop:w-[1200px] mobile:w-full items-center py-32 mx-auto flex mobile:flex-col">
+      <div className="absolute mobile:hidden inset-y-0 laptop:h-[600px] laptop:top-40  -left-[400px] bg-[#dbc994] top-32 rounded-full blur-2xl h-[800px] laptop:w-[600px]  w-[800px] "></div>
+      <div className="absolute inset-y-0 z-50 mobile:hidden bg-[#151515] laptop:top-[700px] top-[850px] rounded-full blur-xl h-[500px] laptop:w-[400px] laptop:h-[400px] laptop:left-[50px] left-[20px] w-[600px]"></div>
+      <div className="w-1/2 mobile:px-10 mobile:hidden relative flex justify-start">
+        <Image
+          className="w-[560px] laptop:w-[450px]"
+          src={newsImage}
+          alt="teste"
+        />
+      </div>
       <div
         data-aos="zoom-in-left"
         data-aos-delay="0"
-        className="w-2/3 mobile:w-full h-full flex justify-center gap-10 mobile:mt-16 flex-col "
+        className="w-1/2 mobile:w-full h-full flex justify-center gap-10 mobile:mt-16 flex-col "
       >
         <div className="mobile:text-center text-4xl laptop:text-3xl text-[#dbc994]">
           Assine nossa newsleatter
