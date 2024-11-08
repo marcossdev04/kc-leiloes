@@ -1,80 +1,77 @@
 'use client'
-import Image from 'next/image'
-import AOS from 'aos'
+import Logo from '@/assets/Ativo 10@20x.png'
 import 'aos/dist/aos.css'
-import { useEffect } from 'react'
-import Logo from '@/assets/kc-leilões.svg'
+import Image from 'next/image'
+import { ArrowDown } from 'lucide-react'
+import imagemPrincipal from '@/assets/foto_principal.svg'
 
 export function Hero() {
-  useEffect(() => {
-    // Inicializa o AOS
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: 'ease-in-out',
-      offset: 0,
-      delay: 0,
-    })
-
-    // Força a animação após o componente ser montado
-    const timer = setTimeout(() => {
-      AOS.refresh()
-    }, 1)
-
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
-    <div className="w-[1100px] mobile:pt-10 mobile:px-5 mb-10 gap-5 mobile:gap-2 desktop:mx-auto laptop:mx-auto laptop:max-w-[1200px] mobile:w-full h-full flex flex-col mobile:h-full mobile:mt-5 justify-center items-center">
-      <div
-        data-aos="fade-right"
-        data-aos-duration="1000"
-        data-aos-delay="100"
-        className="flex w-full flex-col "
-      >
+    <div className="w-[1600px] h-[100vh]  mobile:pt-10 mobile:px-5 mb-10 gap-5 mobile:gap-2 desktop:mx-auto laptop:mx-auto laptop:max-w-[1200px] mobile:w-full flex mobile:h-full mobile:mt-5 justify-center items-center">
+      <div className="absolute h-full w-[600px] overflow-x-hidden right-0 bg-gradient-to-r from-transparent blur-lg to-[#dbc994]"></div>
+      <div className="flex flex-col gap-10 w-full">
         <div
-          data-aos="fade-down"
-          data-aos-duration="800"
-          className="flex justify-center items-center"
-        >
-          <Image
-            src={Logo}
-            className="laptop:hidden mobile:hidden"
-            width={300}
-            alt="logo"
-          />
-          <Image
-            src={Logo}
-            className="mobile:hidden desktop:hidden"
-            width={300}
-            alt="logo"
-          />
-          <Image
-            src={Logo}
-            className="laptop:hidden desktop:hidden"
-            width={250}
-            alt="logo"
-          />
-        </div>
-
-        <div
-          data-aos="fade-up"
+          data-aos="fade-right"
           data-aos-duration="1000"
-          data-aos-delay="300"
-          className="flex flex-col mobile:pts-5 gap-2 justify-center items-center"
+          data-aos-delay="100"
+          className="flex w-full flex-col"
         >
-          <div className="text-4xl mobile:text-xl text-center text-[#dbc994] ">
-            Conquiste os Melhores Bens com Segurança e Vantagem – Oportunidades
-            Exclusivas de Leilão!
+          <div
+            data-aos="fade-down"
+            data-aos-duration="800"
+            className="flex justify-center items-center"
+          >
+            <Image
+              src={Logo}
+              className="laptop:hidden mobile:hidden"
+              width={500}
+              alt="logo"
+            />
+            <Image
+              src={Logo}
+              className="mobile:hidden desktop:hidden"
+              width={300}
+              alt="logo"
+            />
+            <Image
+              src={Logo}
+              className="laptop:hidden desktop:hidden"
+              width={250}
+              alt="logo"
+            />
+          </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            className="flex flex-col mobile:pts-5 gap-2 justify-center items-center"
+          >
+            <div className="text-6xl font-medium mobile:text-xl text-center text-white ">
+              As Melhores Oportunidades com Confiança e Economia!
+            </div>
+          </div>
+        </div>
+        <div className="mobile:text-sm text-center text-2xl">
+          <span className="text-[#dbc994]">+5.000</span> clientes Satisfeitos –
+          Compre com segurança. Imóveis e Veículos em Leilões Exclusivos Preços
+          de Ocasião e Vantagens Reais
+        </div>
+        <div className="bg-[#dbc994] mx-16 hover:bg-opacity-80 transition-all hover:scale-110 cursor-pointer duration-300 flex items-center gap-2 justify-center py-3 text-4xl text-black rounded-xl font-medium">
+          <div>Conheça nossos leilões</div>
+          <div>
+            <ArrowDown size={35} strokeWidth={1.5} />
           </div>
         </div>
       </div>
-      <div className="mobile:text-sm mobile:text-center">
-        <span className="text-[#dbc994]">+5.000</span> arrematantes{' '}
-        <span className="text-[#dbc994]">satisfeitos</span> comprando imóveis,
-        veículos e oportunidades únicas a preços que parecem impossíveis.
+      <div className="w-[90%] z-20 flex flex-col">
+        <Image
+          src={imagemPrincipal}
+          className="w-[1000px]"
+          alt="foto_principal"
+        />
       </div>
-      <div
+      {/* <div
         data-aos="fade-left"
         data-aos-duration="1200"
         data-aos-delay="200"
@@ -90,28 +87,7 @@ export function Hero() {
             ></iframe>
           </div>
         </div>
-      </div>
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="500"
-        className="flex flex-col mobile:mt-10 items-center gap-3"
-      >
-        <div className="text-3xl mobile:text-base text-center text-[#dbc994]">
-          Já assistiu ao vídeo? Clique aqui para entrar diretamente no leilão e
-          não perder as melhores oportunidades agora!
-        </div>
-        <div className="flex w-full gap-5">
-          <div className="w-full flex">
-            <div className="flex w-full text-xl justify-center py-2 rounded-xl text-black bg-[#dbc994] hover:bg-opacity-80 transition-all hover:scale-105 duration-300">
-              Link 1
-            </div>
-          </div>
-          <div className="flex w-full text-xl justify-center py-2 rounded-xl text-black bg-[#dbc994] hover:bg-opacity-80 transition-all hover:scale-105 duration-300">
-            Link 2
-          </div>
-        </div>
-      </div>
+      </div> */}
     </div>
   )
 }
