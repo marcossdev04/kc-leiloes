@@ -111,7 +111,11 @@ export function CarouselComponent() {
         </div>
         <div className="w-[1600px] py-10 laptop:w-[1200px] mobile:w-full mobile:py-5 mx-auto">
           <div className="flex mobile:flex-col mobile:gap-10 justify-around w-full">
-            <Card className="bg-zinc-800 shadow-[#dbc994] shadow-lg">
+            <Card
+              data-aos="zoom-in-right"
+              data-aos-delay="0"
+              className="bg-zinc-800 shadow-[#dbc994] shadow-lg"
+            >
               <CardContent>
                 <Image
                   className="w-[500px] mobile:w-[300px] border-4 border-[#dbc994] mobile:h-[200px] h-[400px] rounded-lg mt-5"
@@ -153,7 +157,11 @@ export function CarouselComponent() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="bg-zinc-800 shadow-[#dbc994] shadow-lg">
+            <Card
+              data-aos="zoom-in-left"
+              data-aos-delay="0"
+              className="bg-zinc-800 shadow-[#dbc994] shadow-lg"
+            >
               <CardContent>
                 <Image
                   className="w-[500px] mobile:w-[300px] border-4 border-[#dbc994] mobile:h-[200px] h-[400px] rounded-lg mt-5"

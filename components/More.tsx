@@ -42,7 +42,7 @@ export function More() {
   return (
     <button
       onClick={scrollToNextSection}
-      className="fixed bottom-0 left-1/2 transform z-50 -translate-x-1/2 text-[#dbc994] pt-2 w-full max-w-[200px] flex justify-center rounded-full"
+      className="fixed bottom-0 left-1/2 mobile:hidden transform z-50 -translate-x-1/2 text-[#dbc994] pt-2 w-full max-w-[200px] flex justify-center rounded-full"
     >
       <ChevronsDown className="animate-bounce" size={50} />
     </button>
