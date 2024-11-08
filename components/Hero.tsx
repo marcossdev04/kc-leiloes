@@ -8,7 +8,7 @@ import imagemPrincipal from '@/assets/foto_principal.svg'
 export function Hero() {
   return (
     <div className="w-[1600px] h-[100vh]  mobile:pt-10 mobile:px-5 mb-10 gap-5 mobile:gap-2 desktop:mx-auto laptop:mx-auto laptop:max-w-[1200px] mobile:w-full flex mobile:h-full mobile:mt-5 justify-center items-center">
-      <div className="absolute h-full w-[600px] overflow-x-hidden right-0 bg-gradient-to-r from-transparent blur-lg to-[#dbc994]"></div>
+      <div className="absolute h-full mobile:hidden w-[600px] overflow-x-hidden right-0 bg-gradient-to-r from-transparent blur-lg to-[#dbc994]"></div>
       <div className="flex flex-col gap-10 w-full">
         <div
           data-aos="fade-right"
@@ -57,14 +57,14 @@ export function Hero() {
           Compre com segurança. Imóveis e Veículos em Leilões Exclusivos Preços
           de Ocasião e Vantagens Reais
         </div>
-        <div className="bg-[#dbc994] mx-16 hover:bg-opacity-80 transition-all hover:scale-110 cursor-pointer duration-300 flex items-center gap-2 justify-center py-3 text-4xl text-black rounded-xl font-medium">
+        <div className="bg-[#dbc994] mx-16 mobile:mx-0 hover:bg-opacity-80 transition-all hover:scale-110 cursor-pointer duration-300 flex items-center gap-2 justify-center py-3 text-4xl mobile:text-xl text-black rounded-xl font-medium">
           <div>Conheça nossos leilões</div>
           <div>
             <ArrowDown size={35} strokeWidth={1.5} />
           </div>
         </div>
       </div>
-      <div className="w-[90%] z-20 flex flex-col">
+      <div className="w-[90%] mobile:hidden z-20 flex flex-col">
         <Image
           src={imagemPrincipal}
           className="w-[1000px]"

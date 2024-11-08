@@ -14,10 +14,10 @@ export function Footer() {
     AOS.init({ duration: 1200, once: false })
   }, [])
   return (
-    <footer className="flex py-2 mobile:py-3 mobile:mt-10 bg-[#dbc994]  mx-auto w-full">
+    <footer className="flex py-2 mobile:py-2 mobile:mt-10 bg-[#dbc994]  mx-auto w-full">
       <div className="w-[1600px] mobile:w-full text-zinc-900 flex items-center justify-center mx-auto">
         <div className="flex mobile:grid mobile:grid-cols-1 mobile:gap-0 justify-between w-full px-24 desktop:px-0 mobile:px-0 items-center gap-2 ">
-          <div className="flex text-2xl mobile:pb-2 justify-center items-center">
+          <div className="flex text-2xl mobile:text-sm mobile:pb-1 justify-center items-center">
             Termos de uso
           </div>
           <div className="flex flex-col mobile:gap-1 items-center">
@@ -28,7 +28,7 @@ export function Footer() {
                 alt="footerImage"
               />{' '}
             </div>
-            <div className="ml-2 text-lg mobile:text-sm mobile:pb-4 flex items-center">
+            <div className="ml-2 text-lg mobile:text-sm mobile:pb-1 flex items-center">
               Todos os direitos reservados
             </div>
           </div>
