@@ -1,13 +1,6 @@
 'use client'
 import teste from '@/assets/leilao-vinhos-online-Winebid.webp'
 import { Card, CardContent, CardTitle } from '@/components/ui/card'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { CalendarClock, Gavel, Hourglass } from 'lucide-react'
@@ -21,91 +14,9 @@ export function CarouselComponent() {
   return (
     <div
       id="passo-a-passo"
-      className="h-full mobile:px-5 mt-20 justify-center mobile:h-full mobile:w-full mx-auto flex flex-col mobile:mt-10 gap-10 laptop:max-w-[1200px] max-w-[1600px]"
+      className="h-full mobile:px-5 mt-20 justify-center mobile:h-full mx-auto flex flex-col mobile:mt-10 gap-10 laptop:max-w-[1200px] max-w-[1600px]"
     >
-      <div className="flex flex-col w-full gap-5">
-        <div className="text-4xl laptop:text-3xl mobile:text-center text-[#dbc994]">
-          Passo a Passo
-        </div>
-        <div className="w-[1600px] laptop:w-[1200px] mobile:w-[80%] mx-auto">
-          <Carousel opts={{ align: 'start' }} className="w-full">
-            <CarouselContent>
-              <CarouselItem
-                data-aos="zoom-in-right"
-                data-aos-delay="0"
-                className="md:basis-1/2 lg:basis-1/3"
-              >
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="h-52 w-full flex aspect-square p-6">
-                      <div className="h-full px-5 flex items-center text-8xl text-[#dbc994]">
-                        1
-                      </div>
-                      <div className="flex py-5 justify-center gap-0 items-center w-full flex-col">
-                        <div className="text-2xl mb-2 text-[#dbc994]">
-                          Passo um
-                        </div>
-                        <div className="text-center flex">
-                          Faça seu cadastro em nossas plataformas!
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-              <CarouselItem
-                data-aos="zoom-in-right"
-                data-aos-delay="600"
-                className="md:basis-1/2 lg:basis-1/3"
-              >
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="h-52 w-full flex aspect-square p-6">
-                      <div className="h-full px-5 flex items-center text-8xl text-[#dbc994]">
-                        2
-                      </div>
-                      <div className="flex py-5 justify-center gap-0 items-center w-full flex-col">
-                        <div className="text-2xl mb-2 text-[#dbc994]">
-                          Passo dois
-                        </div>
-                        <div className="text-center flex">
-                          Faça seu cadastro em nossas plataformas!
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-              <CarouselItem
-                data-aos="zoom-in-right"
-                data-aos-delay="1200"
-                className="md:basis-1/2 lg:basis-1/3"
-              >
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="h-52 w-full flex aspect-square p-6">
-                      <div className="h-full px-5 flex items-center text-8xl text-[#dbc994]">
-                        3
-                      </div>
-                      <div className="flex py-5 justify-center gap-0 items-center w-full flex-col">
-                        <div className="text-2xl mb-2 text-[#dbc994]">
-                          Passo três
-                        </div>
-                        <div className="text-center flex">
-                          Faça seu cadastro em nossas plataformas!
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
-      </div>
-      <div className="flex flex-col w-full gap-5">
+      <div id="plataforms" className="flex flex-col w-full gap-5">
         <div className="text-4xl laptop:text-3xl text-center">
           <span className="text-[#dbc994]">Nossas plataformas</span>
         </div>
@@ -114,11 +25,11 @@ export function CarouselComponent() {
             <Card
               data-aos="zoom-in-right"
               data-aos-delay="0"
-              className="bg-zinc-800 shadow-[#dbc994] shadow-lg"
+              className="bg-zinc-800 border-2 border-zinc-500"
             >
-              <CardContent>
+              <CardContent className="p-8">
                 <Image
-                  className="w-[500px] mobile:w-[300px] border-4 border-[#dbc994] mobile:h-[200px] h-[400px] rounded-lg mt-5"
+                  className="w-[500px] mobile:w-[300px]  mobile:h-[200px] h-[400px] rounded-lg"
                   alt="img"
                   src={teste}
                 />
@@ -126,30 +37,30 @@ export function CarouselComponent() {
                   <CardTitle className="text-4xl mobile:text-xl">
                     <div> Cos D` Estournel 1950</div>
                   </CardTitle>
-                  <div className="text-[#dbc994] flex items-center gap-3 mobile:text-lg text-2xl">
+                  <div className="text-zinc-100 flex items-center gap-3 mobile:text-lg text-2xl">
                     <div>
                       <CalendarClock strokeWidth={1.5} />
                     </div>
                     <div>10 de outubro de 2024</div>
                   </div>
-                  <div className="text-[#dbc994] flex items-center gap-3 mobile:text-lg text-2xl">
+                  <div className="text-zinc-100 flex items-center gap-3 mobile:text-lg text-2xl">
                     <div>
                       <Gavel strokeWidth={1.5} />
                     </div>
                     <div>1º Lote: 10:30h</div>
                   </div>
-                  <div className="w-full mt-5 transition-colors duration-300 cursor-pointer      hover:bg-opacity-90 text-black font-medium mobile:text-base text-xl py-1 bg-[#dbc994] rounded-lg px-5 flex justify-center  items-center">
+                  <div className="w-full mt-5 transition-colors duration-300 cursor-pointer hover:bg-opacity-90 text-black font-medium mobile:text-base text-xl py-1 bg-[#dbc994] rounded-lg px-5 flex justify-center  items-center">
                     <div>Em andamento</div>
                     <div>
                       <Hourglass />
                     </div>
                   </div>
-                  <div className="text-white mb-2 bg-zinc-500 py-1 rounded-lg bg-opacity-50 flex flex-col justify-center items-center ">
+                  <div className="text-white py-2 bg-zinc-500 pt-1 rounded-lg bg-opacity-50 flex flex-col justify-center items-center ">
                     <div className="flex items-center mobile:text-sm font-medium gap-2">
                       Lance inicial
                     </div>
                     <div>
-                      <div className="text-[#dbc994] mobile:text-xl text-3xl font-semibold">
+                      <div className="text-zinc-100 mobile:text-xl text-3xl font-semibold">
                         R$ 8.750,00
                       </div>
                     </div>
@@ -158,13 +69,13 @@ export function CarouselComponent() {
               </CardContent>
             </Card>
             <Card
-              data-aos="zoom-in-left"
+              data-aos="zoom-in-right"
               data-aos-delay="0"
-              className="bg-zinc-800 shadow-[#dbc994] shadow-lg"
+              className="bg-zinc-800 border-2 border-zinc-500"
             >
-              <CardContent>
+              <CardContent className="p-8">
                 <Image
-                  className="w-[500px] mobile:w-[300px] border-4 border-[#dbc994] mobile:h-[200px] h-[400px] rounded-lg mt-5"
+                  className="w-[500px] mobile:w-[300px]  mobile:h-[200px] h-[400px] rounded-lg"
                   alt="img"
                   src={teste}
                 />
@@ -172,30 +83,30 @@ export function CarouselComponent() {
                   <CardTitle className="text-4xl mobile:text-xl">
                     <div> Cos D` Estournel 1950</div>
                   </CardTitle>
-                  <div className="text-[#dbc994] flex items-center gap-3 mobile:text-lg text-2xl">
+                  <div className="text-zinc-100 flex items-center gap-3 mobile:text-lg text-2xl">
                     <div>
                       <CalendarClock strokeWidth={1.5} />
                     </div>
                     <div>10 de outubro de 2024</div>
                   </div>
-                  <div className="text-[#dbc994] flex items-center gap-3 mobile:text-lg text-2xl">
+                  <div className="text-zinc-100 flex items-center gap-3 mobile:text-lg text-2xl">
                     <div>
                       <Gavel strokeWidth={1.5} />
                     </div>
                     <div>1º Lote: 10:30h</div>
                   </div>
-                  <div className="w-full mt-5 transition-colors duration-300 cursor-pointer      hover:bg-opacity-90 text-black font-medium mobile:text-base text-xl py-1 bg-[#dbc994] rounded-lg px-5 flex justify-center  items-center">
+                  <div className="w-full mt-5 transition-colors duration-300 cursor-pointer hover:bg-opacity-90 text-black font-medium mobile:text-base text-xl py-1 bg-[#dbc994] rounded-lg px-5 flex justify-center  items-center">
                     <div>Em andamento</div>
                     <div>
                       <Hourglass />
                     </div>
                   </div>
-                  <div className="text-white mb-2 bg-zinc-500 py-1 rounded-lg bg-opacity-50 flex flex-col justify-center items-center ">
+                  <div className="text-white py-2 bg-zinc-500 pt-1 rounded-lg bg-opacity-50 flex flex-col justify-center items-center ">
                     <div className="flex items-center mobile:text-sm font-medium gap-2">
                       Lance inicial
                     </div>
                     <div>
-                      <div className="text-[#dbc994] mobile:text-xl text-3xl font-semibold">
+                      <div className="text-zinc-100 mobile:text-xl text-3xl font-semibold">
                         R$ 8.750,00
                       </div>
                     </div>

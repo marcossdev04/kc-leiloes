@@ -53,7 +53,14 @@ export function Hero() {
             Reais
           </div>
         </div>
-        <div className="bg-[#dbc994] mobile:hidden mx-12 mobile:mx-0 hover:bg-opacity-80 transition-all hover:scale-110 cursor-pointer duration-300 flex items-center gap-2 justify-center py-3 text-4xl laptop:text-2xl mobile:text-xl text-black rounded-xl font-medium">
+        <div
+          className="bg-[#dbc994] mobile:hidden mx-12 mobile:mx-0 hover:bg-opacity-80 transition-all hover:scale-110 cursor-pointer duration-300 flex items-center gap-2 justify-center py-3 text-4xl laptop:text-2xl mobile:text-xl text-black rounded-xl font-medium"
+          onClick={() => {
+            document
+              .getElementById('plataforms')
+              ?.scrollIntoView({ behavior: 'smooth' })
+          }}
+        >
           <div>Conheça nossos leilões</div>
           <div>
             <ArrowDown size={35} strokeWidth={1.5} />
@@ -73,23 +80,6 @@ export function Hero() {
           <ArrowDown size={35} strokeWidth={1.5} />
         </div>
       </div>
-      {/* <div
-        data-aos="fade-left"
-        data-aos-duration="1200"
-        data-aos-delay="200"
-        className="w-full mobile:px-10 mobile:mt-10 relative flex justify-center"
-      >
-        <div className="z-30 flex flex-col items-center">
-          <div className="w-[1100px] laptop:w-[900px] laptop:h-[400px] h-[500px] mobile:w-[370px] mobile:h-[220px] rounded-xl flex justify-center items-center bg-[#dbc994]">
-            <iframe
-              className="w-[1080px] mobile:w-[350px] mobile:h-[200px] laptop:w-[880px] laptop:h-[380px] h-[480px]"
-              src="https://www.youtube.com/embed/QthVD2DND1o"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      </div> */}
     </div>
   )
 }
