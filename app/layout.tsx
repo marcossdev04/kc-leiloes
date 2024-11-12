@@ -1,31 +1,64 @@
-import type { Metadata } from 'next'
+'use client'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Barlow } from 'next/font/google'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { QueryClientProvider } from 'react-query'
+import { queryClient } from '@/api/queryClient'
+import { AuthContextProvider, useAuth } from '@/store/UseAuth'
+import { usePathname, useRouter } from 'next/navigation'
+import { ReactNode, useEffect } from 'react'
+import mixpanel from 'mixpanel-browser'
 
-export const metadata: Metadata = {
-  title: 'KC Leilões',
-  description: 'Leilões online e presenciais',
-}
 const barlow = Barlow({
   weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
 })
+interface AuthWrapperProps {
+  children: ReactNode
+}
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  mixpanel.init(process.env.NEXT_PUBLIC_MIXPIXEL_ID || '', {
+    debug: true,
+    track_pageview: true,
+    persistence: 'localStorage',
+  })
+  function AuthWrapper({ children }: AuthWrapperProps) {
+    const router = useRouter()
+    const pathname = usePathname()
+    const isAuthPage = pathname === '/admin' || pathname === '/'
+    const { isAuthenticated } = useAuth()
+
+    useEffect(() => {
+      if (isAuthenticated === false && !isAuthPage) {
+        router.push('/admin')
+      }
+    }, [router, isAuthPage, isAuthenticated])
+
+    return <>{children}</>
+  }
   return (
     <html lang="en">
-      <body className={`${barlow.className} antialiased  w-full`}>
+      <body className={`${barlow.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <div>{children}</div>
+          <QueryClientProvider client={queryClient}>
+            <AuthContextProvider>
+              <AuthWrapper>
+                {children}
+                <ToastContainer />
+              </AuthWrapper>
+            </AuthContextProvider>
+          </QueryClientProvider>
         </ThemeProvider>
       </body>
     </html>

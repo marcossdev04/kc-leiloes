@@ -7,7 +7,7 @@ export const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
 })
 
-const getToken = () => cookies.get('token_footi_ai')
+const getToken = () => cookies.get('kc_token')
 
 api.interceptors.request.use(
   (config) => {
@@ -29,7 +29,7 @@ api.interceptors.response.use(
       originalRequest._retry = true
 
       try {
-        const refreshToken = cookies.get('refresh_footi_ai')
+        const refreshToken = cookies.get('refresh_kc')
         const response = await axios.post(
           `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/token/refresh/`,
           {
@@ -38,14 +38,14 @@ api.interceptors.response.use(
         )
 
         const newToken = response.data.access
-        cookies.set('token_footi_ai', newToken)
+        cookies.set('kc_token', newToken)
 
         originalRequest.headers.Authorization = `Bearer ${newToken}`
         return api(originalRequest)
       } catch (refreshError) {
-        cookies.remove('token_footi_ai')
-        cookies.remove('refresh_footi_ai')
-        window.location.href = '/signin'
+        cookies.remove('kc_token')
+        cookies.remove('refresh_kc')
+        window.location.href = '/admin'
         return Promise.reject(refreshError)
       }
     }

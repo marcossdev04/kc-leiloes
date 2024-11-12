@@ -13,7 +13,7 @@ export default function Home() {
       <div className="bg-gradient-to-b from-[#000000] to-[#101010]">
         <Hero />
       </div>
-      <div className="bg-gradient-to-b from-[#101010] to-[#1e1e1e]">
+      <div id="video" className="bg-gradient-to-b from-[#101010] to-[#1e1e1e]">
         <Video />
       </div>
       <div>

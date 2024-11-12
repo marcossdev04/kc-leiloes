@@ -7,13 +7,13 @@ import {
   ReactNode,
   createContext,
   useContext,
-  useState,
   useEffect,
+  useState,
 } from 'react'
 import { toast } from 'react-toastify'
 
 interface SignInCredentials {
-  email: string
+  username: string
   password: string
 }
 
@@ -36,25 +36,24 @@ interface AuthContextProviderProps {
 export function AuthContextProvider({ children }: AuthContextProviderProps) {
   const { push } = useRouter()
   const [cookies, setCookie, removeCookie] = useCookies([
-    'token_footi_ai',
-    'refresh_footi_ai',
+    'kc_token',
+    'kc_refresh',
   ])
 
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(
-    !!cookies.token_footi_ai,
+    !!cookies.kc_token,
   )
 
   useEffect(() => {
     const handleCookieChange = () => {
-      if (!cookies.token_footi_ai) {
+      if (!cookies.kc_token) {
         setIsAuthenticated(false)
         api.defaults.headers.Authorization = ''
-        push('/signin')
       } else {
         setIsAuthenticated(true)
-        api.defaults.headers.Authorization = `Bearer ${cookies.token_footi_ai}`
+        api.defaults.headers.Authorization = `Bearer ${cookies.kc_token}`
       }
     }
     handleCookieChange()
@@ -64,23 +63,24 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
     return () => clearInterval(interval)
   }, [cookies, push])
 
-  async function handleSignIn({ email, password }: SignInCredentials) {
+  async function handleSignIn({ username, password }: SignInCredentials) {
     setIsLoading(true)
     try {
-      const response = await api.post('/api/token/', {
-        email,
+      const response = await api.post('/auth/login/', {
+        username,
         password,
       })
-      const accessToken = response.data.access
-      const refreshToken = response.data.refresh
-      setCookie('token_footi_ai', accessToken, { maxAge: 60 * 60 * 8 })
-      setCookie('refresh_footi_ai', refreshToken, {
-        maxAge: 60 * 60 * 24 * 7,
-      }) // 7 days
+      console.log(response.data)
+      const accessToken = response.data.tokens.access
+      const refreshToken = response.data.tokens.refresh
+      setCookie('kc_token', accessToken, { maxAge: 60 * 60 })
+      setCookie('kc_refresh', refreshToken, {
+        maxAge: 60 * 60 * 24,
+      })
 
       api.defaults.headers.Authorization = `Bearer ${accessToken}`
       setIsAuthenticated(true)
-      push('/')
+      push('/admin/home')
     } catch (err: any) {
       console.log(err)
       toast.error('Ocorreu um erro inesperado com a API', {
@@ -94,25 +94,25 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
   }
 
   async function handleSignOut() {
-    removeCookie('token_footi_ai')
-    removeCookie('refresh_footi_ai')
+    removeCookie('kc_token')
+    removeCookie('kc_refresh')
     api.defaults.headers.Authorization = ''
     setIsAuthenticated(false)
-    push('/')
+    push('/admin')
   }
 
   async function refreshToken() {
     try {
-      const refreshToken = cookies.refresh_footi_ai
+      const refreshToken = cookies.kc_refresh
       if (!refreshToken) {
         throw new Error('No refresh token available')
       }
 
-      const response = await api.post('/api/token/refresh/', {
+      const response = await api.post('/auth/refresh/', {
         refresh: refreshToken,
       })
       const newAccessToken = response.data.access
-      setCookie('token_footi_ai', newAccessToken, { maxAge: 60 * 60 * 8 })
+      setCookie('kc_token', newAccessToken, { maxAge: 60 * 60 * 8 })
       api.defaults.headers.Authorization = `Bearer ${newAccessToken}`
       setIsAuthenticated(true)
     } catch (err: any) {

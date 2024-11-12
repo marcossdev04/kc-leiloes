@@ -2,15 +2,14 @@
 import { useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardTitle } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { useAuth } from '@/store/UseAuth'
 import { LoaderCircle } from 'lucide-react'
 
-// Definir a tipagem dos dados do formulário
 interface FormData {
-  email: string
+  username: string
   password: string
 }
 
@@ -29,14 +28,13 @@ export default function LoginForm5() {
 
   return (
     <div
-      className={`relative flex h-full w-full items-center justify-center mobile:h-[90vh]`}
+      className={`relative flex w-full items-center justify-center h-[100vh]`}
     >
       <Card
         ref={formRef}
-        className=" border-none bg-transparent w-1/3 shadow-none mobile:relative mobile:w-[90vh] mobile:bg-black"
+        className=" border-none bg-transparent w-1/3 h-full flex items-center mobile:w-full shadow-none mobile:relative justify-center mobile:bg-black"
       >
-        <CardTitle className="flex justify-center tablet:hidden laptop:hidden desktop:hidden"></CardTitle>
-        <CardContent className="mt-5">
+        <CardContent className="mt-5 w-full">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="grid gap-4">
               <div className="grid gap-2">
@@ -46,19 +44,13 @@ export default function LoginForm5() {
                 <Input
                   className=" focus-visible:ring-lime"
                   id="email"
-                  type="email"
+                  type="text"
                   placeholder="m@example.com"
-                  {...register('email', {
-                    required: 'Email é obrigatório',
-                    pattern: {
-                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                      message: 'Insira um email válido',
-                    },
-                  })}
+                  {...register('username')}
                 />
-                {errors.email && (
+                {errors.username && (
                   <span className="text-sm text-red-600">
-                    {errors.email.message}
+                    {errors.username.message}
                   </span>
                 )}
               </div>
