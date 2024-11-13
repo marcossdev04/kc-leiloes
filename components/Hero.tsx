@@ -3,14 +3,21 @@ import Logo from '@/assets/Ativo 10@20x.png'
 import 'aos/dist/aos.css'
 import Image from 'next/image'
 import { ArrowDown, Check } from 'lucide-react'
-import imagemPrincipal from '@/assets/foto_principal.svg'
+import imagemPrincipal from '@/assets/bgPrincipall.png'
 
 export function Hero() {
   return (
-    <div className="w-[1600px] h-[100vh] mobile:flex-col  mobile:pt-5 mobile:px-5 mb-10 gap-5 mobile:gap-0 desktop:mx-auto laptop:mx-auto laptop:max-w-[1200px] mobile:w-full flex mobile:h-full mobile:mt-5 justify-center items-center">
-      <div className="absolute h-full mobile:hidden w-[600px] overflow-x-hidden right-0 bg-gradient-to-r from-transparent blur-lg to-[#dbc994]"></div>
-      <div className="from-[#dbc994] desktop:hidden laptop:hidden tablet:hidden to-transparent blur-sm bg-gradient-to-b h-[380px] w-[300px] absolute top-[270px]"></div>
-      <div className="flex flex-col gap-10 mobile:gap-3 w-full">
+    <div
+      className="w-full h-[100vh] mobile:flex-col mobile:pt-5 mobile:px-5 mb-10 gap-5 mobile:gap-0 desktop:mx-auto laptop:mx-auto mobile:w-full flex mobile:h-full mobile:mt-5 justify-start items-center relative"
+      style={{
+        backgroundImage: `url(${imagemPrincipal.src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <div className="bg-black bg-opacity-70 h-[100vh] absolute w-[750px] laptop:w-[600px] z-10"></div>
+      <div className="flex flex-col gap-10 mobile:gap-3 w-[40%] relative z-10 ">
         <div className="flex w-full flex-col">
           <div className="flex justify-center items-center">
             <Image
@@ -35,7 +42,7 @@ export function Hero() {
 
           <div className="flex flex-col gap-2 justify-center items-center">
             <div className="text-6xl laptop:text-4xl font-medium mobile:text-2xl text-center text-white ">
-              As Melhores Oportunidades com Confiança e Economia!
+              Adentre no universo das oportunidades em leilões!
             </div>
           </div>
         </div>
@@ -66,13 +73,6 @@ export function Hero() {
             <ArrowDown size={35} strokeWidth={1.5} />
           </div>
         </div>
-      </div>
-      <div className="w-[90%] z-20 flex justify-center mr-1 mobile:items-center flex-col">
-        <Image
-          src={imagemPrincipal}
-          className="w-[600px] laptop:w-[520px] mobile:mt-6 mobile:w-[250px]"
-          alt="foto_principal"
-        />
       </div>
       <div className="bg-[#dbc994] mx-16 w-[80%] laptop:hidden desktop:hidden tablet:hidden hover:bg-opacity-80 transition-all hover:scale-110 cursor-pointer duration-300 flex items-center gap-2 justify-center py-3 text-4xl mobile:text-xl text-black rounded-xl font-medium">
         <div>Conheça nossos leilões</div>

@@ -24,9 +24,9 @@ export function Video() {
       >
         <div className="w-full mobile:px-10 mobile:mt-10 relative flex justify-center">
           <div className="z-30 flex flex-col items-center">
-            <div className="w-[1500px] laptop:w-[900px] laptop:h-[400px] h-[890px] mobile:w-[370px] mobile:h-[220px] rounded-xl flex justify-center items-center bg-black">
+            <div className="w-[1100px] laptop:w-[900px] laptop:h-[400px] h-[690px] mobile:w-[370px] mobile:h-[220px] rounded-xl flex justify-center items-center bg-black">
               <iframe
-                className="w-[1490px] rounded-xl mobile:w-[350px] mobile:h-[200px] laptop:w-[880px] laptop:h-[380px] h-[880px]"
+                className="w-[1090px] rounded-xl mobile:w-[350px] mobile:h-[200px] laptop:w-[880px] laptop:h-[380px] h-[680px]"
                 src="https://www.youtube.com/embed/QthVD2DND1o"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

@@ -5,7 +5,7 @@ import { Input } from './ui/input'
 import { LoaderCircle } from 'lucide-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import newsImage from '@/assets/newsImage.svg'
+import newsImage from '@/assets/news.png'
 import Image from 'next/image'
 
 export function FormComponent() {
@@ -26,8 +26,8 @@ export function FormComponent() {
   }, [])
   return (
     <div className="w-[1600px] gap-5 h-full laptop:w-[1200px] mobile:w-full items-center py-32 mx-auto flex mobile:flex-col">
-      <div className="absolute mobile:hidden inset-y-0 laptop:h-[600px] laptop:top-40  -left-[400px] bg-[#dbc994] top-32 rounded-full blur-2xl h-[800px] laptop:w-[600px]  w-[800px] "></div>
-      <div className="absolute inset-y-0 z-50 mobile:hidden bg-[#0F0F0F] laptop:top-[700px] top-[850px] rounded-full blur-xl h-[500px] laptop:w-[400px] laptop:h-[400px] laptop:left-[50px] left-[20px] w-[600px]"></div>
+      <div className="absolute mobile:hidden inset-y-0 laptop:h-[700px] laptop:top-40  -left-[400px] bg-[#dbc994] top-32 rounded-full blur-2xl h-[950px] laptop:w-[700px]  w-[800px] "></div>
+      <div className="absolute inset-y-0 z-50 mobile:hidden bg-[#111] laptop:top-[850px] top-[1000px] rounded-full blur-md h-[450px] laptop:w-[620px] laptop:h-[400px] laptop:left-[0px] left-[0px] w-[1000px]"></div>
       <div className="w-1/2 mobile:px-10 mobile:hidden relative flex justify-start">
         <Image
           className="w-[560px] laptop:w-[450px]"

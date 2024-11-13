@@ -7,6 +7,8 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { useAuth } from '@/store/UseAuth'
 import { LoaderCircle } from 'lucide-react'
+import Image from 'next/image'
+import Logo from '@/assets/Ativo 10@20x.png'
 
 interface FormData {
   username: string
@@ -35,6 +37,9 @@ export default function LoginForm5() {
         className=" border-none bg-transparent w-1/3 h-full flex items-center mobile:w-full shadow-none mobile:relative justify-center mobile:bg-black"
       >
         <CardContent className="mt-5 w-full">
+          <div>
+            <Image alt="logo" src={Logo} />
+          </div>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="grid gap-4">
               <div className="grid gap-2">

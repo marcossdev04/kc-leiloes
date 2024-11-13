@@ -6,7 +6,7 @@ import Link from 'next/link'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import React from 'react'
-import tutorialImage from '@/assets/imagetest.svg'
+import tutorialImage from '@/assets/Sem nome (1080 x 1920 px) (1).png'
 
 export function Tutorial() {
   React.useEffect(() => {
@@ -15,9 +15,9 @@ export function Tutorial() {
 
   return (
     <div className="w-[1600px] h-full mt-40 mb-20 laptop:w-[1200px] mobile:w-full items-center mx-auto flex mobile:flex-col ">
-      <div className="absolute mobile:hidden inset-y-0 right-0 bg-[#dbc994] laptop:w-[600px] laptop:h-[600px] top-32 laptop:top-40 rounded-full blur-2xl h-[800px] w-[800px] translate-x-1/2"></div>
-      <div className="absolute inset-y-0 z-50 mobile:hidden laptop:w-[400px] laptop:h-[400px]  bg-[#1D1D1D] top-[880px] rounded-full blur-xl h-[500px] right-[80px] w-[800px]"></div>
-      <div className="w-1/2 mobile:w-full h-full flex justify-center gap-10 mobile:mt-16 flex-col">
+      <div className="absolute mobile:hidden inset-y-0 right-0 bg-[#dbc994] laptop:w-[500px] laptop:h-[650px] top-72  laptop:top-52 rounded-full blur-2xl h-[900px] w-[800px] translate-x-1/2"></div>
+      <div className="absolute inset-y-0 z-50 mobile:hidden laptop:w-[800px] laptop:h-[350px] laptop:top-[800px]  bg-[#1E1E1E] top-[1050px] laptop:right-[30px]  rounded-full blur-lg h-[500px] right-[90px] w-[800px]"></div>
+      <div className="w-full mobile:w-full h-full flex justify-center gap-10 mobile:mt-16 flex-col">
         <div
           data-aos="zoom-out-right"
           data-aos-delay="0"
@@ -56,9 +56,9 @@ export function Tutorial() {
           </div>
         </div>
       </div>
-      <div className="z-40 mobile:hidden">
+      <div className="z-40 mobile:hidden w-full flex justify-end">
         <Image
-          className=" w-[800px] laptop:w-[650px]"
+          className="w-[600px] laptop:w-[450px]"
           src={tutorialImage}
           alt="teste"
         />

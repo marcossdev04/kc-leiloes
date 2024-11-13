@@ -59,6 +59,7 @@ export default function RootLayout({
               </AuthWrapper>
             </AuthContextProvider>
           </QueryClientProvider>
+          <ToastContainer />
         </ThemeProvider>
       </body>
     </html>
