@@ -12,7 +12,7 @@ export function Video() {
       <div
         data-aos="fade-down"
         data-aos-delay="0"
-        className="flex justify-center text-[#dbc994] text-4xl laptop:text-3xl"
+        className="flex justify-center text-[#dbc994] mobile:text-lg mobile:text-center text-4xl laptop:text-3xl"
       >
         Assista à nossa aula de introdução gratuitamente e você vai aprender
         mais sobre:
