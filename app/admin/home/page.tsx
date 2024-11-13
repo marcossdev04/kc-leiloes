@@ -24,6 +24,8 @@ import { DeletePost } from '@/components/DeletePost'
 import Link from 'next/link'
 import { queryClient } from '@/api/queryClient'
 import { toast } from 'react-toastify'
+import Image from 'next/image'
+import Logo from '@/assets/footerImage.png'
 
 const FormSchema = z.object({
   url_video: z.string(),
@@ -102,7 +104,9 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100vh] items-center">
       <header className="px-20 w-full bg-white py-2">
-        <div className="text-2xl text-black">KC Admin</div>
+        <div className="text-2xl flex items-center text-black">
+          <Image src={Logo} width={200} alt="logo" />
+        </div>
       </header>
       <div className="flex w-full justify-center items-center min-h-[9 0vh]">
         <Card className="w-1/2  mt-8">
