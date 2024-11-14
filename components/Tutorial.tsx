@@ -16,7 +16,7 @@ export function Tutorial() {
   return (
     <div className="w-[1600px] h-full mt-40 mb-20 laptop:w-[1200px] mobile:w-full items-center mx-auto flex mobile:flex-col ">
       <div className="absolute mobile:hidden inset-y-0 right-0 bg-[#dbc994] laptop:w-[500px] laptop:h-[650px] top-72  laptop:top-52 rounded-full blur-2xl h-[900px] w-[800px] translate-x-1/2"></div>
-      <div className="absolute inset-y-0 z-50 mobile:hidden laptop:w-[800px] laptop:h-[350px] laptop:top-[800px]  bg-[#1E1E1E] top-[1050px] laptop:right-[30px]  rounded-full blur-lg h-[500px] right-[90px] w-[800px]"></div>
+      <div className="absolute inset-y-0 z-50 mobile:hidden laptop:w-[800px] laptop:h-[350px] laptop:top-[800px]  bg-[#0B0B0B] top-[1050px] laptop:right-[30px]  rounded-full blur-lg h-[500px] right-[90px] w-[800px]"></div>
       <div className="w-full mobile:w-full h-full flex justify-center gap-10 mobile:mt-16 flex-col">
         <div
           data-aos="zoom-out-right"

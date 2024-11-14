@@ -19,10 +19,10 @@ export default function Home() {
   const { data } = useQuery<Config>(['getConfig'], fetchData) */
   return (
     <div className="flex w-full flex-col">
-      <div className="bg-gradient-to-b from-[#000000] to-[#101010]">
+      <div className="bg-gradient-to-b from-[#000000] to-[#000000]">
         <Hero />
       </div>
-      <div id="video" className="bg-gradient-to-b from-[#101010] to-[#1e1e1e]">
+      <div id="video" className="bg-gradient-to-b from-[#000000] to-[#040404]">
         <Video />
       </div>
       <div>
@@ -30,26 +30,26 @@ export default function Home() {
       </div>
       <div
         id="passo-a-passo"
-        className="bg-gradient-to-b from-[#1e1e1e] to-[#202020]"
+        className="bg-gradient-to-b from-[#040404] to-[#080808]"
       >
         <CarouselComponent />
       </div>
 
       <div
         id="tutorial"
-        className="bg-gradient-to-b from-[#202020] to-[#1e1e1e] overflow-hidden relative"
+        className="bg-gradient-to-b from-[#080808] to-[#0b0b0b] overflow-hidden relative"
       >
         <Tutorial />
       </div>
       <div
         id="form"
-        className="bg-gradient-to-b  from-[#1e1e1e] to-[#101010] overflow-hidden relative"
+        className="bg-gradient-to-b  from-[#0b0b0b] to-[#050505] overflow-hidden relative"
       >
         <FormComponent />
       </div>
       <div
         id="faq"
-        className="bg-gradient-to-b from-[#101010] to-[#000000] overflow-y-hidden"
+        className="bg-gradient-to-b from-[#050505] to-[#000000] overflow-y-hidden"
       >
         <Faq />
       </div>
