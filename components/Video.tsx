@@ -3,7 +3,10 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 
-export function Video() {
+interface Props {
+  siteVideo: string | undefined
+}
+export function Video({ siteVideo }: Props) {
   useEffect(() => {
     AOS.init({ duration: 1200 })
   }, [])
@@ -27,7 +30,7 @@ export function Video() {
             <div className="w-[1100px] laptop:w-[900px] laptop:h-[400px] h-[690px] mobile:w-[370px] mobile:h-[220px] rounded-xl flex justify-center items-center bg-black">
               <iframe
                 className="w-[1090px] rounded-xl mobile:w-[350px] mobile:h-[200px] laptop:w-[880px] laptop:h-[380px] h-[680px]"
-                src="https://www.youtube.com/embed/QthVD2DND1o"
+                src={siteVideo}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>

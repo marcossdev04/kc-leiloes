@@ -6,11 +6,11 @@ import 'aos/dist/aos.css'
 import { CalendarClock, Gavel, Hourglass } from 'lucide-react'
 import Image from 'next/image'
 import * as React from 'react'
-import Logo from '@/assets/Ativo 10@20x.png'
+import Logo from '@/assets/cardLogo.png'
 
 export function CarouselComponent() {
   React.useEffect(() => {
-    AOS.init({ duration: 1200 }) // Configure a duração da animação
+    AOS.init({ duration: 1200 })
   }, [])
   return (
     <div
@@ -22,10 +22,12 @@ export function CarouselComponent() {
           <span className="text-[#dbc994]">Nossas plataformas</span>
         </div>
         <div className="w-[1600px] py-10 laptop:w-[1200px] mobile:w-full mobile:py-5 mx-auto">
-          <div className="flex mobile:flex-col mobile:gap-10 justify-around gap-20 w-full">
+          <div className="flex relative mobile:flex-col mobile:gap-10 justify-around gap-20 w-full">
+            <div className="absolute left-1/2 h-[150%] border border-white"></div>
             <div className="flex flex-col items-center">
               <div data-aos="zoom-in-right" data-aos-delay="0">
                 <Image className="w-[300px]" src={Logo} alt="logo" />
+                <div className="text-2xl text-center mb-2">SOLEUM</div>
               </div>
               <Card
                 data-aos="zoom-in-right"
@@ -77,6 +79,7 @@ export function CarouselComponent() {
             <div className="flex flex-col items-center">
               <div data-aos="zoom-in-left" data-aos-delay="0">
                 <Image className="w-[300px]" src={Logo} alt="logo" />
+                <div className="text-2xl text-center mb-2">Bom valor</div>
               </div>
               <Card
                 data-aos="zoom-in-left"
