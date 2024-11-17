@@ -43,7 +43,7 @@ export default function Home() {
 
   async function fetchPosts() {
     const response = await api.get('/auctions/')
-    return response.data
+    return response.data.results
   }
   const { data: auctions } = useQuery<Auction[]>(['getAuctions'], fetchPosts)
 

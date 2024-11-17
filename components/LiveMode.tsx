@@ -1,5 +1,7 @@
 import { X } from 'lucide-react'
 import { useState } from 'react'
+import Logo from '@/assets/Ativo 10@20x.png'
+import Image from 'next/image'
 
 interface Props {
   liveLink: string | undefined
@@ -15,12 +17,31 @@ export function LiveMode({ liveLink, onChange, initialShowLive }: Props) {
   }
 
   return (
-    <div className="flex justify-center items-center w-full h-[100vh]">
-      <div className="absolute top-5 right-5" onClick={handleClose}>
-        <X size={60} />
+    <div className="flex flex-col justify-center items-center w-full h-[100vh]">
+      <div className="flex flex-col mb-8 items-center justify-center">
+        <Image src={Logo} alt="logo" className="w-[400px] mobile:w-[300px]" />
+        <div className="text-3xl mobile:text-xl mobile:text-center -mt-10 mobile:-mt-6">
+          Veja nossa live ou clique em{' '}
+          <span className="underline cursor-pointer" onClick={handleClose}>
+            sair
+          </span>{' '}
+          e seja direcionado para nossa página
+        </div>
       </div>
-      <div className="flex justify-center w-2/3">
-        <iframe src={liveLink}></iframe>
+      <div
+        className="absolute top-5 cursor-pointer right-5"
+        onClick={handleClose}
+      >
+        <X size={60} className="mobile:hidden" />
+        <X size={40} className="desktop:hidden laptop:hidden tablet:hidden" />
+      </div>
+      <div className="flex justify-center w-full">
+        <div className="bg-white p-1 rounded-xl">
+          <iframe
+            className="w-[1300px] laptop:w-[900px] laptop:h-[500px] mobile:w-[350px] mobile:h-[220px] h-[700px] rounded-xl"
+            src={liveLink}
+          ></iframe>
+        </div>
       </div>
     </div>
   )

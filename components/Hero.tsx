@@ -106,14 +106,16 @@ export function Hero() {
             <DialogTrigger className="bg-zinc-500 bg-opacity-60  mx-12 mobile:mx-1 hover:bg-opacity-80 transition-all hover:scale-110 cursor-pointer duration-300 flex items-center gap-2 justify-center py-3 mobile:py-2 text-4xl laptop:text-2xl mobile:text-base text-zinc-300 rounded-xl font-medium">
               Sobre nós
             </DialogTrigger>
-            <DialogContent className="max-w-[50%]">
+            <DialogContent className="max-w-[50%] mobile:max-w-[90%]">
               <div className="flex items-center">
                 <div>
                   <Image className="w-[1800px]" src={about} alt="about" />
                 </div>
                 <div className="text-xl flex flex-col gap-5">
-                  <div className="text-2xl text-[#dbc994]">Sobre Kátia</div>
-                  <div>
+                  <div className="text-2xl mobile:text-lg text-[#dbc994]">
+                    Sobre Kátia
+                  </div>
+                  <div className=" mobile:text-xs">
                     Atuando há 06 anos como leiloeira pública oficial, Kátia se
                     encontrou neste ramo o qual trouxe um renovo para a sua
                     carreira. Apesar de atuar em uma área burocrática, Kátia
@@ -121,7 +123,7 @@ export function Hero() {
                     comunicação e entendimento por parte daqueles que não
                     possuem conhecimento em leilões.
                   </div>
-                  <div>
+                  <div className=" mobile:text-xs">
                     Por entender e vivenciar as oportunidades que os leilões
                     podem oferecer, hoje Kátia atua também como educadora,
                     compartilhando o seu conhecimento e suas vivências para

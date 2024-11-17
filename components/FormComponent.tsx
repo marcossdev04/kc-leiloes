@@ -25,12 +25,12 @@ export function FormComponent() {
     AOS.init({ duration: 1200, once: false })
   }, [])
   return (
-    <div className="w-[1600px] gap-5 h-full laptop:w-[1200px] mobile:w-full items-center py-32 mx-auto flex mobile:flex-col">
-      <div className="absolute mobile:hidden inset-y-0 laptop:h-[700px] laptop:top-40  -left-[400px] bg-[#dbc994] top-32 rounded-full blur-2xl h-[950px] laptop:w-[700px]  w-[800px] "></div>
-      <div className="absolute inset-y-0 z-50 mobile:hidden bg-[#0F0F0F] laptop:top-[850px] top-[1000px] rounded-full blur-md h-[450px] laptop:w-[620px] laptop:h-[400px] laptop:left-[0px] left-[0px] w-[1000px]"></div>
-      <div className="w-1/2 mobile:px-10 mobile:hidden relative flex justify-start">
+    <div className="w-[1600px] gap-5 h-full laptop:w-[1200px] mobile:w-full items-center py-32 mx-auto flex">
+      <div className="absolute inset-y-0 mobile:h-[400px] mobile:top-[150px] mobile:w-[350px] mobile:-left-[175px] laptop:h-[700px] laptop:top-40  -left-[400px] bg-[#dbc994] top-32 rounded-full blur-2xl h-[950px] laptop:w-[700px]  w-[800px] "></div>
+      <div className="absolute inset-y-0 z-50 bg-[#0F0F0F] mobile:top-[460px] mobile:w-[270px] mobile:-left-[50px] laptop:top-[850px] top-[1000px]  mobile:rounded-3xl rounded-full blur-md h-[450px] laptop:w-[620px] laptop:h-[400px] laptop:left-[0px] left-[0px] w-[1000px]"></div>
+      <div className="w-1/2 relative flex justify-start">
         <Image
-          className="w-[560px] laptop:w-[450px]"
+          className="w-[560px] mobile:w-[300px] laptop:w-[450px]"
           src={newsImage}
           alt="teste"
         />
@@ -38,12 +38,12 @@ export function FormComponent() {
       <div
         data-aos="zoom-in-left"
         data-aos-delay="0"
-        className="w-1/2 mobile:w-full h-full flex justify-center gap-10 mobile:mt-16 flex-col "
+        className="w-1/2 h-full flex justify-center gap-10 mobile:mt-16 flex-col mobile:px-1 "
       >
-        <div className="mobile:text-center text-4xl laptop:text-3xl text-[#dbc994]">
+        <div className="mobile:text-center mobile:text-xl text-4xl laptop:text-3xl text-[#dbc994]">
           Assine nossa newsleatter
         </div>
-        <div className=" mobile:px-5 mobile:text flex flex-col gap-2 text-xl laptop:text-lg">
+        <div className="flex flex-col gap-2 text-xl mobile:text-xs laptop:text-lg">
           <div>
             Receba em primeira mão nossas atualizações, promoções exclusivas e
             conteúdos especiais.
@@ -59,7 +59,7 @@ export function FormComponent() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="space-y-6 w-full flex flex-col mobile:px-5"
+          className="space-y-6 w-full flex flex-col mobile:px-1"
         >
           <div className="space-y-2">
             <Input
