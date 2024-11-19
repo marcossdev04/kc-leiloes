@@ -276,7 +276,7 @@ export function AddPost() {
                       <SelectValue placeholder="Plataforma" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Soleum">Sileum</SelectItem>
+                      <SelectItem value="Soleum">Soleum</SelectItem>
                       <SelectItem value="Bom valor">Bom Valor</SelectItem>
                     </SelectContent>
                   </Select>

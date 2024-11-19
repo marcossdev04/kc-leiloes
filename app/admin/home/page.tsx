@@ -26,11 +26,14 @@ import { queryClient } from '@/api/queryClient'
 import { toast } from 'react-toastify'
 import Image from 'next/image'
 import Logo from '@/assets/footerImage.png'
+import { format, parseISO } from 'date-fns'
 
 const FormSchema = z.object({
   url_video: z.string(),
   live: z.boolean().default(false),
   url_live: z.string(),
+  live_title: z.string(),
+  live_data_hora: z.string(),
 })
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false)
@@ -43,7 +46,7 @@ export default function Home() {
 
   async function fetchPosts() {
     const response = await api.get('/auctions/')
-    return response.data.results
+    return response.data
   }
   const { data: auctions } = useQuery<Auction[]>(['getAuctions'], fetchPosts)
 
@@ -62,6 +65,8 @@ export default function Home() {
         live_mode: data.live,
         site_video: data.url_video,
         live_link: data.url_live,
+        live_titulo: data.live_title,
+        live_data_hora: data.live_data_hora,
       })
       await queryClient.refetchQueries(['getAuctions'])
       toast.success('Configurações atualizadas com sucesso', {
@@ -72,6 +77,7 @@ export default function Home() {
       setIsLoading(false)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
+      console.log(err)
       toast.error(
         err.response.data.live_link
           ? 'Live link com url inválida. Ex: htpps://...'
@@ -93,11 +99,20 @@ export default function Home() {
     setIsLoading(false)
   }
 
+  function removeTimeZone(dateString: string) {
+    // Converte a string para um objeto Date
+    const date = parseISO(dateString)
+
+    // Formata a data sem o fuso horário
+    return format(date, "yyyy-MM-dd'T'HH:mm:ss")
+  }
   useEffect(() => {
     if (config) {
       form.setValue('url_video', config.site_video || '')
       form.setValue('live', config.live_mode || false)
       form.setValue('url_live', config.live_link || '')
+      form.setValue('live_title', config.live_titulo)
+      form.setValue('live_data_hora', removeTimeZone(config.live_data_hora))
     }
   }, [config, form.setValue, form])
 
@@ -160,6 +175,33 @@ export default function Home() {
                         type="text"
                         {...field}
                       />
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="live_title"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Título da live</FormLabel>
+                      <Input
+                        placeholder="Confira a live do Leilão X"
+                        className="placeholder:text-zinc-600"
+                        type="text"
+                        {...field}
+                      />
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="live_data_hora"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col">
+                      <FormLabel>Horário do leilão</FormLabel>
+                      <Input {...field} type="datetime-local" />
                       <FormMessage />
                     </FormItem>
                   )}

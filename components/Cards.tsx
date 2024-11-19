@@ -19,7 +19,7 @@ export function CarouselComponent() {
 
   async function fetchPosts() {
     const response = await api.get('/auctions/')
-    return response.data.results
+    return response.data
   }
 
   const { data: auctions } = useQuery<Auction[]>(['getAuctions'], fetchPosts)
