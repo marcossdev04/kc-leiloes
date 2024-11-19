@@ -118,13 +118,13 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100vh] items-center">
-      <header className="px-20 w-full bg-white py-2">
+      <header className="px-20 mobile:px-0 w-full bg-white py-2">
         <div className="text-2xl flex items-center text-black">
           <Image src={Logo} width={200} alt="logo" />
         </div>
       </header>
-      <div className="flex w-full justify-center items-center min-h-[9 0vh]">
-        <Card className="w-1/2  mt-8">
+      <div className="flex w-full justify-center items-center min-h-[90vh]">
+        <Card className="w-1/2 mobile:w-full mobile:mx-auto  mt-8">
           <CardContent className="pt-6">
             <Form {...form}>
               <form
@@ -225,7 +225,7 @@ export default function Home() {
                 </div>
               </form>
             </Form>
-            <div className="grid grid-cols-3 gap-2 mt-6">
+            <div className="grid grid-cols-3 mobile:grid-cols-1 gap-2 mt-6">
               <AddPost />
               {auctions?.map((auction, index) => {
                 return (

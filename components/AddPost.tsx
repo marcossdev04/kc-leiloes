@@ -94,7 +94,7 @@ export function AddPost() {
   }
   return (
     <Dialog open={open} onOpenChange={() => setOpen(!open)}>
-      <DialogTrigger className="bg-zinc-800 cursor-pointer hover:bg-zinc-900 transition-colors duration-300 p-2 rounded-lg border border-dashed border-white flex justify-center items-center">
+      <DialogTrigger className="bg-zinc-800 mobile:h-[180px] cursor-pointer hover:bg-zinc-900 transition-colors duration-300 p-2 rounded-lg border border-dashed border-white flex justify-center items-center">
         <Plus size={40} />
       </DialogTrigger>
       <DialogContent>
