@@ -7,9 +7,15 @@ interface Props {
   liveLink: string | undefined
   onChange: (showLive: boolean) => void
   initialShowLive: boolean | undefined
+  title: string | undefined
 }
 
-export function LiveMode({ liveLink, onChange, initialShowLive }: Props) {
+export function LiveMode({
+  liveLink,
+  onChange,
+  initialShowLive,
+  title,
+}: Props) {
   const [, setShowLive] = useState(initialShowLive)
   const handleClose = () => {
     setShowLive(false)
@@ -21,11 +27,7 @@ export function LiveMode({ liveLink, onChange, initialShowLive }: Props) {
       <div className="flex flex-col mb-8 items-center justify-center">
         <Image src={Logo} alt="logo" className="w-[400px] mobile:w-[300px]" />
         <div className="text-3xl mobile:text-xl mobile:text-center -mt-10 mobile:-mt-6">
-          Veja nossa live ou clique em{' '}
-          <span className="underline cursor-pointer" onClick={handleClose}>
-            sair
-          </span>{' '}
-          e seja direcionado para nossa página
+          {title}
         </div>
       </div>
       <div

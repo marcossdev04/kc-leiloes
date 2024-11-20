@@ -12,6 +12,7 @@ import { Auction } from '@/types/Auction'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 
 export function CarouselComponent() {
   const [currentCardIndexBV, setCurrentCardIndexBV] = React.useState(0)
@@ -111,8 +112,12 @@ export function CarouselComponent() {
         </div>
         <div className="w-[1600px] py-10 laptop:w-[1200px] mobile:w-full mobile:py-5 mx-auto">
           <div className="flex relative mobile:flex-col mobile:gap-10 justify-around gap-20 w-full">
-            <div className="absolute left-1/2 h-[150%] border mobile:hidden border-white"></div>
-            <div className="flex flex-col items-center">
+            <div className="absolute left-1/2 h-[150%] border mobile:hidden border-zinc-500"></div>
+            <Link
+              target="_blank"
+              href={cardsSoleum[currentCardIndexSoleum].link_lote}
+              className="flex flex-col items-center"
+            >
               <div data-aos="zoom-in-right" data-aos-delay="0">
                 <Image className="w-[300px]" src={Logo} alt="logo" />
                 <div className="text-2xl text-center mb-2">SOLEUM</div>
@@ -243,8 +248,12 @@ export function CarouselComponent() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
-            <div className="flex flex-col items-center">
+            </Link>
+            <Link
+              target="_blank"
+              href={cardsSoleum[currentCardIndexSoleum].link_lote}
+              className="flex flex-col items-center"
+            >
               <div data-aos="zoom-in-left" data-aos-delay="0">
                 <Image className="w-[300px]" src={Logo} alt="logo" />
                 <div className="text-2xl text-center mb-2">Bom valor</div>
@@ -373,7 +382,7 @@ export function CarouselComponent() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

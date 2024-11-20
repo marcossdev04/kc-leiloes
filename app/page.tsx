@@ -11,7 +11,7 @@ import { More } from '@/components/More'
 import { Tutorial } from '@/components/Tutorial'
 import { Video } from '@/components/Video'
 import { Config } from '@/types/Config'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useQuery } from 'react-query'
 
 export default function Home() {
@@ -21,8 +21,12 @@ export default function Home() {
   }
   const { data } = useQuery<Config>(['getConfig'], fetchData)
   const [showLive, setShowLive] = useState(data?.live_mode)
+  useEffect(() => {
+    setShowLive(data?.live_mode)
+  }, [data])
   return showLive ? (
     <LiveMode
+      title={data?.live_titulo}
       liveLink={data?.live_link}
       onChange={setShowLive}
       initialShowLive={data?.live_mode}
