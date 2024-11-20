@@ -26,6 +26,7 @@ export default function Home() {
   }, [data])
   return showLive ? (
     <LiveMode
+      dateTime={data?.live_data_hora}
       title={data?.live_titulo}
       liveLink={data?.live_link}
       onChange={setShowLive}

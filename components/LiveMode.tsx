@@ -8,6 +8,7 @@ interface Props {
   onChange: (showLive: boolean) => void
   initialShowLive: boolean | undefined
   title: string | undefined
+  dateTime: string | undefined
 }
 
 export function LiveMode({
@@ -15,19 +16,27 @@ export function LiveMode({
   onChange,
   initialShowLive,
   title,
+  dateTime,
 }: Props) {
   const [, setShowLive] = useState(initialShowLive)
   const handleClose = () => {
     setShowLive(false)
     onChange(false)
   }
-
+  const data = new Date(dateTime !== undefined ? dateTime : '')
+  const dataFormatada = data.toLocaleString('pt-BR', {
+    dateStyle: 'short',
+    timeStyle: 'short',
+  })
   return (
     <div className="flex flex-col justify-center items-center w-full h-[100vh]">
       <div className="flex flex-col mb-8 items-center justify-center">
-        <Image src={Logo} alt="logo" className="w-[400px] mobile:w-[250px]" />
+        <Image src={Logo} alt="logo" className="w-[300px] mobile:w-[250px]" />
         <div className="text-3xl mobile:text-xl mobile:text-center -mt-10 mobile:-mt-6">
           {title}
+        </div>
+        <div className="text-2xl text-[#dbc994] mobile:text-lg">
+          {dataFormatada}
         </div>
       </div>
       <div
