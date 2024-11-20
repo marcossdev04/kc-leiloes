@@ -131,22 +131,7 @@ export default function Home() {
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="w-full space-y-6"
               >
-                <FormField
-                  control={form.control}
-                  name="live"
-                  render={({ field }) => (
-                    <FormItem className="mt-3 flex items-center gap-3 space-y-0">
-                      <div className="flex h-9 items-center text-xl">
-                        Modo live
-                      </div>
-                      <Switch
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                <div className="text-2xl">Video</div>
                 <FormField
                   control={form.control}
                   name="url_video"
@@ -158,6 +143,23 @@ export default function Home() {
                         className="placeholder:text-zinc-600"
                         type="text"
                         {...field}
+                      />
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <div className="text-2xl">Live</div>
+                <FormField
+                  control={form.control}
+                  name="live"
+                  render={({ field }) => (
+                    <FormItem className="mt-3 flex items-center gap-3 space-y-0">
+                      <div className="flex h-9 items-center text-xl">
+                        Modo live
+                      </div>
+                      <Switch
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
                       />
                       <FormMessage />
                     </FormItem>
@@ -236,7 +238,7 @@ export default function Home() {
                     <div className="flex justify-center text-xl">
                       {auction.nome_leilao}
                     </div>
-                    <div>Lance inicial: R${auction.lance_inicial}</div>
+
                     <div>Plataforma: {auction.fonte_leilao}</div>
                     <Link
                       target="_blank"
@@ -248,6 +250,16 @@ export default function Home() {
                         <SquareArrowOutUpRight size={18} />
                       </div>
                     </Link>
+                    <div>
+                      Data: {auction.data_leilao} {auction.hora_primeiro_lote}H
+                    </div>
+                    <div>
+                      Valor:
+                      {new Intl.NumberFormat('pt-BR', {
+                        style: 'currency',
+                        currency: 'BRL',
+                      }).format(parseInt(auction.lance_inicial))}
+                    </div>
                     <div className="flex justify-end">
                       <DeletePost auction={auction} />
                     </div>

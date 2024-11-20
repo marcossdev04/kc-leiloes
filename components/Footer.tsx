@@ -86,11 +86,14 @@ export function Footer() {
             </div>
           </div>
           <div className="flex  gap-3 mobile:justify-between mobile:w-full mobile:px-16 items-center">
-            <div className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center">
-              <Image width={22} src={wpp} alt="whatsapp" />
-            </div>
             <Link
               href={'/'}
+              className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"
+            >
+              <Image width={22} src={wpp} alt="whatsapp" />
+            </Link>
+            <Link
+              href={'https://www.instagram.com/kcleiloes/'}
               className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"
             >
               <Image width={22} src={insta} alt="insta" />

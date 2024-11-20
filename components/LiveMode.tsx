@@ -25,7 +25,7 @@ export function LiveMode({
   return (
     <div className="flex flex-col justify-center items-center w-full h-[100vh]">
       <div className="flex flex-col mb-8 items-center justify-center">
-        <Image src={Logo} alt="logo" className="w-[400px] mobile:w-[300px]" />
+        <Image src={Logo} alt="logo" className="w-[400px] mobile:w-[250px]" />
         <div className="text-3xl mobile:text-xl mobile:text-center -mt-10 mobile:-mt-6">
           {title}
         </div>
@@ -35,7 +35,10 @@ export function LiveMode({
         onClick={handleClose}
       >
         <X size={60} className="mobile:hidden" />
-        <X size={40} className="desktop:hidden laptop:hidden tablet:hidden" />
+        <X
+          size={40}
+          className="desktop:hidden laptop:hidden tablet:hidden mt-6"
+        />
       </div>
       <div className="flex justify-center w-full">
         <div className="bg-white p-1 rounded-xl">
