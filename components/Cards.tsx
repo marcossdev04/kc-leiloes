@@ -33,7 +33,7 @@ export function CarouselComponent() {
       setCurrentCardIndexBV(
         (prevIndex) => (prevIndex + 1) % cardsBomValor.length,
       )
-    }, 4000)
+    }, 2000)
 
     return () => clearInterval(interval)
   }, [cardsBomValor.length])
@@ -90,7 +90,7 @@ export function CarouselComponent() {
       setCurrentCardIndexSoleum(
         (prevIndex) => (prevIndex + 1) % cardsSoleum.length,
       )
-    }, 4000)
+    }, 2000)
 
     return () => clearInterval(interval)
   }, [cardsSoleum.length])
@@ -120,7 +120,7 @@ export function CarouselComponent() {
             >
               <div data-aos="zoom-in-right" data-aos-delay="0">
                 <Image className="w-[300px]" src={Logo} alt="logo" />
-                <div className="text-2xl text-center mb-2">SOLEUM</div>
+                <div className="text-2xl text-center mb-2">SOLEON</div>
               </div>
               <Card
                 data-aos="zoom-in-right"

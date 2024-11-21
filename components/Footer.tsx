@@ -3,12 +3,13 @@ import wpp from '@/assets/whatsapp-svgrepo-com (1).svg'
 import insta from '@/assets/instagram-svgrepo-com.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import phone from '@/assets/phone-call.png'
 import React from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import imageFooter from '@/assets/footerImage.png'
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from './ui/dialog'
+import x from '@/assets/Design sem nome.png'
+import facebook from '@/assets/Design sem nome (2).png'
 
 export function Footer() {
   React.useEffect(() => {
@@ -18,6 +19,45 @@ export function Footer() {
     <footer className="flex py-2 mobile:py-2 mobile:mt-10 bg-[#dbc994]  mx-auto w-full">
       <div className="w-[1600px] mobile:w-full text-zinc-900 flex items-center justify-center mx-auto">
         <div className="flex mobile:grid mobile:grid-cols-1 mobile:gap-0 justify-between w-full px-24 desktop:px-0 mobile:px-0 items-center gap-2 ">
+          <div className="flex  gap-3 mobile:justify-between mobile:w-full mobile:px-16 items-center">
+            <Link
+              href={'https://wa.me/75998141403'}
+              className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"
+            >
+              <Image width={22} src={wpp} alt="whatsapp" />
+            </Link>
+            <Link
+              href={'https://www.instagram.com/kcleiloes/'}
+              className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"
+            >
+              <Image width={22} src={insta} alt="insta" />
+            </Link>
+            <Link
+              href={'https://x.com/KcLeiloes'}
+              className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"
+            >
+              <Image width={22} src={x} alt="insta" />
+            </Link>
+            <Link
+              href={'https://www.facebook.com/kcleiloes/?locale=pt_BR'}
+              className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"
+            >
+              <Image width={22} src={facebook} alt="facebook" />
+            </Link>
+          </div>
+
+          <div className="flex flex-col mobile:gap-1 items-center">
+            <div className="text-xl flex items-center mobile:text-xl">
+              <Image
+                src={imageFooter}
+                className="w-[160px]"
+                alt="footerImage"
+              />{' '}
+            </div>
+            <div className="ml-2 text-lg mobile:text-sm mobile:pb-1 flex items-center">
+              Todos os direitos reservados
+            </div>
+          </div>
           <Dialog>
             <DialogTrigger className="flex text-2xl hover:bg-zinc-900 hover:bg-opacity-10 rounded-lg transition-colors duration-300 px-3 py-2 mobile:text-sm mobile:pb-1 justify-center items-center">
               Termos de uso
@@ -73,38 +113,6 @@ export function Footer() {
               </div>
             </DialogContent>
           </Dialog>
-          <div className="flex flex-col mobile:gap-1 items-center">
-            <div className="text-xl flex items-center mobile:text-xl">
-              <Image
-                src={imageFooter}
-                className="w-[160px]"
-                alt="footerImage"
-              />{' '}
-            </div>
-            <div className="ml-2 text-lg mobile:text-sm mobile:pb-1 flex items-center">
-              Todos os direitos reservados
-            </div>
-          </div>
-          <div className="flex  gap-3 mobile:justify-between mobile:w-full mobile:px-16 items-center">
-            <Link
-              href={'/'}
-              className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"
-            >
-              <Image width={22} src={wpp} alt="whatsapp" />
-            </Link>
-            <Link
-              href={'https://www.instagram.com/kcleiloes/'}
-              className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"
-            >
-              <Image width={22} src={insta} alt="insta" />
-            </Link>
-            <Link
-              href={'/'}
-              className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"
-            >
-              <Image width={22} src={phone} alt="insta" />
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
