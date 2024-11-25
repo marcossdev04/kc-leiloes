@@ -60,23 +60,25 @@ export function Hero() {
 
           <div className="flex flex-col gap-2 justify-center items-center">
             <div className="text-6xl  laptop:text-4xl font-medium mobile:text-2xl text-center text-white ">
-              Adentre no universo das oportunidades em leilões!
+              Transforme oportunidades em conquistas com os leilões da KC
+              Leilões!
             </div>
           </div>
         </div>
 
         <div className="flex flex-col mobile:pl-0 gap-5 mobile:gap-2 pl-12 mobile:text-lg mobile:px-4 text-3xl laptop:text-xl">
           <div className="flex items-center gap-2">
-            <Check size={40} className="text-[#dbc994]" />
-            5.000 Clientes Satisfeitos – Compra segura
+            <Check size={50} className="text-[#dbc994]" />
+            Mais de 5.000 clientes satisfeitos: confiança e credibilidade em
+            cada arremate.
           </div>
           <div className="flex items-center gap-2">
-            <Check size={40} className="text-[#dbc994]" /> Imóveis e Veículos em
-            Leilões Exclusivos
+            <Check size={50} className="text-[#dbc994]" /> Diversidade de itens:
+            imóveis, veículos, móveis, eletrônicos e muito mais!
           </div>
           <div className="flex items-center gap-2">
-            <Check size={40} className="text-[#dbc994]" /> Preços de Ocasião e
-            Vantagens Reais
+            <Check size={50} className="text-[#dbc994]" /> Participe de forma
+            prática e segura, com lances acessíveis e suporte dedicado.
           </div>
         </div>
         <div className="flex flex-col gap-2">
@@ -88,7 +90,7 @@ export function Hero() {
                 ?.scrollIntoView({ behavior: 'smooth' })
             }}
           >
-            <div>Conheça nossos leilões</div>
+            <div className="mobile:text-sm">Explore nossos leilões agora!</div>
             <div>
               <ArrowDown
                 className="mobile:hidden"

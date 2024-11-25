@@ -71,44 +71,75 @@ export function Footer() {
                   <div className="text-lg text-[#dbc994]">
                     1. Aceitação dos Termos
                   </div>
-                  Ao acessar e utilizar o site KC Leilões, você concorda em
-                  cumprir e estar sujeito aos presentes Termos de Uso.
+                  Ao acessar e utilizar o site KC Leilões, você concorda
+                  integralmente em cumprir e estar sujeito aos presentes Termos
+                  de Uso. Caso não concorde, pedimos que cesse o uso da
+                  plataforma imediatamente.
                 </div>
                 <div>
                   <div className="text-lg text-[#dbc994]">
                     2. Descrição dos Serviços
                   </div>
-                  KC Leilões oferece uma plataforma digital que facilita o
-                  acesso a leilões de diversos itens, incluindo imóveis e
-                  veículos, permitindo aos usuários participar de forma prática
-                  e segura.
+                  O KC Leilões oferece uma plataforma digital que facilita o
+                  acesso a leilões de diversos itens, incluindo imóveis,
+                  veículos e outros bens. A plataforma permite que os usuários
+                  participem de forma prática, segura e transparente, conforme
+                  as condições aqui estabelecidas.
                 </div>
                 <div>
                   <div className="text-lg text-[#dbc994]">
                     3. Cadastro e Segurança da Conta
                   </div>
-                  Para participar de nossos leilões, você precisará criar uma
-                  conta fornecendo informações verdadeiras e completas. Você é
-                  responsável por manter a confidencialidade dos dados da sua
-                  conta e por todas as atividades realizadas nela. Notifique-nos
-                  imediatamente caso suspeite de qualquer uso não autorizado da
-                  sua conta.
+                  <div>
+                    <div>
+                      Para participar dos leilões, é necessário criar uma conta,
+                      fornecendo informações precisas, completas e atualizadas.
+                    </div>
+                    <div>
+                      Você é o único responsável por manter a confidencialidade.
+                    </div>
+                    <div>
+                      Todas as atividades realizadas na sua conta são de sua
+                      responsabilidade.
+                    </div>
+                    <div>
+                      Em caso de uso não autorizado ou suspeita de violação de
+                      segurança, entre em contato conosco imediatamente por meio
+                      dos canais indicados abaixo.
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <div className="text-lg text-[#dbc994]">
                     4. Direitos e Responsabilidades do Usuário
                   </div>
-                  Você concorda em utilizar nosso site de forma ética, sem
-                  violar direitos de terceiros e sem realizar atividades
-                  fraudulentas ou ilícitas. É proibido usar scripts, automação,
-                  ou outros métodos que manipulem os leilões ou sobrecarreguem o
-                  site.
+
+                  <div>
+                    <div>
+                      Você concorda em utilizar nosso site de forma ética, sem
+                      violar direitos de terceiros e sem realizar atividades
+                      fraudulentas ou ilícitas. É proibido usar scripts,
+                      automação, ou outros métodos que manipulem os leilões ou
+                      sobrecarreguem o site.
+                    </div>
+                    <div>
+                      <div>É expressamente proibido:</div>
+                      <div>
+                        Utilizar scripts, bots ou métodos automatizados para
+                        manipular os leilões.
+                      </div>
+                      <div>
+                        Executar atividades que sobrecarreguem o sistema ou
+                        prejudiquem sua funcionalidade.
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <div className="text-lg text-[#dbc994]"> 5. Contato</div>
-                  Para dúvidas ou esclarecimentos sobre estes Termos de Uso,
-                  entre em contato conosco pelo e-mail [seu_email@exemplo.com]
-                  ou pelo telefone [seu_telefone].
+                  Para dúvidas, suporte ou esclarecimentos sobre estes Termos de
+                  Uso, entre em contato pelos seguintes canais: E-mail:
+                  contato@kcleiloes.com.br WhatsApp: +55 75 99814-1403
                 </div>
               </div>
             </DialogContent>

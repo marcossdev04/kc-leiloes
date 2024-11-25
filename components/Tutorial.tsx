@@ -24,16 +24,17 @@ export function Tutorial() {
           data-aos-delay="0"
           className="mobile:text-center text-4xl laptop:text-3xl mobile:text-xl text-[#dbc994]"
         >
-          Nossa mídias
+          Siga a KC Leilões e aproveite as melhores oportunidades!
         </div>
         <div
           data-aos="zoom-out-right"
           data-aos-delay="0"
           className="mobile:px-5 text-3xl mobile:text-base laptop:text-2xl"
         >
-          Siga-nos em nossas redes sociais e plataformas de vídeos para não
-          ficar de fora de nenhum dos nossos riquíssimos conteúdos que te
-          auxiliará a ser uma abordagem assertiva no ramo de leilões.
+          Conecte-se com a KC Leilões nas nossas redes sociais e plataformas de
+          vídeos. Descubra conteúdos exclusivos, dicas práticas e alertas
+          imperdíveis. Participe da nossa comunidade e transforme oportunidades
+          em grandes conquistas!
         </div>
         <div>
           <div className="flex mobile:flex-col justify-center gap-2 mobile:justify-center mobile:w-full mobile:px-5 items-center">

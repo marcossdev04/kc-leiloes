@@ -256,7 +256,7 @@ export function CarouselComponent() {
             >
               <div data-aos="zoom-in-left" data-aos-delay="0">
                 <Image className="w-[300px]" src={Logo} alt="logo" />
-                <div className="text-2xl text-center mb-2">Bom valor</div>
+                <div className="text-2xl text-center mb-2">BOM VALOR</div>
               </div>
               <Card
                 data-aos="zoom-in-left"

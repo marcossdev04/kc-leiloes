@@ -45,16 +45,11 @@ export function FormComponent() {
         </div>
         <div className="flex flex-col gap-2 text-xl mobile:text-base laptop:text-lg">
           <div>
-            Receba em primeira mão nossas atualizações, promoções exclusivas e
-            conteúdos especiais.
-          </div>
-          <div>
-            Nossa newsletter traz dicas, insights e materiais exclusivos que
-            você não encontra nas redes sociais!
-          </div>
-          <div>
-            Não perca a chance de estar sempre à frente com as melhores
-            informações.
+            Faça parte da nossa comunidade exclusiva e receba as melhores
+            oportunidades de leilões diretamente no seu e-mail! Cadastre-se
+            agora para acessar dicas valiosas, novidades imperdíveis e ofertas
+            incríveis. Tudo isso de forma simples, segura e gratuita. Não perca
+            nenhuma chance de arrematar grandes conquistas!
           </div>
         </div>
         <form
