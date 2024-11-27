@@ -8,6 +8,7 @@ import 'aos/dist/aos.css'
 import React from 'react'
 import tutorialImage from '@/assets/Sem nome (1080 x 1920 px) (1).png'
 import x from '@/assets/Design sem nome.png'
+import { FaFacebook } from 'react-icons/fa'
 
 export function Tutorial() {
   React.useEffect(() => {
@@ -64,6 +65,15 @@ export function Tutorial() {
             >
               <Image width={35} src={youtube} alt="youtube" />
               <div className="text-xl mobile:text-lg">Youtube</div>
+            </Link>
+            <Link
+              href={'https://www.youtube.com/@kcleiloes4509'}
+              data-aos="zoom-out-right"
+              data-aos-delay="1000"
+              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium w-full justify-center hover:bg-opacity-80 transition-colors duration-300 p-2 mobile:p-1 rounded-xl items-center"
+            >
+              <FaFacebook />
+              <div className="text-xl mobile:text-lg">Facebook</div>
             </Link>
           </div>
         </div>
