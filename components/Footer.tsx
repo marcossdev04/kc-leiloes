@@ -66,9 +66,9 @@ export function Footer() {
               <DialogTitle className="flex text-[#dbc994] justify-center text-2xl">
                 Termos de Uso
               </DialogTitle>
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-5 laptop:gap-3 overflow-auto max-h-[90vh]">
                 <div>
-                  <div className="text-lg text-[#dbc994]">
+                  <div className="text-lg laptop:text-sm text-[#dbc994]">
                     1. Aceitação dos Termos
                   </div>
                   Ao acessar e utilizar o site KC Leilões, você concorda
@@ -77,7 +77,7 @@ export function Footer() {
                   plataforma imediatamente.
                 </div>
                 <div>
-                  <div className="text-lg text-[#dbc994]">
+                  <div className="text-lg laptop:text-sm text-[#dbc994]">
                     2. Descrição dos Serviços
                   </div>
                   O KC Leilões oferece uma plataforma digital que facilita o
@@ -87,7 +87,7 @@ export function Footer() {
                   as condições aqui estabelecidas.
                 </div>
                 <div>
-                  <div className="text-lg text-[#dbc994]">
+                  <div className="text-lg laptop:text-sm text-[#dbc994]">
                     3. Cadastro e Segurança da Conta
                   </div>
                   <div>
@@ -110,7 +110,7 @@ export function Footer() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-lg text-[#dbc994]">
+                  <div className="text-lg laptop:text-sm text-[#dbc994]">
                     4. Direitos e Responsabilidades do Usuário
                   </div>
 
@@ -136,7 +136,10 @@ export function Footer() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-lg text-[#dbc994]"> 5. Contato</div>
+                  <div className="text-lg laptop:text-sm text-[#dbc994]">
+                    {' '}
+                    5. Contato
+                  </div>
                   Para dúvidas, suporte ou esclarecimentos sobre estes Termos de
                   Uso, entre em contato pelos seguintes canais: E-mail:
                   contato@kcleiloes.com.br WhatsApp: +55 75 99814-1403

@@ -26,8 +26,8 @@ export function FormComponent() {
   }, [])
   return (
     <div className="w-[1600px] gap-5 h-full laptop:w-[1200px] mobile:w-full items-center py-32 mobile:py-10 mx-auto flex">
-      <div className="absolute inset-y-0 mobile:h-[400px] mobile:top-[150px] mobile:w-[350px] mobile:-left-[175px] laptop:h-[700px] laptop:top-40  -left-[400px] bg-[#dbc994] top-32 rounded-full blur-2xl h-[950px] laptop:w-[700px]  w-[800px] "></div>
-      <div className="absolute inset-y-0 z-30 bg-[#0F0F0F] mobile:top-[380px] mobile:w-[220px] mobile:-left-[50px] laptop:top-[850px] top-[1000px]  mobile:rounded-3xl rounded-full blur-md h-[450px] laptop:w-[620px] laptop:h-[400px] laptop:left-[0px] left-[0px] w-[1000px]"></div>
+      <div className="absolute inset-y-0 mobile:h-[400px] mobile:top-[150px] mobile:w-[350px] mobile:-left-[220px] laptop:h-[700px] laptop:top-40  -left-[400px] bg-[#dbc994] top-32 rounded-full blur-2xl h-[950px] laptop:w-[700px]  w-[800px] "></div>
+      <div className="absolute inset-y-0 z-30 bg-[#0F0F0F] mobile:top-[430px] mobile:w-[220px] mobile:-left-[50px] laptop:top-[850px] top-[1000px]  mobile:rounded-none rounded-full blur-md mobile:blur-none h-[450px] laptop:w-[620px] laptop:h-[400px] laptop:left-[0px] left-[0px] w-[1000px]"></div>
       <div className="w-1/2 mobile:w-2/3 relative flex justify-start">
         <Image
           className="w-[560px] mobile:w-[300px] laptop:w-[450px]"
