@@ -1,6 +1,5 @@
 'use client'
-import wpp from '@/assets/whatsapp-svgrepo-com (1).svg'
-import insta from '@/assets/instagram-svgrepo-com.svg'
+import insta from '@/assets/insta-color.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -10,6 +9,7 @@ import imageFooter from '@/assets/footerImage.png'
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from './ui/dialog'
 import x from '@/assets/Design sem nome.png'
 import facebook from '@/assets/Design sem nome (2).png'
+import { FaWhatsapp } from 'react-icons/fa'
 
 export function Footer() {
   React.useEffect(() => {
@@ -24,13 +24,13 @@ export function Footer() {
               href={'https://wa.me/75998141403'}
               className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"
             >
-              <Image width={22} src={wpp} alt="whatsapp" />
+              <FaWhatsapp size={22} className="text-green-500" />
             </Link>
             <Link
               href={'https://www.instagram.com/kcleiloes/'}
-              className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"
+              className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-2 rounded-xl items-center"
             >
-              <Image width={22} src={insta} alt="insta" />
+              <Image width={30} src={insta} alt="insta" />
             </Link>
             <Link
               href={'https://x.com/KcLeiloes'}

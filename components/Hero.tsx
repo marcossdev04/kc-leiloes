@@ -35,13 +35,13 @@ export function Hero() {
       }}
     >
       <div className="bg-black bg-opacity-70 h-[100vh] absolute w-[750px] laptop:w-[600px] mobile:w-[215px] mobile:h-full z-10"></div>
-      <div className="flex flex-col gap-10 mobile:gap-5 w-[40%] mobile:w-[215px] relative z-10 ">
+      <div className="flex flex-col gap-5 mobile:gap-5 w-[40%] mobile:w-[215px] relative z-10 ">
         <div className="flex w-full flex-col">
           <div className="flex justify-center items-center">
             <Image
               src={Logo}
               className="laptop:hidden mobile:hidden"
-              width={500}
+              width={400}
               alt="logo"
             />
             <Image
@@ -59,14 +59,14 @@ export function Hero() {
           </div>
 
           <div className="flex flex-col gap-2 justify-center items-center">
-            <div className="text-6xl  laptop:text-4xl font-medium mobile:text-xl text-center text-white ">
+            <div className="text-4xl  laptop:text-4xl font-medium mobile:text-xl text-center text-white ">
               Transforme oportunidades em conquistas com os leilões da KC
               Leilões!
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col mobile:pl-0 gap-5 mobile:gap-1 pl-12 mobile:text-base mobile:px-4 text-3xl laptop:text-xl">
+        <div className="flex flex-col mobile:pl-0 gap-3 mobile:gap-1 pl-12 mobile:text-base mobile:px-4 text-2xl laptop:text-xl">
           <div className="flex items-center gap-2">
             <Check size={50} className="text-[#dbc994]" />
             Mais de 5.000 clientes satisfeitos: confiança e credibilidade em
@@ -83,7 +83,7 @@ export function Hero() {
         </div>
         <div className="flex flex-col gap-2">
           <div
-            className="bg-[#dbc994]  mx-12 mobile:mx-1 hover:bg-opacity-80 transition-all hover:scale-110 cursor-pointer duration-300 flex items-center gap-2 justify-center py-3 mobile:py-2 text-4xl laptop:text-2xl mobile:text-base text-black rounded-xl font-medium"
+            className="bg-[#dbc994]  mx-12 mobile:mx-1 hover:bg-opacity-80 transition-all hover:scale-110 cursor-pointer duration-300 flex items-center gap-2 justify-center py-3 mobile:py-2 text-3xl laptop:text-2xl mobile:text-base text-black rounded-xl font-medium"
             onClick={() => {
               document
                 .getElementById('plataforms')

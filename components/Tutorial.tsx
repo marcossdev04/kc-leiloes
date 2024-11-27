@@ -43,7 +43,7 @@ export function Tutorial() {
               data-aos="zoom-out-right"
               data-aos-delay="0"
               href={'https://www.instagram.com/kcleiloes/'}
-              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium w-full justify-center     hover:bg-opacity-80 transition-colors duration-300 p-3 mobile:p-2 rounded-xl items-center"
+              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium w-full justify-center mobile:justify-start mobile:px-8 hover:bg-opacity-80 transition-colors duration-300 p-3 mobile:p-2 rounded-xl items-center"
             >
               <Image width={28} src={insta} alt="insta" />
               <div className="text-xl  mobile:text-lg">Instagram</div>
@@ -52,7 +52,7 @@ export function Tutorial() {
               href={'https://x.com/KcLeiloes'}
               data-aos="zoom-out-right"
               data-aos-delay="800"
-              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium w-full justify-center hover:bg-opacity-80 transition-colors duration-300 p-2 mobile:p-1 rounded-xl items-center"
+              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium w-full justify-center mobile:justify-start mobile:px-8 hover:bg-opacity-80 transition-colors duration-300 p-2 mobile:p-1 rounded-xl items-center"
             >
               <Image width={35} src={x} alt="youtube" />
               <div className="text-xl mobile:text-lg">X</div>
@@ -61,18 +61,18 @@ export function Tutorial() {
               href={'https://www.youtube.com/@kcleiloes4509'}
               data-aos="zoom-out-right"
               data-aos-delay="1000"
-              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium w-full justify-center hover:bg-opacity-80 transition-colors duration-300 p-2 mobile:p-1 rounded-xl items-center"
+              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium w-full justify-center mobile:justify-start mobile:px-8 hover:bg-opacity-80 transition-colors duration-300 p-2 mobile:p-1 rounded-xl items-center"
             >
               <Image width={35} src={youtube} alt="youtube" />
               <div className="text-xl mobile:text-lg">Youtube</div>
             </Link>
             <Link
-              href={'https://www.youtube.com/@kcleiloes4509'}
+              href={'https://www.facebook.com/kcleiloes/?locale=pt_BR'}
               data-aos="zoom-out-right"
               data-aos-delay="1000"
-              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium w-full justify-center hover:bg-opacity-80 transition-colors duration-300 p-2 mobile:p-1 rounded-xl items-center"
+              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium w-full justify-center mobile:justify-start mobile:px-8 hover:bg-opacity-80 transition-colors duration-300 p-2 mobile:p-1 rounded-xl items-center"
             >
-              <FaFacebook />
+              <FaFacebook size={25} />
               <div className="text-xl mobile:text-lg">Facebook</div>
             </Link>
           </div>
