@@ -35,7 +35,7 @@ export function Hero() {
       }}
     >
       <div className="bg-black bg-opacity-70 h-[100vh] absolute w-[750px] laptop:w-[600px] mobile:w-[215px] mobile:h-full z-10"></div>
-      <div className="flex flex-col gap-10 mobile:gap-10 w-[40%] mobile:w-[215px] relative z-10 ">
+      <div className="flex flex-col gap-10 mobile:gap-5 w-[40%] mobile:w-[215px] relative z-10 ">
         <div className="flex w-full flex-col">
           <div className="flex justify-center items-center">
             <Image
@@ -59,14 +59,14 @@ export function Hero() {
           </div>
 
           <div className="flex flex-col gap-2 justify-center items-center">
-            <div className="text-6xl  laptop:text-4xl font-medium mobile:text-2xl text-center text-white ">
+            <div className="text-6xl  laptop:text-4xl font-medium mobile:text-xl text-center text-white ">
               Transforme oportunidades em conquistas com os leilões da KC
               Leilões!
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col mobile:pl-0 gap-5 mobile:gap-2 pl-12 mobile:text-lg mobile:px-4 text-3xl laptop:text-xl">
+        <div className="flex flex-col mobile:pl-0 gap-5 mobile:gap-1 pl-12 mobile:text-base mobile:px-4 text-3xl laptop:text-xl">
           <div className="flex items-center gap-2">
             <Check size={50} className="text-[#dbc994]" />
             Mais de 5.000 clientes satisfeitos: confiança e credibilidade em

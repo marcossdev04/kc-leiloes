@@ -15,7 +15,7 @@ const config: Config = {
         '3xl': '2000px',
         mobile: { max: '767px' },
         tablet: { min: '768px', max: '1023px' },
-        laptop: { min: '1024px', max: '1439px' },
+        laptop: { min: '1024px', max: '1639px' },
         desktop: { min: '1440px' },
       },
       colors: {

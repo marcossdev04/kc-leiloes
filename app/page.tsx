@@ -33,7 +33,7 @@ export default function Home() {
       initialShowLive={data?.live_mode}
     />
   ) : (
-    <div className="flex w-full flex-col">
+    <div className="flex w-full flex-col overflow-x-hidden">
       <div className="bg-gradient-to-b from-[#000000] to-[#000000]">
         <Hero />
       </div>
