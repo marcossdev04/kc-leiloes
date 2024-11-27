@@ -70,7 +70,7 @@ export function Tutorial() {
               href={'https://www.facebook.com/kcleiloes/?locale=pt_BR'}
               data-aos="zoom-out-right"
               data-aos-delay="1000"
-              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium w-full justify-center mobile:justify-start mobile:px-8 hover:bg-opacity-80 transition-colors duration-300 p-2 mobile:p-1 rounded-xl items-center"
+              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium w-full justify-center mobile:justify-start mobile:px-8 hover:bg-opacity-80 transition-colors duration-300 p-3 mobile:p-2 rounded-xl items-center"
             >
               <FaFacebook size={25} />
               <div className="text-xl mobile:text-lg">Facebook</div>
