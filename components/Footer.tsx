@@ -16,10 +16,10 @@ export function Footer() {
     AOS.init({ duration: 1200, once: false })
   }, [])
   return (
-    <footer className="flex py-2 mobile:py-2 mobile:mt-10 bg-[#dbc994]  mx-auto w-full">
+    <footer className="flex py-2 mobile:py-2 mobile:mt-2  bg-[#dbc994]  mx-auto w-full">
       <div className="w-[1600px] mobile:w-full text-zinc-900 flex items-center justify-center mx-auto">
         <div className="flex mobile:grid mobile:grid-cols-1 mobile:gap-0 justify-between w-full px-24 desktop:px-0 mobile:px-0 items-center gap-2 ">
-          <div className="flex  gap-3 mobile:justify-between mobile:w-full mobile:px-16 items-center">
+          <div className="flex mobile:hidden gap-3 mobile:justify-between mobile:w-full mobile:px-16 items-center">
             <Link
               href={'https://wa.me/75998141403'}
               className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"

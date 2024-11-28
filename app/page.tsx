@@ -8,6 +8,7 @@ import { FormComponent } from '@/components/FormComponent'
 import { Hero } from '@/components/Hero'
 import { LiveMode } from '@/components/LiveMode'
 import { More } from '@/components/More'
+import { Social } from '@/components/social'
 import { Tutorial } from '@/components/Tutorial'
 import { Video } from '@/components/Video'
 import { Config } from '@/types/Config'
@@ -67,6 +68,9 @@ export default function Home() {
         className="bg-gradient-to-b from-[#0f0f0f] to-[#000000] overflow-y-hidden"
       >
         <Faq />
+      </div>
+      <div>
+        <Social />
       </div>
       <Footer />
     </div>
