@@ -16,10 +16,10 @@ export function Footer() {
     AOS.init({ duration: 1200, once: false })
   }, [])
   return (
-    <footer className="flex py-2 mobile:py-2 mobile:mt-2  bg-[#dbc994]  mx-auto w-full">
-      <div className="w-[1600px] mobile:w-full text-zinc-900 flex items-center justify-center mx-auto">
-        <div className="flex mobile:grid mobile:grid-cols-1 mobile:gap-0 justify-between w-full px-24 desktop:px-0 mobile:px-0 items-center gap-2 ">
-          <div className="flex mobile:hidden gap-3 mobile:justify-between mobile:w-full mobile:px-16 items-center">
+    <footer className="flex py-2 mobile:py-2 mini:py-1 mobile:mt-2  bg-[#dbc994]  mx-auto w-full">
+      <div className="w-[1600px] mobile:w-full mini:w-full text-zinc-900 flex items-center justify-center mx-auto">
+        <div className="flex mobile:grid mobile:grid-cols-1 mini:grid-cols-1 mini:grid mobile:gap-0 justify-between w-full px-24 desktop:px-0 mobile:px-0 mini:px-0 items-center gap-2 ">
+          <div className="flex mobile:hidden mini:hidden gap-3 mobile:justify-between mobile:w-full mobile:px-16 items-center">
             <Link
               href={'https://wa.me/75998141403'}
               className="flex gap-2 bg-white hover:bg-opacity-90 transition-colors duration-300 bg-opacity-70 p-3 rounded-xl items-center"
@@ -47,26 +47,26 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col mobile:gap-1 items-center">
-            <div className="text-xl flex items-center mobile:text-xl">
+            <div className="text-xl flex items-center mobile:text-xl mini:text-base">
               <Image
                 src={imageFooter}
-                className="w-[160px]"
+                className="w-[160px] mini:w-[130px]"
                 alt="footerImage"
               />{' '}
             </div>
-            <div className="ml-2 text-lg mobile:text-sm mobile:pb-1 flex items-center">
+            <div className="ml-2 text-lg mobile:text-sm mini:text-xs mini:pb-1 mobile:pb-1 flex items-center">
               Todos os direitos reservados
             </div>
           </div>
           <Dialog>
-            <DialogTrigger className="flex text-2xl hover:bg-zinc-900 hover:bg-opacity-10 rounded-lg transition-colors duration-300 px-3 py-2 mobile:text-sm mobile:pb-1 justify-center items-center">
+            <DialogTrigger className="flex text-2xl hover:bg-zinc-900 hover:bg-opacity-10 rounded-lg transition-colors duration-300 px-3 py-2 mobile:text-sm mini:text-xs mini:pb-1 mobile:pb-1 justify-center items-center">
               Termos de uso
             </DialogTrigger>
             <DialogContent>
-              <DialogTitle className="flex text-[#dbc994] justify-center text-2xl">
+              <DialogTitle className="flex text-[#dbc994] mini:text-lg justify-center text-2xl">
                 Termos de Uso
               </DialogTitle>
-              <div className="flex flex-col gap-5 laptop:gap-3 overflow-auto max-h-[90vh]">
+              <div className="flex flex-col gap-5 laptop:gap-3 overflow-auto max-h-[90vh] mini:max-h-[82vh]">
                 <div>
                   <div className="text-lg laptop:text-sm text-[#dbc994]">
                     1. Aceitação dos Termos

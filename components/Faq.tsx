@@ -14,18 +14,22 @@ export function Faq() {
     AOS.init({ duration: 1200, once: false })
   }, [])
   return (
-    <div className="max-w-[1600px] h-full mobile:h-full laptop:w-[1200px] mobile:w-full mx-auto mobile:mt-0 flex">
+    <div className="max-w-[1600px] h-full mobile:h-full mini:h-full mini:w-full mini:mt-0 laptop:w-[1200px] mobile:w-full mx-auto mobile:mt-0 flex">
       <div className="w-full h-full flex  flex-col gap-10 justify-center">
-        <div className="text-4xl laptop:text-3xl text-[#dbc994] mobile:text-center">
+        <div className="text-4xl laptop:text-3xl mini:text-lg text-[#dbc994] mobile:text-center mini:text-center">
           Perguntas Frequentes
         </div>
-        <Accordion type="single" collapsible className="w-full mobile:px-6">
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full mobile:px-6 mini:px-4"
+        >
           <AccordionItem data-aos="zoom-out" data-aos-delay="0" value="1">
-            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base">
+            <AccordionTrigger className="text-2xl laptop:text-xl mini:text-sm mobile:text-base">
               Como posso ter certeza de que não estou pagando mais do que o
               valor de mercado?
             </AccordionTrigger>
-            <AccordionContent className="text-lg laptop:text-base mobile:text-sm">
+            <AccordionContent className="text-lg laptop:text-base mobile:text-sm mini:text-sm">
               Embora não possamos oferecer uma análise exata do valor de mercado
               para cada lote, disponibilizamos informações detalhadas sobre o
               bem, incluindo descrições, fotos e documentos relevantes.
@@ -37,10 +41,10 @@ export function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem data-aos="zoom-out" data-aos-delay="0" value="2">
-            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base">
+            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base mini:text-sm">
               O que acontece se o imóvel arrematado tiver ocupantes?
             </AccordionTrigger>
-            <AccordionContent className="text-lg laptop:text-base mobile:text-sm">
+            <AccordionContent className="text-lg laptop:text-base mobile:text-sm mini:text-sm">
               É possível que um imóvel arrematado ainda tenha ocupantes. Nestes
               casos, o processo de desocupação fica por conta do arrematante e
               pode exigir ações legais. Recomendamos que você esteja ciente dos
@@ -52,10 +56,10 @@ export function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem data-aos="zoom-out" data-aos-delay="100" value="3">
-            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base">
+            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base mini:text-sm">
               É possível financiar um bem arrematado em leilão?
             </AccordionTrigger>
-            <AccordionContent className="text-lg laptop:text-base mobile:text-sm">
+            <AccordionContent className="text-lg laptop:text-base mobile:text-sm mini:text-sm">
               A maioria dos leilões requer pagamento à vista, e o prazo para a
               quitação é geralmente curto. No entanto, existem bancos e
               instituições financeiras que oferecem linhas de crédito
@@ -69,10 +73,10 @@ export function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem data-aos="zoom-out" data-aos-delay="150" value="4">
-            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base">
+            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base mini:text-sm">
               Preciso ser um especialista para participar de leilões?
             </AccordionTrigger>
-            <AccordionContent className="text-lg laptop:text-base mobile:text-sm">
+            <AccordionContent className="text-lg laptop:text-base mobile:text-sm mini:text-sm">
               Não, você não precisa ser um especialista para participar de um
               leilão. Nosso objetivo é tornar o processo acessível para todos,
               independentemente do nível de experiência. Disponibilizamos guias
@@ -85,10 +89,10 @@ export function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem data-aos="zoom-out" data-aos-delay="200" value="5">
-            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base">
+            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base mini:text-sm">
               Quanto tempo leva para eu realmente ter a posse do bem arrematado?
             </AccordionTrigger>
-            <AccordionContent className="text-lg laptop:text-base mobile:text-sm">
+            <AccordionContent className="text-lg laptop:text-base mobile:text-sm mini:text-sm">
               O tempo para obter a posse do bem pode variar de acordo com o tipo
               de bem arrematado. Para veículos, o processo geralmente é mais
               rápido, podendo ser concluído em algumas semanas. Já para imóveis,
@@ -102,11 +106,11 @@ export function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem data-aos="zoom-out" data-aos-delay="250" value="6">
-            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base">
+            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base mini:text-sm">
               E se eu não tiver experiência em análise de valor e mercado, como
               faço para garantir que estou fazendo um bom negócio?
             </AccordionTrigger>
-            <AccordionContent className="text-lg laptop:text-base mobile:text-sm">
+            <AccordionContent className="text-lg laptop:text-base mobile:text-sm mini:text-sm">
               Não ter experiência em análise de valor e mercado não precisa ser
               uma barreira. Disponibilizamos informações detalhadas sobre cada
               lote, incluindo descrições completas e fotos, para ajudá-lo a
@@ -119,10 +123,10 @@ export function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem data-aos="zoom-out" data-aos-delay="300" value="7">
-            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base">
+            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base mini:text-sm">
               Como posso ter certeza de que o bem está em bom estado?
             </AccordionTrigger>
-            <AccordionContent className="text-lg laptop:text-base mobile:text-sm">
+            <AccordionContent className="text-lg laptop:text-base mobile:text-sm mini:text-sm">
               Disponibilizamos registros fotográficos detalhados e descrições
               fornecidas pelos responsáveis pelos bens, que ajudam a dar uma
               noção do estado atual do lote. Recomendamos que você analise
@@ -135,10 +139,10 @@ export function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem data-aos="zoom-out" data-aos-delay="350" value="8">
-            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base">
+            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base mini:text-sm">
               E se eu perder o leilão? Ainda terei custos?
             </AccordionTrigger>
-            <AccordionContent className="text-lg laptop:text-base mobile:text-sm">
+            <AccordionContent className="text-lg laptop:text-base mobile:text-sm mini:text-sm">
               Não. Caso você não seja o vencedor do leilão, não haverá custos
               associados ao processo, além do seu tempo investido. A
               participação é gratuita até o momento do arremate. Aconselhamos
@@ -147,10 +151,10 @@ export function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem data-aos="zoom-out" data-aos-delay="400" value="9">
-            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base">
+            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base mini:text-sm">
               Posso desistir de um bem após vencer o leilão?
             </AccordionTrigger>
-            <AccordionContent className="text-lg laptop:text-base mobile:text-sm">
+            <AccordionContent className="text-lg laptop:text-base mobile:text-sm mini:text-sm">
               Não. Dar o lance vencedor em um leilão é um compromisso
               vinculativo e não há opção de desistência após o arremate. Por
               isso, é essencial que você tenha certeza absoluta sobre a compra
@@ -159,10 +163,10 @@ export function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem data-aos="zoom-out" data-aos-delay="450" value="10">
-            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base">
+            <AccordionTrigger className="text-2xl laptop:text-xl mobile:text-base mini:text-sm">
               Como é feito o pagamento do bem arrematado?
             </AccordionTrigger>
-            <AccordionContent className="text-lg laptop:text-base mobile:text-sm">
+            <AccordionContent className="text-lg laptop:text-base mobile:text-sm mini:text-sm">
               O pagamento do bem arrematado é feito por transferência bancária,
               dentro dos prazos estipulados em edital, que geralmente é curto. O
               não pagamento no prazo pode implicar multas e cancelamento da

@@ -104,15 +104,15 @@ export function CarouselComponent() {
   return (
     <div
       id="passo-a-passo"
-      className="h-full mobile:px-5 mt-20 justify-center mobile:h-full mx-auto flex flex-col mobile:mt-10 gap-10 laptop:max-w-[1200px] max-w-[1600px]"
+      className="h-full mobile:px-5 mini:px-3 mini:h-full mt-20 justify-center mobile:h-full mx-auto flex flex-col mobile:mt-10 mini:mt-5 s gap-10 laptop:max-w-[1200px] max-w-[1600px]"
     >
       <div id="plataforms" className="flex flex-col w-full gap-5">
-        <div className="text-4xl laptop:text-3xl text-center">
+        <div className="text-4xl laptop:text-3xl mini:text-xl text-center">
           <span className="text-[#dbc994]">Nossas plataformas</span>
         </div>
-        <div className="w-[1600px] py-10 laptop:w-[1200px] mobile:w-full mobile:py-5 mx-auto">
-          <div className="flex relative mobile:flex-col mobile:gap-10 justify-around gap-20 w-full">
-            <div className="absolute left-1/2 h-[150%] border mobile:hidden border-zinc-500"></div>
+        <div className="w-[1600px] py-10 laptop:w-[1200px] mobile:w-full  mini:w-full mini:py-3 mobile:py-5 mx-auto">
+          <div className="flex relative mobile:flex-col mini:flex-col mobile:gap-10 mini:gap-5 justify-around gap-20 w-full">
+            <div className="absolute left-1/2 h-[150%] border mobile:hidden mini:hidden border-zinc-500"></div>
             <Link
               target="_blank"
               href={cardsSoleum[currentCardIndexSoleum].link_lote}
@@ -137,7 +137,7 @@ export function CarouselComponent() {
                       transition={{ duration: 0.3 }}
                     >
                       <Image
-                        className="w-[400px] mobile:w-[300px]  mobile:h-[200px] h-[300px] rounded-lg"
+                        className="w-[400px] mobile:w-[300px] mini:w-[200px] mini:h-[150px]  mobile:h-[200px] h-[300px] rounded-lg"
                         alt="img"
                         width={400}
                         height={300}
@@ -151,7 +151,7 @@ export function CarouselComponent() {
                   </AnimatePresence>
 
                   <div className=" mt-5 flex flex-col gap-3">
-                    <CardTitle className="text-4xl mobile:text-xl">
+                    <CardTitle className="text-4xl mobile:text-xl mini:text-base">
                       <div>
                         <AnimatePresence mode="wait">
                           <motion.div
@@ -168,7 +168,7 @@ export function CarouselComponent() {
                         </AnimatePresence>
                       </div>
                     </CardTitle>
-                    <div className="text-zinc-100 fflex items-center gap-3 mobile:text-lg text-xl">
+                    <div className="text-zinc-100 fflex items-center gap-3 mobile:text-lg mini:text-base text-xl">
                       <div>
                         <AnimatePresence mode="wait">
                           <motion.div
@@ -183,7 +183,7 @@ export function CarouselComponent() {
                         </AnimatePresence>
                       </div>
                     </div>
-                    <div className="text-zinc-100 flex items-center gap-3 mobile:text-lg text-2xl">
+                    <div className="text-zinc-100 flex items-center gap-3 mobile:text-lg mini:text-base text-2xl">
                       <div>
                         <CalendarClock strokeWidth={1.5} />
                       </div>
@@ -201,7 +201,7 @@ export function CarouselComponent() {
                         </AnimatePresence>
                       </div>
                     </div>
-                    <div className="text-zinc-100 flex items-center gap-3 mobile:text-lg text-2xl">
+                    <div className="text-zinc-100 flex items-center gap-3 mobile:text-lg mini:text-base text-2xl">
                       <div>
                         <Gavel strokeWidth={1.5} />
                       </div>
@@ -219,18 +219,18 @@ export function CarouselComponent() {
                         </AnimatePresence>
                       </div>
                     </div>
-                    <div className="w-full mt-5 transition-colors duration-300 cursor-pointer hover:bg-opacity-90 text-black font-medium mobile:text-base text-xl py-1 bg-[#dbc994] rounded-lg px-5 flex justify-center  items-center">
+                    <div className="w-full mt-5 transition-colors duration-300 cursor-pointer hover:bg-opacity-90 text-black font-medium mobile:text-base mini:text-xs text-xl py-1 bg-[#dbc994] rounded-lg px-5 flex justify-center  items-center">
                       <div>Em andamento</div>
                       <div>
                         <Hourglass />
                       </div>
                     </div>
                     <div className="text-white py-2 bg-zinc-500 pt-1 rounded-lg bg-opacity-50 flex flex-col justify-center items-center ">
-                      <div className="flex items-center mobile:text-sm font-medium gap-2">
+                      <div className="flex items-center mobile:text-sm mini:text-xs font-medium gap-2">
                         Lance inicial
                       </div>
                       <div>
-                        <div className="text-zinc-100 mobile:text-xl text-3xl font-semibold">
+                        <div className="text-zinc-100 mobile:text-xl mini:text-base text-3xl font-semibold">
                           <AnimatePresence mode="wait">
                             <motion.div
                               key={formattedLanceInicialSoleum}
@@ -273,7 +273,7 @@ export function CarouselComponent() {
                       transition={{ duration: 0.3 }}
                     >
                       <Image
-                        className="w-[400px] mobile:w-[300px]  mobile:h-[200px] h-[300px] rounded-lg"
+                        className="w-[400px] mobile:w-[300px] mini:w-[200px] mini:h-[150px]  mobile:h-[200px] h-[300px] rounded-lg"
                         alt="img"
                         width={400}
                         height={300}
@@ -287,7 +287,7 @@ export function CarouselComponent() {
                   </AnimatePresence>
 
                   <div className=" mt-5 flex flex-col gap-3">
-                    <CardTitle className="text-4xl mobile:text-xl">
+                    <CardTitle className="text-4xl mobile:text-xl mini:text-base">
                       <div>
                         <AnimatePresence mode="wait">
                           <motion.div
@@ -302,7 +302,7 @@ export function CarouselComponent() {
                         </AnimatePresence>
                       </div>
                     </CardTitle>
-                    <div className="text-zinc-100 fflex items-center gap-3 mobile:text-lg text-xl">
+                    <div className="text-zinc-100 fflex items-center gap-3 mobile:text-lg mini:text-base text-xl">
                       <div>
                         <AnimatePresence mode="wait">
                           <motion.div
@@ -317,7 +317,7 @@ export function CarouselComponent() {
                         </AnimatePresence>
                       </div>
                     </div>
-                    <div className="text-zinc-100 flex items-center gap-3 mobile:text-lg text-2xl">
+                    <div className="text-zinc-100 flex items-center gap-3 mobile:text-lg mini:text-base text-2xl">
                       <div>
                         <CalendarClock strokeWidth={1.5} />
                       </div>
@@ -335,7 +335,7 @@ export function CarouselComponent() {
                         </AnimatePresence>
                       </div>
                     </div>
-                    <div className="text-zinc-100 flex items-center gap-3 mobile:text-lg text-2xl">
+                    <div className="text-zinc-100 flex items-center gap-3 mobile:text-lg mini:text-base text-2xl">
                       <div>
                         <Gavel strokeWidth={1.5} />
                       </div>
@@ -353,18 +353,18 @@ export function CarouselComponent() {
                         </AnimatePresence>
                       </div>
                     </div>
-                    <div className="w-full mt-5 transition-colors duration-300 cursor-pointer hover:bg-opacity-90 text-black font-medium mobile:text-base text-xl py-1 bg-[#dbc994] rounded-lg px-5 flex justify-center  items-center">
+                    <div className="w-full mt-5 transition-colors duration-300 cursor-pointer hover:bg-opacity-90 text-black font-medium mobile:text-base mini:text-xs text-xl py-1 bg-[#dbc994] rounded-lg px-5 flex justify-center  items-center">
                       <div>Em andamento</div>
                       <div>
                         <Hourglass />
                       </div>
                     </div>
                     <div className="text-white py-2 bg-zinc-500 pt-1 rounded-lg bg-opacity-50 flex flex-col justify-center items-center ">
-                      <div className="flex items-center mobile:text-sm font-medium gap-2">
+                      <div className="flex items-center mobile:text-sm mini:text-xs font-medium gap-2">
                         Lance inicial
                       </div>
                       <div>
-                        <div className="text-zinc-100 mobile:text-xl text-3xl font-semibold">
+                        <div className="text-zinc-100 mobile:text-xl mini:text-base text-3xl font-semibold">
                           <AnimatePresence mode="wait">
                             <motion.div
                               key={formattedLanceInicialBV}
