@@ -99,20 +99,27 @@ export default function Home() {
     setIsLoading(false)
   }
 
-  function removeTimeZone(dateString: string) {
+  function removeTimeZone(dateString: string | null) {
+    // Verifica se dateString é null ou undefined
+    if (!dateString) {
+      return new Date().toISOString().slice(0, 19) // Retorna data atual formatada
+    }
+
     // Converte a string para um objeto Date
     const date = parseISO(dateString)
 
     // Formata a data sem o fuso horário
     return format(date, "yyyy-MM-dd'T'HH:mm:ss")
   }
+
   useEffect(() => {
     if (config) {
       form.setValue('url_video', config.site_video || '')
       form.setValue('live', config.live_mode || false)
       form.setValue('url_live', config.live_link || '')
-      form.setValue('live_title', config.live_titulo)
-      form.setValue('live_data_hora', removeTimeZone(config.live_data_hora))
+      form.setValue('live_title', config.live_titulo || '')
+      // Adiciona verificação de null
+      form.setValue('live_data_hora', removeTimeZone(config?.live_data_hora))
     }
   }, [config, form.setValue, form])
 
