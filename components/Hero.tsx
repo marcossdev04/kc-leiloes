@@ -1,13 +1,10 @@
 'use client'
-import Logo from '@/assets/Ativo 10@20x.png'
+import Logo from '@/assets/KatiaCasaes.svg'
 import 'aos/dist/aos.css'
 import Image from 'next/image'
-import { ArrowDown, Check } from 'lucide-react'
 import imagemPrincipal from '@/assets/bgPrincipall.png'
 import mobileImage from '@/assets/mobileHero.png'
 import { useState, useEffect } from 'react'
-import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
-import about from '@/assets/aboutImage.png'
 
 export function Hero() {
   const [backgroundImage, setBackgroundImage] = useState('')
@@ -26,7 +23,7 @@ export function Hero() {
   }, [])
   return (
     <div
-      className="w-full h-[100vh] mobile:px-0 mini:px-0 mb-10 gap-5 mobile:gap-0 mini:gap-0 desktop:mx-auto laptop:mx-auto flex  justify-start items-center relative"
+      className="w-full h-[100vh] mobile:px-0 mini:px-0 mb-10 mobile:gap-0 mini:gap-0 desktop:mx-auto laptop:mx-auto flex  justify-start items-center relative"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -34,121 +31,108 @@ export function Hero() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="bg-black bg-opacity-70 h-[100vh] absolute w-[750px] laptop:w-[600px] mobile:w-[215px] mini:w-[170px] mini:h-full mobile:h-full z-10"></div>
-      <div className="flex flex-col gap-5 mobile:gap-5 w-[40%] mobile:w-[215px] mini:w-[170px] relative z-10 ">
-        <div className="flex w-full flex-col">
-          <div className="flex justify-center items-center">
-            <Image
-              src={Logo}
-              className="laptop:hidden mini:hidden mobile:hidden"
-              width={400}
-              alt="logo"
-            />
-            <Image
-              src={Logo}
-              className="mobile:hidden mini:hidden desktop:hidden"
-              width={300}
-              alt="logo"
-            />
-            <Image
-              src={Logo}
-              className="laptop:hidden mini:hidden desktop:hidden"
-              width={200}
-              alt="logo"
-            />
-            <Image
-              src={Logo}
-              className="laptop:hidden mobile:hidden desktop:hidden"
-              width={200}
-              alt="logo"
-            />
-          </div>
+      <div className="flex flex-col justify-center h-full w-full">
+        <div className="bg-black bg-opacity-70 h-[100vh] absolute w-[750px] laptop:w-[600px] mobile:w-[215px] mini:w-[170px] mini:h-full mobile:h-full z-10"></div>
+        <div className="flex flex-col gap-5 mobile:gap-5 w-[40%] mobile:w-[215px] mini:w-[170px] relative z-10 ">
+          <div className="flex w-full flex-col mt-32 mobile:mt-8 mini:mt-0 laptop:mt-8">
+            <div className="flex justify-center items-center">
+              <Image
+                src={Logo}
+                className="laptop:hidden mini:hidden mobile:hidden"
+                width={400}
+                alt="logo"
+              />
+              <Image
+                src={Logo}
+                className="mobile:hidden mini:hidden desktop:hidden"
+                width={300}
+                alt="logo"
+              />
+              <Image
+                src={Logo}
+                className="laptop:hidden mini:hidden desktop:hidden"
+                width={200}
+                alt="logo"
+              />
+              <Image
+                src={Logo}
+                className="laptop:hidden mobile:hidden desktop:hidden"
+                width={200}
+                alt="logo"
+              />
+            </div>
 
-          <div className="flex flex-col gap-2 justify-center items-center">
-            <div className="text-4xl mini:text-xs  laptop:text-4xl font-medium mobile:text-xl text-center text-white ">
-              Transforme oportunidades em conquistas com os leilões da KC
-              Leilões!
+            <div className="flex flex-col gap-2 justify-center items-center">
+              <div className="text-4xl mini:text-xs px-3 laptop:text-4xl font-medium mobile:text-base text-center text-white ">
+                Transparência e segurança em cada lance, conectando sonhos a
+                oportunidades reais
+              </div>
+            </div>
+            <div className="px-10 mobile:px-1 mini:px-1 mini:text-xs text-lg mobile:text-xs text-zinc-200 text-center mt-3">
+              Atuando há 06 anos como leiloeira pública oficial, Kátia se
+              encontrou neste ramo o qual trouxe um renovo para a sua carreira.
+              Apesar de atuar em uma área burocrática, Kátia exala a sua leveza
+              também no profissional, o que facilita a comunicação e
+              entendimento por parte daqueles que não possuem conhecimento em
+              leilões.
+            </div>
+            <div className="w-[50%] mini:text-xs mini:w-[90%] flex font-medium text-xl mobile:text-sm mobile:w-[90%] mt-6 justify-center text-black mx-auto py-2 rounded-lg hover:bg-opacity-90 cursor-pointer duration-300 transition-colors text-center  bg-[#dbc994]">
+              Explore o mundo dos leilões
             </div>
           </div>
         </div>
-
-        <div className="flex flex-col mobile:pl-0 gap-3 mobile:gap-1 mini:gap-0 pl-12 mobile:text-base mini:px-2 mini:text-xs mobile:px-4 text-2xl laptop:text-xl">
-          <div className="flex items-center gap-2">
-            <Check size={50} className="text-[#dbc994]" />
-            Mais de 5.000 clientes satisfeitos: confiança e credibilidade em
-            cada arremate.
-          </div>
-          <div className="flex items-center gap-2">
-            <Check size={50} className="text-[#dbc994]" /> Diversidade de itens:
-            imóveis, veículos, móveis, eletrônicos e muito mais!
-          </div>
-          <div className="flex items-center gap-2">
-            <Check size={50} className="text-[#dbc994]" /> Participe de forma
-            prática e segura, com lances acessíveis e suporte dedicado.
-          </div>
-        </div>
-        <div className="flex flex-col gap-2">
-          <div
-            className="bg-[#dbc994]  mx-12 mobile:mx-1 mini:mx-0 hover:bg-opacity-80 transition-all hover:scale-110 cursor-pointer duration-300 flex items-center gap-2 justify-center py-3 mobile:py-2 mini:py-1 text-3xl laptop:text-2xl mobile:text-base mini:text-xs text-black rounded-xl font-medium"
-            onClick={() => {
-              document
-                .getElementById('plataforms')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }}
-          >
-            <div className="mobile:text-sm mini:text-[11px]">
-              Explore nossos leilões agora!
-            </div>
-            <div>
-              <ArrowDown
-                className="mobile:hidden mini:hidden"
-                size={35}
-                strokeWidth={1.5}
-              />
-              <ArrowDown
-                className="desktop:hidden mini:hidden laptop:hidden tablet:hidden"
-                size={20}
-                strokeWidth={1.5}
-              />
-              <ArrowDown
-                className="desktop:hidden laptop:hidden tablet:hidden mobile:hidden"
-                size={16}
-                strokeWidth={1.5}
-              />
-            </div>
-          </div>
-          <Dialog>
-            <DialogTrigger className="bg-zinc-500 bg-opacity-60 mini:mx-1  mini:text-xs mx-12 mobile:mx-1 hover:bg-opacity-80 transition-all hover:scale-110 cursor-pointer duration-300 flex items-center gap-2 justify-center py-3 mobile:py-2 mini:py-1 text-4xl laptop:text-2xl mobile:text-base text-zinc-300 rounded-xl font-medium">
-              Sobre nós
-            </DialogTrigger>
-            <DialogContent className="max-w-[50%] mobile:max-w-[90%] mini:overflow-auto mini:max-w-full">
-              <div className="flex items-center">
-                <div>
-                  <Image className="w-[1800px]" src={about} alt="about" />
+        <div className="max-w-[1200px] mini:hidden mt-36 mobile:mt-4 mini:mt-2 laptop:mt-0 w-full z-10 mx-auto">
+          <div className="flex justify-evenly mobile:grid mobile:grid-cols-1 mobile:gap-3 mini:gap-2 mini:grid mini:grid-cols-1 w-full">
+            <div className="bg-zinc-800 items-center gap-6 flex bg-opacity-50 rounded-xl px-3 h-[120px] w-[350px] mini:w-[300px] mini:mx-auto mobile:h-[80px] mini:h-[60px] relative mobile:mx-auto ">
+              <div className="flex flex-col">
+                <div className="text-2xl mobile:text-lg mini:text-base font-medium text-[#ead38e]">
+                  Experiência
                 </div>
-                <div className="text-xl flex flex-col gap-5">
-                  <div className="text-2xl mobile:text-lg mini:text-sm text-[#dbc994]">
-                    Sobre Kátia
-                  </div>
-                  <div className=" mobile:text-xs mini:text-xs">
-                    Atuando há 06 anos como leiloeira pública oficial, Kátia se
-                    encontrou neste ramo o qual trouxe um renovo para a sua
-                    carreira. Apesar de atuar em uma área burocrática, Kátia
-                    exala a sua leveza também no profissional, o que facilita a
-                    comunicação e entendimento por parte daqueles que não
-                    possuem conhecimento em leilões.
-                  </div>
-                  <div className=" mobile:text-xs mini:text-xs">
-                    Por entender e vivenciar as oportunidades que os leilões
-                    podem oferecer, hoje Kátia atua também como educadora,
-                    compartilhando o seu conhecimento e suas vivências para
-                    aqueles que desejam não apenas arrematar, mas também se e
-                    reencontrar e se potencializar no meio profissional.
-                  </div>
+                <div className="text-zinc-100 mini:text-[11px] text-sm mobile:text-xs">
+                  Há mais de 6 anos no mercado, Katia tem propriedade e uma
+                  vasta experiência
                 </div>
               </div>
-            </DialogContent>
-          </Dialog>
+              <div className="flex justify-center flex-col text-[#ead38e] items-center">
+                <div className="text-5xl mobile:text-2xl mini:text-xl font-semibold">
+                  +6
+                </div>
+                <div className="text-lg mobile:text-sm mini:text-xs font-semibold">
+                  ANOS
+                </div>
+              </div>
+            </div>
+            <div className="bg-zinc-800 items-center gap-6 flex bg-opacity-50 rounded-xl px-3 h-[120px] w-[350px] mini:w-[300px] mini:mx-auto mobile:h-[80px] mini:h-[60px] relative mobile:mx-auto">
+              <div className="flex flex-col">
+                <div className="text-2xl mobile:text-lg mini:text-sm font-medium text-[#ead38e]">
+                  Confiança
+                </div>
+                <div className="text-zinc-100 text-sm mini:text-[9px] mobile:text-xs">
+                  Com mais de 6.000 clientes satisfeitos, Katia trás resultados
+                  e seus seguidores comprovam!
+                </div>
+              </div>
+              <div className="flex justify-center flex-col text-[#ead38e] items-center">
+                <div className="text-5xl mobile:text-2xl mini:text-xl font-semibold">
+                  +5K
+                </div>
+                <div className="text-lg mobile:text-xs mini:text-xs font-semibold">
+                  CLIENTES
+                </div>
+              </div>
+            </div>
+            <div className="bg-zinc-800 items-center gap-6 flex bg-opacity-50 rounded-xl px-3 h-[120px] mini:w-[300px] mini:mx-auto w-[350px] mobile:h-[80px] mini:h-[60px] relative mobile:mx-auto">
+              <div className="flex flex-col">
+                <div className="text-2xl mobile:text-lg mini:text-sm font-medium text-[#ead38e]">
+                  Autoridade
+                </div>
+                <div className="text-zinc-100 mini:text-[11px] text-sm mobile:text-xs">
+                  Katia possui todas as licenças e certificações necessárias e
+                  desejáveis para um leiloeiro
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
