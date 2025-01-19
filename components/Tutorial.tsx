@@ -55,7 +55,7 @@ export function Tutorial() {
               data-aos="zoom-out-right"
               data-aos-delay="200"
               href={'https://www.instagram.com/kcleiloes/'}
-              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium justify-center mobile:justify-start mini:justify-start mini:p-2 mobile:px-2 mini:px-2 hover:bg-opacity-80 transition-colors duration-300 p-3.5 mobile:p-2 rounded-full items-center"
+              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium justify-center mobile:justify-start mini:justify-start mini:p-2 mobile:px-2 mini:px-2 hover:bg-opacity-80 transition-colors duration-300 p-2.5 mobile:p-2 rounded-full items-center"
             >
               <Image
                 className="w-[50px] mobile:w-[20px] mini:w-[20px]"
@@ -79,9 +79,10 @@ export function Tutorial() {
               href={'https://www.facebook.com/kcleiloes/?locale=pt_BR'}
               data-aos="zoom-out-right"
               data-aos-delay="1000"
-              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium justify-center mobile:justify-start mini:justify-start mini:px-2 mini:p-2 mobile:px-2 hover:bg-opacity-80 transition-colors duration-300 p-3.5 mobile:p-2 rounded-full items-center"
+              className="flex gap-2 bg-[#dbc994] text-zinc-900 font-medium  justify-center mobile:justify-start mini:justify-start mini:px-2 mini:p-2 mobile:px-2 hover:bg-opacity-80 transition-colors duration-300 p-2.5 laptop:p-2 mobile:p-2 rounded-full items-center"
             >
-              <FaFacebook className="w-[50px] mobile:w-[20px] mini:w-[20px]" />
+              <FaFacebook className="mobile:hidden mini:hidden" size={50} />
+              <FaFacebook className="desktop:hidden laptop:hidden" size={20} />
             </Link>
           </div>
         </div>
