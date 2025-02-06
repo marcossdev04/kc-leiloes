@@ -66,13 +66,13 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
   async function handleSignIn({ username, password }: SignInCredentials) {
     setIsLoading(true)
     try {
-      const response = await api.post('/auth/login/', {
+      const response = await api.post('/api/token/', {
         username,
         password,
       })
       console.log(response.data)
-      const accessToken = response.data.tokens.access
-      const refreshToken = response.data.tokens.refresh
+      const accessToken = response.data.access
+      const refreshToken = response.data.refresh
       setCookie('kc_token', accessToken, { maxAge: 60 * 60 })
       setCookie('kc_refresh', refreshToken, {
         maxAge: 60 * 60 * 24,

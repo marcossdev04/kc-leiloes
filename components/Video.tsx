@@ -17,19 +17,6 @@ export function Video() {
 
   return (
     <div className="mt-5 mobile:px-5 laptop:mt-2 max-w-[1600px] gap-6 mx-auto flex flex-col h-full">
-      <div
-        data-aos="fade-down"
-        data-aos-delay="0"
-        className="flex justify-center text-[#dbc994] mobile:text-xl mini:text-base mobile:text-center mini:text-center text-4xl laptop:text-3xl"
-      >
-        Descubra como transformar seus sonhos em realidade com a KC Leilões!
-      </div>
-      <div className="text-lg w-[70%] mini:px-2 mobile:w-full mini:w-full mobile:text-lg mini:text-sm mobile:px-5 mx-auto">
-        Neste vídeo, você aprenderá como participar de leilões de forma segura,
-        estratégica e emocionante. Seja para conquistar sua casa própria, o
-        carro dos sonhos ou expandir seu patrimônio, a KC Leilões está aqui para
-        guiá-lo em cada etapa, garantindo transparência e sucesso!
-      </div>
       <Carousel
         opts={{
           align: 'start',

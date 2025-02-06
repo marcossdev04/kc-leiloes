@@ -12,35 +12,20 @@ import {
   FormMessage,
 } from './ui/form'
 import { Input } from './ui/input'
+import { Textarea } from './ui/textarea'
 import { Button } from './ui/button'
-import { CalendarIcon, Loader, Plus } from 'lucide-react'
-import InputMask from 'react-input-mask'
-import CurrencyInput from 'react-currency-input-field'
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from './ui/select'
-import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
-import { Calendar } from './ui/calendar'
-import { cn } from '@/lib/utils'
-import { format } from 'date-fns'
+import { Loader, Plus } from 'lucide-react'
 import { toast } from 'react-toastify'
 import { api } from '@/api/api'
 import { queryClient } from '@/api/queryClient'
 
 const FormSchema = z.object({
-  nome_leilao: z.string(),
-  descricao_lote: z.string(),
-  lance_inicial: z.string(),
-  hora_primeiro_lote: z.string(),
-  data_leilao: z.date(),
-  link_lote: z.string(),
-  foto_lote: z.string(),
-  fonte_leilao: z.string(),
-  id_lote: z.string(),
+  title: z.string().min(1, 'Título é obrigatório'),
+  description1: z.string().min(1, 'Descrição 1 é obrigatória'),
+  description2: z.string().min(1, 'Descrição 2 é obrigatória'),
+  description3: z.string().min(1, 'Descrição 3 é obrigatória'),
+  image1: z.string().url('URL inválida'),
+  image2: z.string().url('URL inválida'),
 })
 export function AddPost() {
   const [open, setOpen] = useState<boolean>(false)
@@ -51,18 +36,15 @@ export function AddPost() {
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
     try {
       setIsLoading(true)
-      await api.post('/auctions/', {
-        fonte_leilao: data.fonte_leilao,
-        nome_leilao: data.nome_leilao,
-        foto_lote: data.foto_lote,
-        descricao_lote: data.descricao_lote,
-        link_lote: data.link_lote,
-        data_leilao: format(data.data_leilao, 'yyyy-MM-dd'),
-        hora_primeiro_lote: data.hora_primeiro_lote,
-        lance_inicial: data.lance_inicial,
-        id_lote: data.id_lote,
+      await api.post('/api/v1/posts/', {
+        title: data.title,
+        description1: data.description1,
+        description2: data.description2,
+        description3: data.description3,
+        image1: data.image1,
+        image2: data.image2,
       })
-      await queryClient.refetchQueries(['getAuctions'])
+      await queryClient.refetchQueries(['getPosts'])
       toast.success('Post adicionado com sucesso', {
         position: 'bottom-right',
         theme: 'dark',
@@ -73,18 +55,11 @@ export function AddPost() {
     } catch (err: any) {
       console.log(err)
       setIsLoading(false)
-      toast.error(
-        err.response.data.foto_lote
-          ? 'Foto do lote com url inválida. Ex: htpps://...'
-          : err.response.data.link_lote
-            ? 'Link do lote com url inválida. Ex: htpps://...'
-            : 'Erro desconhecido',
-        {
-          position: 'bottom-right',
-          theme: 'dark',
-          closeOnClick: true,
-        },
-      )
+      toast.error(err.response?.data?.message || 'Erro ao criar post', {
+        position: 'bottom-right',
+        theme: 'dark',
+        closeOnClick: true,
+      })
     }
 
     await new Promise((resolve) => setTimeout(resolve, 1000))
@@ -106,177 +81,91 @@ export function AddPost() {
           >
             <FormField
               control={form.control}
-              name="nome_leilao"
+              name="title"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Nome</FormLabel>
-                  <Input
-                    placeholder="Leilão teste"
-                    className="placeholder:text-zinc-600"
-                    type="text"
-                    {...field}
-                  />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="descricao_lote"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Descrição</FormLabel>
-                  <Input
-                    placeholder="Descrição teste"
-                    className="placeholder:text-zinc-600"
-                    type="text"
-                    {...field}
-                  />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="lance_inicial"
-              render={({ field }) => (
-                <FormItem className="flex flex-col">
-                  <FormLabel>Lance Inicial</FormLabel>
-                  <CurrencyInput
-                    prefix="R$ "
-                    decimalSeparator=","
-                    groupSeparator="."
-                    placeholder="R$ 0,00"
-                    className="placeholder:text-zinc-600 border-[#27272A] px-3 bg-[#0B0B0B] border rounded-lg p-1"
-                    decimalsLimit={2}
-                    onValueChange={(value) => field.onChange(value)}
-                    value={field.value}
-                  />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="link_lote"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Link do Leilão</FormLabel>
-                  <Input
-                    placeholder="https://www.youtube.com/watch?v=x9Zg90Xo0PY"
-                    className="placeholder:text-zinc-600"
-                    type="text"
-                    {...field}
-                  />
+                  <FormLabel>Título</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Título do post" {...field} />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
             <FormField
               control={form.control}
-              name="foto_lote"
+              name="description1"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Foto</FormLabel>
-                  <Input
-                    placeholder="https://www.youtube.com/watch?v=x9Zg90Xo0PY"
-                    className="placeholder:text-zinc-600"
-                    type="text"
-                    {...field}
-                  />
+                  <FormLabel>Descrição 1</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Primeira descrição"
+                      className="min-h-[100px]"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />
             <FormField
               control={form.control}
-              name="id_lote"
+              name="description2"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>ID Lote</FormLabel>
-                  <Input
-                    placeholder="ID098"
-                    className="placeholder:text-zinc-600"
-                    type="text"
-                    {...field}
-                  />
+                  <FormLabel>Descrição 2</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Segunda descrição"
+                      className="min-h-[100px]"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />
             <FormField
               control={form.control}
-              name="hora_primeiro_lote"
+              name="description3"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Horário 1 lance</FormLabel>
-                  <InputMask
-                    mask="99:99"
-                    maskChar={null}
-                    placeholder="00:00"
-                    {...field}
-                  >
-                    {(inputProps) => (
-                      <Input
-                        {...inputProps}
-                        className="placeholder:text-zinc-600"
-                        type="text"
-                      />
-                    )}
-                  </InputMask>
+                  <FormLabel>Descrição 3</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Terceira descrição"
+                      className="min-h-[100px]"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />
             <FormField
               control={form.control}
-              name="data_leilao"
+              name="image1"
               render={({ field }) => (
-                <FormItem className="flex flex-col gap-1 w-full">
-                  <FormLabel>Data de Início</FormLabel>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <FormControl>
-                        <Button
-                          variant={'outline'}
-                          className={cn(
-                            'w-full pl-3 text-left font-normal',
-                            !field.value && 'text-muted-foreground',
-                          )}
-                        >
-                          {field.value ? (
-                            format(field.value, 'PPP')
-                          ) : (
-                            <span>Selecione uma data</span>
-                          )}
-                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                        </Button>
-                      </FormControl>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
-                      <Calendar
-                        mode="single"
-                        selected={field.value}
-                        onSelect={field.onChange}
-                        initialFocus
-                      />
-                    </PopoverContent>
-                  </Popover>
+                <FormItem>
+                  <FormLabel>Imagem 1</FormLabel>
+                  <FormControl>
+                    <Input placeholder="URL da primeira imagem" {...field} />
+                  </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />
             <FormField
               control={form.control}
-              name="fonte_leilao"
+              name="image2"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Plataforma</FormLabel>
-                  <Select
-                    onValueChange={field.onChange}
-                    defaultValue={field.value}
-                  >
-                    <SelectTrigger>
-                      <SelectValue placeholder="Plataforma" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="Soleum">Soleum</SelectItem>
-                      <SelectItem value="Bom valor">Bom Valor</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <FormLabel>Imagem 2</FormLabel>
+                  <FormControl>
+                    <Input placeholder="URL da segunda imagem" {...field} />
+                  </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />

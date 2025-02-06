@@ -99,14 +99,6 @@ export function BlogPosts() {
   }, [])
   return (
     <div className="max-w-[1370px] mx-auto mt-14 px-4">
-      <div className="text-center mb-8">
-        <h2 className="text-4xl text-[#dbc994] mb-4">Postagens</h2>
-        <p className="text-lg text-zinc-100 max-w-3xl mx-auto">
-          Semanalmente postamos pensamentos e ideias que a Katia deseja
-          compartilhar com você!
-        </p>
-      </div>
-
       <Carousel className="w-full">
         <CarouselContent className="px-4">
           {posts.map((post, index) => (

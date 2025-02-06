@@ -11,11 +11,11 @@ import {
 import { useState } from 'react'
 import { api } from '@/api/api'
 import { toast } from 'react-toastify'
-import { Auction } from '@/types/Auction'
 import { queryClient } from '@/api/queryClient'
+import { Posts } from '@/types/Auction'
 
 interface Props {
-  auction: Auction | undefined
+  auction: Posts | undefined
 }
 export function DeletePost({ auction }: Props) {
   const [loading, setLoading] = useState(false)
@@ -23,8 +23,8 @@ export function DeletePost({ auction }: Props) {
   async function handleDeletePlan() {
     try {
       setLoading(true)
-      await api.delete(`/auctions/${auction?.id}/`)
-      await queryClient.refetchQueries(['getAuctions'])
+      await api.delete(`/api/v1/posts/${auction?.id}/`)
+      await queryClient.refetchQueries(['getPosts'])
       toast.success('Post deletado com sucesso!', {
         position: 'bottom-right',
         closeOnClick: true,

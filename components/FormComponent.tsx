@@ -52,71 +52,8 @@ export function FormComponent() {
           Quem é Katia?
         </div>
         <div className="flex flex-col gap-2 mobile:gap-0 text-xl mobile:text-base mini:text-xs laptop:text-lg">
-          <div className="grid md:grid-cols-2 gap-8 mobile:gap-3 mini:gap-3 mb-16">
+          <div className="grid gap-8 mobile:gap-3 mini:gap-3 mb-16">
             <div className="space-y-3">
-              <Card className="bg-white/10 border-none p-6 mini:p-2 mobile:p-2">
-                <CardContent className="p-0">
-                  <h3 className="text-xl laptop:text-base mobile:text-sm mini:text-sm font-medium text-[#dbc994] mb-2">
-                    Trajetória Profissional
-                  </h3>
-                  <p className="text-zinc-200 leading-relaxed mobile:text-[11px] text-sm mini:text-[11px] laptop:text-xs">
-                    Atuando há 06 anos como leiloeira pública oficial, Kátia
-                    encontrou nos leilões um renovo para sua carreira. Com uma
-                    abordagem única que combina profissionalismo e leveza, ela
-                    revolucionou a forma de comunicar e educar sobre o mundo dos
-                    leilões, tornando-o acessível para todos.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/10 border-none p-6 mini:p-2 mobile:p-2">
-                <CardContent className="p-0">
-                  <h3 className="text-xl laptop:text-base mini:text-sm mobile:text-sm font-medium text-[#dbc994] mb-2">
-                    Missão e Valores
-                  </h3>
-                  <p className="text-zinc-200 leading-relaxed mini:text-[11px] text-sm mobile:text-[11px] laptop:text-xs">
-                    Por entender e vivenciar as oportunidades que os leilões
-                    podem oferecer, Kátia dedica-se a compartilhar seu
-                    conhecimento e experiências. Seu objetivo é capacitar
-                    pessoas que desejam não apenas arrematar, mas também se
-                    reencontrar e se potencializar profissionalmente neste
-                    mercado promissor.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/10 border-none p-6 mini:p-2 mobile:p-2">
-                <CardContent className="p-0">
-                  <h3 className="text-xl font-medium mobile:text-sm mini:text-sm laptop:text-base text-[#dbc994] mb-2">
-                    Compromisso com o Sucesso
-                  </h3>
-                  <p className="text-zinc-200 leading-relaxed mini:text-[11px] text-sm mobile:text-[11px] laptop:text-xs">
-                    Como educadora e mentora, Kátia não apenas compartilha
-                    técnicas e estratégias, mas também inspira seus alunos a
-                    desenvolverem uma mentalidade empreendedora e visão
-                    estratégica no mercado de leilões. Seu compromisso é
-                    transformar conhecimento em oportunidades reais de
-                    crescimento e sucesso para seus mentorados.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="space-y-6 mobile:space-y-2 mini:space-y-2">
-              <Card className="bg-white/10 border-none p-6 mini:p-2 mobile:p-2">
-                <CardContent className="p-0">
-                  <h3 className="text-xl font-medium laptop:text-base mini:text-sm mobile:text-sm text-[#dbc994] mb-4">
-                    Diferencial
-                  </h3>
-                  <p className="text-zinc-200 leading-relaxed mini:text-[11px] laptop:text-xs mobile:text-[11px] text-sm">
-                    O que destaca Kátia no mercado é sua capacidade de simplicar
-                    processos complexos e burocráticos, tornando o universo dos
-                    leilões mais acessível e compreensível. Sua abordagem
-                    combina expertise técnica com uma comunicação clara e
-                    objetiva, permitindo que iniciantes se sintam seguros em
-                    suas primeiras experiências com leilões.
-                  </p>
-                </CardContent>
-              </Card>
-
               <div className="grid grid-cols-1 gap-6 mobile:gap-2 mini:gap-2">
                 {achievements.map((item, index) => (
                   <Card

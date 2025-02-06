@@ -1,14 +1,11 @@
-export interface Auction {
+export interface Posts {
   id: number
-  fonte_leilao: string
-  nome_leilao: string
-  id_lote: string
-  foto_lote: string
-  descricao_lote: string
-  link_lote: string
-  data_leilao: string
-  hora_primeiro_lote: string
-  lance_inicial: string
+  title: string
+  description1: string
+  description2: string
+  description3: string
+  image1: string
+  image2: string
   created_at: string
   updated_at: string
 }

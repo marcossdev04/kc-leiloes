@@ -23,9 +23,6 @@ export function Footer() {
                 alt="footerImage"
               />{' '}
             </div>
-            <div className="ml-2 text-lg mobile:text-sm mini:text-xs mini:pb-1 mobile:pb-1 flex items-center">
-              Todos os direitos reservados
-            </div>
           </div>
           <div className="flex justify-center mobile:hidden mini:hidden gap-3 mobile:justify-between mobile:w-full mini:w-full mobile:px-16 items-center">
             <Link
