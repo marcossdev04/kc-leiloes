@@ -12,7 +12,7 @@ import { ReactNode, useEffect } from 'react'
 import mixpanel from 'mixpanel-browser'
 
 const barlow = Barlow({
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '200', '500', '600', '700', '800'],
   subsets: ['latin'],
 })
 interface AuthWrapperProps {
@@ -31,7 +31,8 @@ export default function RootLayout({
   function AuthWrapper({ children }: AuthWrapperProps) {
     const router = useRouter()
     const pathname = usePathname()
-    const isAuthPage = pathname === '/admin' || pathname === '/'
+    const isAuthPage =
+      pathname === '/admin' || pathname === '/' || pathname?.includes('/blog')
     const { isAuthenticated } = useAuth()
 
     useEffect(() => {

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { api } from '@/api/api'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import { CookiesProvider, useCookies } from 'react-cookie'
 import {
   ReactNode,
@@ -46,8 +46,16 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
     !!cookies.kc_token,
   )
 
+  const pathname = usePathname()
+
   useEffect(() => {
     const handleCookieChange = () => {
+      // Always consider authenticated in blog routes
+      if (pathname?.includes('/blog')) {
+        setIsAuthenticated(true)
+        return
+      }
+
       if (!cookies.kc_token) {
         setIsAuthenticated(false)
         api.defaults.headers.Authorization = ''
@@ -61,7 +69,7 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
     const interval = setInterval(handleCookieChange, 3000)
 
     return () => clearInterval(interval)
-  }, [cookies, push])
+  }, [cookies, push, pathname])
 
   async function handleSignIn({ username, password }: SignInCredentials) {
     setIsLoading(true)

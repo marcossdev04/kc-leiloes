@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
+import logo from '@/assets/footerImage.png'
 
 const BlogHeader = () => {
   return (
-    <header className="w-full flex justify-center border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center justify-between">
+    <header className="w-full flex justify-center border-b bg-black">
+      <div className="container max-w-7xl flex h-20 items-center justify-between">
         <Link href="/" className="font-bold text-2xl text-primary">
-          KC Blog
+          <Image src={logo} width={100} alt="logo" />
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
@@ -16,13 +18,7 @@ const BlogHeader = () => {
           >
             Home
           </Link>
-          <Link
-            href="/blog"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-          >
-            Todos os Posts
-          </Link>
-          <Button variant="outline">Fale Conosco</Button>
+          <Button>Fale Conosco</Button>
         </nav>
 
         <Button variant="ghost" className="md:hidden" aria-label="Menu">

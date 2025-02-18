@@ -38,7 +38,7 @@ export function AddVideo() {
         url: data.url,
         title: 'oto',
       })
-      queryClient.refetchQueries(['getVideoUrl'])
+      queryClient.refetchQueries(['getVideoUrls'])
       toast.success('URL de vídeo adicionada com sucesso', {
         position: 'bottom-right',
         theme: 'dark',
@@ -60,8 +60,9 @@ export function AddVideo() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger className="px-2 py-2 bg-green-600 rounded-md hover:bg-green-700 text-white">
-        <Plus size={18} />
+      <DialogTrigger className="px-2 items-center gap-2 hover:bg-opacity-80 transition-colors duration-300 py-3 w-full flex justify-center border-white border border-dotted rounded-md bg-[#27272B] text-white">
+        <span>Novo Link</span>
+        <Plus size={24} />
       </DialogTrigger>
       <DialogContent>
         <DialogTitle>Adicionar Vídeo</DialogTitle>

@@ -15,18 +15,16 @@ import Logo from '@/assets/footerImage.png'
 
 export default function Home() {
   async function fetchData() {
-    const response = await api.get('/api/v1/videos/?page_size=100')
+    const response = await api.get('/api/v1/videos/')
     return response.data
   }
   const { data: videos } = useQuery<Config[]>(['getVideoUrls'], fetchData)
-  console.log(videos)
 
   async function fetchPosts() {
     const response = await api.get('/api/v1/posts/')
     return response.data
   }
   const { data: posts } = useQuery<Posts[]>(['getPosts'], fetchPosts)
-  console.log(posts)
 
   return (
     <div className="flex flex-col min-h-[100vh] items-center">
@@ -39,6 +37,9 @@ export default function Home() {
         <Card className="w-1/2 mobile:w-full mobile:mx-auto mt-8">
           <CardContent className="pt-6">
             <div className="flex flex-col gap-3">
+              <div>
+                <AddVideo />
+              </div>
               {videos?.map((video, index) => {
                 return (
                   <div
@@ -49,7 +50,6 @@ export default function Home() {
                       {video.url}
                     </div>
                     <DeleteVideo videoId={video.id} />
-                    <AddVideo />
                   </div>
                 )
               })}

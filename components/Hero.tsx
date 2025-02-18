@@ -63,9 +63,9 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col gap-2 justify-center items-center">
-              <div className="text-4xl mini:text-xs px-3 laptop:text-4xl font-medium mobile:text-base text-center text-white ">
-                Transparência e segurança em cada lance, conectando sonhos a
-                oportunidades reais
+              <div className="text-4xl mini:text-xs px-3 laptop:text-4xl mobile:text-base text-center text-[#dbc994] font-extralight ">
+                Conhecimento é poder, e nos leilões não seria diferente, aprenda
+                sobre leilões e tenha mais segurança para seus lances
               </div>
             </div>
           </div>

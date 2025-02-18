@@ -21,11 +21,14 @@ export function DeleteVideo({ videoId }: DeleteVideoProps) {
   const [open, setOpen] = useState<boolean>(false)
   const [loadign, setIsLoading] = useState(false)
 
-  const handleDelete = (id: number) => {
+  const handleDelete = async (id: number) => {
     try {
       setIsLoading(true)
-      api.delete(`/api/v1/videos/${id}/`)
-      queryClient.refetchQueries(['getVideoUrls'])
+      await api.delete(`/api/v1/videos/${id}/`)
+
+      // Invalidate and refetch queries after successful deletion
+      await queryClient.invalidateQueries(['getVideoUrls'])
+
       toast.success('URL de vídeo deletada com sucesso', {
         position: 'bottom-right',
         theme: 'dark',
