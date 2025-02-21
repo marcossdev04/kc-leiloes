@@ -40,8 +40,9 @@ export function Tutorial() {
       <div className="absolute mobile:hidden  mobile:h-[400px] mini:hidden mobile:top-[80px] mobile:w-[350px] mobile:-right-[30px] inset-y-0 right-0 bg-[#dbc994] laptop:w-[500px] laptop:h-[650px] top-72  laptop:top-52 rounded-full blur-2xl h-[900px] w-[800px] translate-x-1/2"></div>
       <div className="absolute inset-y-0 mobile:hidden  mobile:top-[350px] mobile:h-[190px] mini:hidden mobile:rounded-none mobile:-right-[100px] mobile:w-[270px] blur-md mobile:blur-sm  z-50 laptop:w-[800px] laptop:h-[350px] laptop:top-[800px]  bg-[#0F0F0F] top-[1050px] laptop:right-[30px]  rounded-full  h-[500px] right-[90px] w-[800px]"></div>
       <Link
+        target="blank"
         href={'https://www.instagram.com/katiacasaes/'}
-        className="w-full h-full flex justify-center gap-10 mobile:gap-2 mini:gap-2 flex-col"
+        className="w-full  desktop:ml-40 desktop:w-[800px] laptop:w-[500px] laptop:ml-20 h-full flex justify-center gap-10 mobile:gap-2 mini:gap-2 flex-col"
       >
         <div className="bg-white/20 flex flex-col">
           <div className="flex justify-center text-xl font-medium py-1.5 border-b px-5">
@@ -63,7 +64,7 @@ export function Tutorial() {
                 <Ellipsis size={25} />
               </div>
             </div>
-            <div className="relative w-full h-[500px] overflow-hidden">
+            <div className="relative w-full desktop:h-[700px] h-[500px] overflow-hidden">
               {CAROUSEL_IMAGES.map((image, index) => (
                 <Image
                   key={index}

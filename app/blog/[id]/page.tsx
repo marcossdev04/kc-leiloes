@@ -7,6 +7,7 @@ import { useQuery } from 'react-query'
 import { api } from '@/api/api'
 import { Card } from '@/components/ui/card'
 import { Loader2 } from 'lucide-react'
+import Image from 'next/image'
 
 export interface BlogPost {
   id: number
@@ -89,11 +90,13 @@ export default function Blog({ params }: Props) {
 
               {post.image2 && (
                 <div className="my-8 rounded-lg overflow-hidden">
-                  {/* <Image
-                  src={post.image2}
-                  alt={post.title}
-                  className="w-full h-[400px] object-cover"
-                /> */}
+                  <Image
+                    width={800}
+                    height={800}
+                    src={post.image2}
+                    alt={post.title}
+                    className="w-full h-[400px] object-cover"
+                  />
                 </div>
               )}
 
@@ -103,11 +106,13 @@ export default function Blog({ params }: Props) {
 
               {post.image1 && (
                 <div className="mb-8 rounded-lg overflow-hidden">
-                  {/* <Image
-                  src={post.image1}
-                  alt={post.title}
-                  className="w-full h-[400px] object-cover"
-                /> */}
+                  <Image
+                    width={800}
+                    height={800}
+                    src={post.image1}
+                    alt={post.title}
+                    className="w-full h-[400px] object-cover"
+                  />
                 </div>
               )}
 

@@ -35,7 +35,7 @@ export function Video() {
               {videos !== undefined ? (
                 <iframe
                   src={videos[0].url}
-                  className="w-[1290px] rounded-xl mobile:w-[96%] mini:w-[95%] mini:h-[160px] mobile:h-[240px] laptop:w-[240px] laptop:h-[160px] h-[690px]"
+                  className="w-[1290px] rounded-xl mobile:w-[96%] mini:w-[95%] mini:h-[160px] mobile:h-[240px] laptop:w-[1290px] laptop:h-[690px] h-[690px]"
                 ></iframe>
               ) : null}
             </div>
