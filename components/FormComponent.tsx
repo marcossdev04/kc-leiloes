@@ -33,48 +33,72 @@ export function FormComponent() {
     AOS.init({ duration: 1200, once: false })
   }, [])
   return (
-    <div className="w-[1600px] gap-5 h-full laptop:w-[1200px] mobile:w-full mini:w-full mini:py-10 items-center mobile:px-5 py-32 mobile:py-10 mx-auto flex">
-      <div className="absolute inset-y-0 mobile:hidden mobile:h-[400px] mini:hidden mobile:top-[150px] mobile:w-[350px] mobile:-left-[220px] laptop:h-[700px] laptop:top-40  -left-[400px] bg-[#dbc994] top-32 rounded-full blur-2xl h-[950px] laptop:w-[700px]  w-[800px] "></div>
-      <div className="absolute mobile:hidden inset-y-0 z-30 bg-[#141414] mini:hidden mobile:top-[430px] mobile:w-[220px] mobile:-left-[50px] laptop:top-[850px] top-[1000px]  mobile:rounded-none rounded-full blur-md mobile:blur-none h-[450px] laptop:w-[620px] laptop:h-[400px] laptop:left-[0px] left-[0px] w-[1000px]"></div>
-      <div className="w-1/2 mobile:hidden mini:hidden mobile:w-2/3 relative flex justify-start">
-        <Image
-          className="w-[560px] mobile:w-[300px] laptop:w-[450px]"
-          src={newsImage}
-          alt="teste"
-        />
-      </div>
-      <div
-        data-aos="zoom-in-left"
-        data-aos-delay="0"
-        className="w-1/2 z-50 mobile:w-full mini:w-full h-full flex justify-center gap-10 mobile:gap-3 mobile:mt-16 mini:mt-10 mini:px-1 flex-col mobile:px-1 "
-      >
-        <div className="mobile:text-center mini:text-center mini:text-base mobile:text-xl text-4xl laptop:text-3xl text-[#dbc994]">
-          Quem é Katia?
+    <div className="max-w-[1200px] mx-auto py-12">
+        <div className="flex flex-col lg:flex-row items-end gap-12 px-6">
+        <div className="lg:w-5/12 relative flex items-end">
+          {/* Darker smoke effects */}
+          <div className="absolute -right-32 top-20 w-52 h-44 bg-gradient-to-r from-[#8B7355]/30 to-transparent rotate-[25deg] blur-2xl"></div>
+          <div className="absolute -left-20 top-0 w-48 h-40 bg-gradient-to-r from-[#916f28]/35 to-transparent -rotate-[35deg] blur-2xl"></div>
+          <div className="absolute right-0 top-10 w-44 h-52 bg-gradient-to-l from-[#7d5f15]/25 to-transparent rotate-[40deg] blur-2xl"></div>
+          <div className="absolute -right-24 bottom-20 w-48 h-44 bg-gradient-to-r from-[#8B7355]/20 to-transparent rotate-[15deg] blur-2xl"></div>
+          <div className="absolute right-20 bottom-32 w-44 h-48 bg-gradient-to-l from-[#7d5f15]/30 to-transparent rotate-[60deg] blur-2xl"></div>
+
+          {/* Medium tones smoke */}
+          <div className="absolute -left-28 top-32 w-52 h-40 bg-gradient-to-r from-[#dbc994]/25 to-transparent -rotate-[22deg] blur-2xl"></div>
+          <div className="absolute right-20 -top-10 w-44 h-48 bg-gradient-to-br from-[#dbc994]/20 to-transparent rotate-[55deg] blur-2xl"></div>
+          <div className="absolute left-0 top-16 w-48 h-40 bg-gradient-to-r from-[#dbc994]/30 to-transparent rotate-[65deg] blur-2xl"></div>
+          <div className="absolute -left-16 bottom-10 w-44 h-36 bg-gradient-to-r from-[#dbc994]/25 to-transparent rotate-[10deg] blur-2xl"></div>
+          <div className="absolute -left-24 bottom-28 w-48 h-40 bg-gradient-to-r from-[#dbc994]/25 to-transparent rotate-[45deg] blur-2xl"></div>
+          
+          {/* Lighter smoke effects */}
+          <div className="absolute -right-16 top-40 w-44 h-40 bg-gradient-to-r from-[#e8d5a9]/20 to-transparent -rotate-[25deg] blur-2xl"></div>
+          <div className="absolute left-20 -top-5 w-48 h-44 bg-gradient-to-br from-[#f0e3c4]/15 to-transparent rotate-[30deg] blur-2xl"></div>
+          <div className="absolute right-10 bottom-28 w-40 h-48 bg-gradient-to-l from-[#f5ebd8]/25 to-transparent rotate-[85deg] blur-2xl"></div>
+          <div className="absolute -right-20 bottom-0 w-44 h-40 bg-gradient-to-r from-[#e8d5a9]/15 to-transparent rotate-[5deg] blur-2xl"></div>
+          <div className="absolute -right-28 top-32 w-48 h-44 bg-gradient-to-r from-[#e8d5a9]/20 to-transparent -rotate-[15deg] blur-2xl"></div>
+          <div className="absolute left-10 bottom-16 w-40 h-44 bg-gradient-to-br from-[#f0e3c4]/20 to-transparent rotate-[25deg] blur-2xl"></div>
+          <div className="relative w-[400px]">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/0 to-transparent"></div>
+            <Image
+              className="w-full relative"
+              src={newsImage}
+              alt="Katia Casaes"
+            />
+          </div>
         </div>
-        <div className="flex flex-col gap-2 mobile:gap-0 text-xl mobile:text-base mini:text-xs laptop:text-lg">
-          <div className="grid gap-8 mobile:gap-3 mini:gap-3 mb-16">
-            <div className="space-y-3">
-              <div className="grid grid-cols-1 gap-6 mobile:gap-2 mini:gap-2">
-                {achievements.map((item, index) => (
-                  <Card
-                    key={index}
-                    className="bg-white/10 border-none p-4 mini:p-2 mobile:p-2"
-                  >
-                    <CardContent className="p-0 flex items-start gap-4 mobile:gap-2">
-                      <div className="text-[#dbc994]">{item.icon}</div>
+        
+        <div className="lg:w-7/12 lg:-mt-28 lg:translate-x-12">
+          <div className="mb-10">
+            <h2 className="text-3xl font-light text-[#dbc994] mb-3">Quem é Katia?</h2>
+            <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#dbc994] to-transparent mb-6"></div>
+          </div>
+          
+          <div className="grid gap-5">
+            {achievements.map((item, index) => (
+              <div
+                key={index}
+                className="group hover:translate-x-2 transition-all duration-300"
+              >
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#dbc994]/10 to-transparent rounded-lg"></div>
+                  <Card className="bg-black/40 backdrop-blur-sm border border-[#dbc994]/10 overflow-hidden">
+                    <CardContent className="p-4 flex items-start gap-4">
+                      <div className="shrink-0 p-2.5 bg-gradient-to-br from-[#dbc994]/20 to-transparent rounded-lg">
+                        <div className="text-[#dbc994]">{item.icon}</div>
+                      </div>
                       <div>
-                        <h4 className="text-[#dbc994] laptop:text-base mobile:text-sm mini:text-sm font-medium mb-1">
+                        <h4 className="text-[#dbc994] text-lg font-medium mb-2">
                           {item.title}
                         </h4>
-                        <p className="text-sm text-zinc-200 laptop:text-xs mini:text-[11px] mobile:text-[11px]">
+                        <p className="text-zinc-300 text-sm leading-relaxed">
                           {item.description}
                         </p>
                       </div>
                     </CardContent>
                   </Card>
-                ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
