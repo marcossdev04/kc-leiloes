@@ -46,7 +46,7 @@ export function Faq() {
           </AccordionItem>
 
           <AccordionItem data-aos="zoom-out" data-aos-delay="100" value="3">
-            <AccordionTrigger className="text-xl laptop:text-lg text-[#dbc994] mini:text-sm">
+            <AccordionTrigger className="text-xl laptop:text-lg text-white mini:text-sm">
               É possível financiar um bem arrematado em leilão?
             </AccordionTrigger>
             <AccordionContent className="text-base text-zinc-400 mini:text-sm">
@@ -56,7 +56,7 @@ export function Faq() {
           </AccordionItem>
 
           <AccordionItem data-aos="zoom-out" data-aos-delay="150" value="4">
-            <AccordionTrigger className="text-xl laptop:text-lg text-[#dbc994] mini:text-sm">
+            <AccordionTrigger className="text-xl laptop:text-lg text-white mini:text-sm">
               Preciso ser um especialista para participar de leilões?
             </AccordionTrigger>
             <AccordionContent className="text-base text-zinc-400 mini:text-sm">
@@ -66,7 +66,7 @@ export function Faq() {
           </AccordionItem>
 
           <AccordionItem data-aos="zoom-out" data-aos-delay="200" value="5">
-            <AccordionTrigger className="text-xl laptop:text-lg text-[#dbc994] mini:text-sm">
+            <AccordionTrigger className="text-xl laptop:text-lg text-white mini:text-sm">
               Como é feito o pagamento do bem arrematado?
             </AccordionTrigger>
             <AccordionContent className="text-base text-zinc-400 mini:text-sm">
