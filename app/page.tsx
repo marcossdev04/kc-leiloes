@@ -15,13 +15,22 @@ export default function Home() {
       <div id="video" className="bg-gradient-to-b from-[#0F0F0F] to-[#0F0F0F]">
         <Video />
       </div>
-      <div id="form" className="bg-gradient-to-b from-[#0f0f0f] to-[#131313] overflow-hidden relative">
+      <div
+        id="form"
+        className="bg-gradient-to-b from-[#0f0f0f] to-[#131313] overflow-hidden relative"
+      >
         <FormComponent />
       </div>
-      <div id="instagram" className="bg-gradient-to-b from-[#131313] to-[#0f0f0f] overflow-hidden relative">
+      <div
+        id="instagram"
+        className="bg-gradient-to-b from-[#131313] to-[#0f0f0f] overflow-hidden relative"
+      >
         <Instagram />
       </div>
-      <div id="faq" className="bg-gradient-to-b from-[#0f0f0f] to-[#000000] overflow-y-hidden">
+      <div
+        id="faq"
+        className="bg-gradient-to-b from-[#0f0f0f] to-[#000000] overflow-y-hidden"
+      >
         <Faq />
       </div>
       <Footer />

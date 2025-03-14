@@ -34,7 +34,7 @@ export function FormComponent() {
   }, [])
   return (
     <div className="max-w-[1200px] mx-auto py-12">
-        <div className="flex flex-col lg:flex-row items-end gap-12 px-6">
+      <div className="flex flex-col lg:flex-row items-end gap-12 px-6">
         <div className="lg:w-5/12 relative flex items-end">
           {/* Darker smoke effects */}
           <div className="absolute -right-32 top-20 w-52 h-44 bg-gradient-to-r from-[#8B7355]/30 to-transparent rotate-[25deg] blur-2xl"></div>
@@ -49,7 +49,7 @@ export function FormComponent() {
           <div className="absolute left-0 top-16 w-48 h-40 bg-gradient-to-r from-[#dbc994]/30 to-transparent rotate-[65deg] blur-2xl"></div>
           <div className="absolute -left-16 bottom-10 w-44 h-36 bg-gradient-to-r from-[#dbc994]/25 to-transparent rotate-[10deg] blur-2xl"></div>
           <div className="absolute -left-24 bottom-28 w-48 h-40 bg-gradient-to-r from-[#dbc994]/25 to-transparent rotate-[45deg] blur-2xl"></div>
-          
+
           {/* Lighter smoke effects */}
           <div className="absolute -right-16 top-40 w-44 h-40 bg-gradient-to-r from-[#e8d5a9]/20 to-transparent -rotate-[25deg] blur-2xl"></div>
           <div className="absolute left-20 -top-5 w-48 h-44 bg-gradient-to-br from-[#f0e3c4]/15 to-transparent rotate-[30deg] blur-2xl"></div>
@@ -66,13 +66,15 @@ export function FormComponent() {
             />
           </div>
         </div>
-        
+
         <div className="lg:w-7/12 lg:-mt-28 lg:translate-x-12">
           <div className="mb-10">
-            <h2 className="text-3xl font-light text-[#dbc994] mb-3">Quem é Katia?</h2>
+            <h2 className="text-3xl font-light text-[#dbc994] mb-3">
+              Quem é Katia?
+            </h2>
             <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#dbc994] to-transparent mb-6"></div>
           </div>
-          
+
           <div className="grid gap-5">
             {achievements.map((item, index) => (
               <div

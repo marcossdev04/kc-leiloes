@@ -18,21 +18,21 @@ export function Footer() {
       <div className="absolute -left-28 top-0 w-96 h-full bg-gradient-to-r from-[#dbc994]/20 to-transparent -rotate-[22deg] blur-2xl"></div>
       <div className="absolute left-20 top-0 w-72 h-full bg-gradient-to-r from-[#dbc994]/15 via-[#dbc994]/10 to-transparent rotate-[15deg] blur-2xl"></div>
       <div className="absolute -left-10 top-0 w-80 h-full bg-gradient-to-r from-[#dbc994]/15 to-transparent rotate-[35deg] blur-2xl"></div>
-      
+
       {/* Right Side */}
       <div className="absolute -right-28 top-0 w-96 h-full bg-gradient-to-l from-[#dbc994]/20 to-transparent rotate-[22deg] blur-2xl"></div>
       <div className="absolute right-20 top-0 w-72 h-full bg-gradient-to-l from-[#dbc994]/15 via-[#dbc994]/10 to-transparent -rotate-[15deg] blur-2xl"></div>
       <div className="absolute -right-10 top-0 w-80 h-full bg-gradient-to-l from-[#dbc994]/15 to-transparent -rotate-[35deg] blur-2xl"></div>
-      
+
       {/* Center */}
       <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[800px] h-full bg-gradient-to-b from-[#dbc994]/15 to-transparent blur-3xl"></div>
       <div className="absolute left-1/3 top-0 w-96 h-full bg-gradient-to-r from-[#dbc994]/10 via-[#dbc994]/15 to-transparent rotate-[45deg] blur-2xl"></div>
       <div className="absolute right-1/3 top-0 w-96 h-full bg-gradient-to-l from-[#dbc994]/10 via-[#dbc994]/15 to-transparent -rotate-[45deg] blur-2xl"></div>
-      
+
       {/* Additional Overlays */}
       <div className="absolute left-1/4 -top-5 w-80 h-[150%] bg-gradient-to-b from-[#dbc994]/10 via-[#dbc994]/5 to-transparent rotate-[30deg] blur-2xl"></div>
       <div className="absolute right-1/4 -top-5 w-80 h-[150%] bg-gradient-to-b from-[#dbc994]/10 via-[#dbc994]/5 to-transparent -rotate-[30deg] blur-2xl"></div>
-      
+
       <div className="relative w-[1600px] mobile:w-full mini:w-full mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -71,15 +71,23 @@ export function Footer() {
             </div>
 
             {/* Copyright */}
-            <p className="text-white/80 text-sm">© 2025 KC Leilões. Todos os direitos reservados.</p>
+            <p className="text-white/80 text-sm">
+              © 2025 KC Leilões. Todos os direitos reservados.
+            </p>
           </div>
 
           {/* Right Links */}
           <div className="flex flex-col items-end gap-2 text-sm">
-            <Link href="/termos" className="text-white/90 hover:text-[#dbc994] transition-colors">
+            <Link
+              href="/termos"
+              className="text-white/90 hover:text-[#dbc994] transition-colors"
+            >
               Termos de uso
             </Link>
-            <Link href="/contatos" className="text-white/90 hover:text-[#dbc994] transition-colors">
+            <Link
+              href="/contatos"
+              className="text-white/90 hover:text-[#dbc994] transition-colors"
+            >
               Contatos
             </Link>
           </div>
