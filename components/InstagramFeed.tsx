@@ -22,7 +22,6 @@ export function InstagramFeed() {
             className="w-full max-w-[550px] h-[750px] bg-transparent"
             frameBorder="0"
             scrolling="no"
-            allowTransparency={true}
           ></iframe>
         </div>
       </div>
