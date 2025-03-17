@@ -32,7 +32,7 @@ export function Hero() {
       }}
     >
       <div className="flex flex-col justify-center h-full w-full">
-        <div className="bg-black bg-opacity-70 h-[100vh] absolute w-[750px] laptop:w-[600px] mobile:w-[215px] mini:w-[170px] mini:h-full mobile:h-full z-10"></div>
+        <div className="bg-gradient-to-r from-black/95 via-black/65 to-transparent h-[100vh] absolute w-[50%] laptop:w-[50%] mobile:w-full mini:w-full mini:h-full mobile:h-full z-10"></div>
         <div className="flex flex-col gap-5 mobile:gap-5 w-[40%] mobile:w-[215px] mini:w-[170px] relative z-10 ">
           <div className="flex w-full flex-col">
             <div className="flex justify-center items-center">
@@ -63,7 +63,7 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col gap-2 justify-center items-center">
-              <div className="text-4xl mini:text-xs px-3 laptop:text-4xl mobile:text-base text-center text-[#dbc994] font-extralight ">
+              <div className="text-2xl mini:text-xs px-3 laptop:text-2xl mobile:text-base text-center text-[#dbc994] font-extralight">
                 Conhecimento é poder, e nos leilões não seria diferente, aprenda
                 sobre leilões e tenha mais segurança para seus lances
               </div>
