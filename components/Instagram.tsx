@@ -10,8 +10,8 @@ export function Instagram() {
 
   return (
     <div className="max-w-[1200px] mx-auto py-16">
-      <div className="flex flex-row-reverse items-center gap-16 px-6">
-        <div className="w-1/2">
+      <div className="flex flex-row-reverse mobile:flex-col-reverse items-center gap-16 mobile:gap-10  px-6">
+        <div className="w-1/2 mobile:w-full">
           <div className="max-w-[450px] bg-black rounded-xl overflow-hidden">
             <iframe
               src="https://www.instagram.com/katiacasaes/embed"
@@ -19,12 +19,11 @@ export function Instagram() {
               style={{ background: 'black', colorScheme: 'dark' }}
               frameBorder="0"
               scrolling="no"
-              allowTransparency={true}
             ></iframe>
           </div>
         </div>
 
-        <div className="w-1/2">
+        <div className="w-1/2 mobile:w-full">
           <div className="max-w-[450px]">
             <h2 className="text-3xl font-light text-[#dbc994] mb-3">
               Acompanhe minha jornada

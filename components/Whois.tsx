@@ -28,7 +28,6 @@ export function BlogPosts() {
             className="w-full h-[750px] bg-transparent rounded-xl"
             frameBorder="0"
             scrolling="no"
-            allowTransparency={true}
           ></iframe>
         </div>
       </div>

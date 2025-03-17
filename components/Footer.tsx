@@ -33,8 +33,8 @@ export function Footer() {
       <div className="absolute left-1/4 -top-5 w-80 h-[150%] bg-gradient-to-b from-[#dbc994]/10 via-[#dbc994]/5 to-transparent rotate-[30deg] blur-2xl"></div>
       <div className="absolute right-1/4 -top-5 w-80 h-[150%] bg-gradient-to-b from-[#dbc994]/10 via-[#dbc994]/5 to-transparent -rotate-[30deg] blur-2xl"></div>
 
-      <div className="relative w-[1600px] mobile:w-full mini:w-full mx-auto px-6">
-        <div className="flex items-center justify-between">
+      <div className="relative w-[1600px] mobile:w-full mini:w-full mx-auto px-6 mobile:px-0">
+        <div className="flex mobile:flex-col items-center justify-between">
           {/* Logo */}
           <div>
             <Image
@@ -77,7 +77,7 @@ export function Footer() {
           </div>
 
           {/* Right Links */}
-          <div className="flex flex-col items-end gap-2 text-sm">
+          <div className="flex flex-col mobile:flex-row items-end gap-2 text-sm">
             <Link
               href="/termos"
               className="text-white/90 hover:text-[#dbc994] transition-colors"
