@@ -6,6 +6,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import imageFooter from '@/assets/footerImage.png'
 import { FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 
 export function Footer() {
   React.useEffect(() => {
@@ -49,7 +50,9 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex items-center gap-4 mobile:gap-3 mini:gap-2">
               <Link
-                href={'https://wa.me/75998141403'}
+                href={
+                  'https://wa.me/557599501970?text=Quero%20saber%20mais%20sobre%20leiloes'
+                }
                 className="p-2 rounded-lg hover:bg-white/5 transition-colors"
               >
                 <FaWhatsapp size={26} className="text-[#dbc994]" />
@@ -63,10 +66,16 @@ export function Footer() {
               </Link>
 
               <Link
-                href={'https://x.com/KcLeiloes'}
+                href={'https://www.youtube.com/@kcleiloes4509'}
                 className="p-2 rounded-lg hover:bg-white/5 transition-colors"
               >
                 <FaYoutube size={26} className="text-[#dbc994]" />
+              </Link>
+              <Link
+                href={'https://x.com/KcLeiloes'}
+                className="p-2 rounded-lg hover:bg-white/5 transition-colors"
+              >
+                <FaXTwitter size={26} className="text-[#dbc994]" />
               </Link>
             </div>
 
