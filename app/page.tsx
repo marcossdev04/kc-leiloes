@@ -1,4 +1,5 @@
 'use client'
+import BlogPostss from '@/components/Blog'
 import { Faq } from '@/components/Faq'
 import { Footer } from '@/components/Footer'
 import { FormComponent } from '@/components/FormComponent'
@@ -14,6 +15,9 @@ export default function Home() {
       </div>
       <div id="video" className="bg-gradient-to-b from-[#0F0F0F] to-[#0F0F0F]">
         <Video />
+      </div>
+      <div id="video" className="bg-gradient-to-b from-[#0F0F0F] to-[#0F0F0F]">
+        <BlogPostss />
       </div>
       <div
         id="form"
