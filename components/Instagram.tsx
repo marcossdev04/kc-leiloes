@@ -12,11 +12,16 @@ export function Instagram() {
     <div className="max-w-[1200px] mx-auto py-16">
       <div className="flex flex-row-reverse mobile:flex-col-reverse items-center gap-16 mobile:gap-10  px-6">
         <div className="w-1/2 mobile:w-full">
-          <div className="max-w-[450px] bg-black rounded-xl overflow-hidden">
+          <div className="max-w-[450px] bg-zinc-950 rounded-xl overflow-hidden">
             <iframe
-              src="https://www.instagram.com/katiacasaes/embed"
-              className="w-full h-[600px]"
-              style={{ background: 'black', colorScheme: 'dark' }}
+              src="https://www.instagram.com/katiacasaes/embed?theme=dark"
+              className="w-full h-[384px]"
+              style={{ 
+                background: '#09090b',
+                border: 'none',
+                filter: 'brightness(0.9)'
+              }}
+              data-theme="dark"
               frameBorder="0"
               scrolling="no"
             ></iframe>

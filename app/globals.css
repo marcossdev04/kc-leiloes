@@ -2,8 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.content-wrapper {
+  position: relative;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(8, 8, 8, 1) 0%,
+    rgba(3, 3, 3, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient-shift 20s ease-in-out infinite;
+}
+
+.content-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(30, 30, 30, 0.15) 0%,
+    rgba(10, 10, 10, 0.1) 25%,
+    transparent 50%
+  );
+  pointer-events: none;
 }
 
 @layer utilities {

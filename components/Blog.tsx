@@ -100,8 +100,6 @@ export function BlogPostss() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="text-[#dbc994] hover:text-white" />
-        <CarouselNext className="text-[#dbc994] hover:text-white" />
       </Carousel>
     </div>
   )

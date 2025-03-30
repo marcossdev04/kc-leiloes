@@ -23,7 +23,7 @@ export function Hero() {
   }, [])
   return (
     <div
-      className="w-full h-[100vh] mobile:px-0 mini:px-0 mb-10 mobile:gap-0 mini:gap-0 desktop:mx-auto laptop:mx-auto flex  justify-start items-center relative"
+      className="w-full h-[100vh] mobile:px-0 mini:px-0 mobile:gap-0 mini:gap-0 desktop:mx-auto laptop:mx-auto flex justify-start items-center relative"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
