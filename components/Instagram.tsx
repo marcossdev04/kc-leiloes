@@ -16,10 +16,10 @@ export function Instagram() {
             <iframe
               src="https://www.instagram.com/katiacasaes/embed?theme=dark"
               className="w-full h-[384px]"
-              style={{ 
+              style={{
                 background: '#09090b',
                 border: 'none',
-                filter: 'brightness(0.9)'
+                filter: 'brightness(0.9)',
               }}
               data-theme="dark"
               frameBorder="0"
