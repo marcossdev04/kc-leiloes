@@ -80,7 +80,7 @@ export function BlogPostss() {
 
   return (
     <div className="max-w-[1370px] mx-auto mt-32 px-4">
-      <div className="text-center mb-16" data-aos="fade-up">
+      <div className="text-center mb-6" data-aos="fade-up">
         <h2 className="text-4xl font-light text-[#dbc994] mb-3 tracking-wide">
           Blog da Kátia
         </h2>
