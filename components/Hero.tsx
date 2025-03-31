@@ -33,8 +33,8 @@ export function Hero() {
     >
       <div className="flex flex-col justify-center h-full w-full">
         <div className="bg-gradient-to-r from-black/95 via-black/65 to-transparent h-[100vh] absolute w-[50%] laptop:w-[50%] mobile:w-full mini:w-full mini:h-full mobile:h-full z-10"></div>
-        <div className="flex flex-col gap-5 mobile:gap-5 w-[40%] mobile:w-[215px] mini:w-[170px] relative z-10 ">
-          <div className="flex w-full flex-col">
+        <div className="flex flex-col gap-3 mobile:gap-3 w-[40%] mobile:w-[215px] mini:w-[170px] relative z-10">
+          <div className="flex w-full flex-col gap-3">
             <div className="flex justify-center items-center">
               <Image
                 src={Logo}
@@ -69,6 +69,25 @@ export function Hero() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        className="absolute bottom-12 left-1/2 flex flex-col items-center gap-4 cursor-pointer hover:scale-110 transition-transform duration-300"
+        style={{ animation: 'scroll-indicator 2s ease-in-out infinite' }}
+        onClick={() => {
+          window.scrollTo({
+            top: window.innerHeight * 0.3,
+            behavior: 'smooth',
+          })
+        }}
+      >
+        <div className="text-[#dbc994] text-base font-light tracking-wider">
+          Descubra mais
+        </div>
+        <div className="w-[2px] h-12 bg-gradient-to-b from-[#dbc994] to-transparent"></div>
+        <div className="w-10 h-10 rounded-full border-2 border-[#dbc994] flex items-center justify-center p-1 relative overflow-hidden">
+          <div className="w-full h-full rounded-full bg-gradient-to-br from-[#dbc994] to-[#dbc994]/30 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-[#dbc994]/10"></div>
         </div>
       </div>
     </div>

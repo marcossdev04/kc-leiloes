@@ -13,10 +13,10 @@ export default function Home() {
       <div className="bg-gradient-to-b from-[#000000] to-[#0F0F0F] pb-0">
         <Hero />
       </div>
-      <div className="content-wrapper min-h-screen -mt-1">
+      <div className="content-wrapper min-h-screen ">
+        <FormComponent />
         <Video />
         <BlogPostss />
-        <FormComponent />
         <Instagram />
         <Faq />
       </div>
