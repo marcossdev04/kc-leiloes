@@ -23,11 +23,11 @@ export function Video() {
   console.log(videos)
 
   return (
-    <div className="py-20">
+    <div className="pt-20 pb-32">
       <div className="max-w-[1600px] mx-auto flex flex-col-reverse lg:flex-row items-center gap-16 px-6">
         <div className="w-full lg:w-1/2 flex flex-col gap-8 p-6 text-justify">
           <div>
-            <h2 className="text-3xl font-light text-[#dbc994] mb-2">
+            <h2 className="text-4xl font-light text-[#dbc994] mb-2">
               Simplifique sua jornada em leilões
             </h2>
             <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#dbc994] to-transparent"></div>
@@ -50,10 +50,10 @@ export function Video() {
                 </svg>
               </div>
               <div className="flex-1">
-                <h3 className="font-medium mb-3 text-[#dbc994]">
+                <h3 className="text-xl font-medium mb-3 text-[#dbc994]">
                   Transparência e Segurança
                 </h3>
-                <p className="text-sm text-zinc-400 leading-relaxed">
+                <p className="text-base text-zinc-400 leading-relaxed">
                   Tenha acesso a informações detalhadas e documentação completa
                   de cada lote, permitindo análises aprofundadas e decisões mais
                   seguras em suas participações.
@@ -77,10 +77,10 @@ export function Video() {
                 </svg>
               </div>
               <div className="flex-1">
-                <h3 className="font-medium mb-3 text-[#dbc994]">
+                <h3 className="text-xl font-medium mb-3 text-[#dbc994]">
                   Oportunidades Exclusivas
                 </h3>
-                <p className="text-sm text-zinc-400 leading-relaxed">
+                <p className="text-base text-zinc-400 leading-relaxed">
                   Explore uma seleção cuidadosamente curada de bens com valores
                   diferenciados e condições especiais de pagamento, maximizando
                   seu potencial de investimento.
@@ -104,10 +104,10 @@ export function Video() {
                 </svg>
               </div>
               <div className="flex-1">
-                <h3 className="font-medium mb-3 text-[#dbc994]">
+                <h3 className="text-xl font-medium mb-3 text-[#dbc994]">
                   Suporte Especializado
                 </h3>
-                <p className="text-sm text-zinc-400 leading-relaxed">
+                <p className="text-base text-zinc-400 leading-relaxed">
                   Conte com orientação profissional personalizada em todas as
                   etapas do processo, desde a análise inicial até a conclusão
                   bem-sucedida da sua aquisição.

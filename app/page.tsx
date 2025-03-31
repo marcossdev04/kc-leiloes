@@ -14,9 +14,9 @@ export default function Home() {
         <Hero />
       </div>
       <div className="content-wrapper min-h-screen -mt-1">
+        <FormComponent />
         <Video />
         <BlogPostss />
-        <FormComponent />
         <Instagram />
         <Faq />
       </div>
