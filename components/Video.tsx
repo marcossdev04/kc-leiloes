@@ -20,7 +20,6 @@ export function Video() {
     cacheTime: 0,
     refetchOnWindowFocus: true,
   })
-  console.log(videos)
 
   return (
     <div className="py-20">
