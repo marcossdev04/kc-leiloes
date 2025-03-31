@@ -78,7 +78,6 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
         username,
         password,
       })
-      console.log(response.data)
       const accessToken = response.data.access
       const refreshToken = response.data.refresh
       setCookie('kc_token', accessToken, { maxAge: 60 * 60 })

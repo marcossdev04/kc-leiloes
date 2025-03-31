@@ -20,10 +20,9 @@ export function Video() {
     cacheTime: 0,
     refetchOnWindowFocus: true,
   })
-  console.log(videos)
 
   return (
-    <div className="py-20 bg-white/5">
+    <div className="py-20 ">
       <div className="max-w-[1600px] mx-auto flex flex-col-reverse lg:flex-row items-center gap-16 px-6">
         <div className="w-full lg:w-1/2 flex flex-col gap-8 p-6 text-justify">
           <div>
