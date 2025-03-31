@@ -71,17 +71,19 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div 
+      <div
         className="absolute bottom-12 left-1/2 flex flex-col items-center gap-4 cursor-pointer hover:scale-110 transition-transform duration-300"
         style={{ animation: 'scroll-indicator 2s ease-in-out infinite' }}
         onClick={() => {
           window.scrollTo({
             top: window.innerHeight * 0.3,
-            behavior: 'smooth'
-          });
+            behavior: 'smooth',
+          })
         }}
       >
-        <div className="text-[#dbc994] text-base font-light tracking-wider">Descubra mais</div>
+        <div className="text-[#dbc994] text-base font-light tracking-wider">
+          Descubra mais
+        </div>
         <div className="w-[2px] h-12 bg-gradient-to-b from-[#dbc994] to-transparent"></div>
         <div className="w-10 h-10 rounded-full border-2 border-[#dbc994] flex items-center justify-center p-1 relative overflow-hidden">
           <div className="w-full h-full rounded-full bg-gradient-to-br from-[#dbc994] to-[#dbc994]/30 backdrop-blur-sm"></div>
