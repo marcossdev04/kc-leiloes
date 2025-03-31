@@ -4,8 +4,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from '@/components/ui/carousel'
 import { Card, CardContent, CardHeader, CardFooter } from '@/components/ui/card'
 import { Calendar, Clock, Eye } from 'lucide-react'
@@ -100,8 +98,6 @@ export function BlogPostss() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="text-[#dbc994] hover:text-white" />
-        <CarouselNext className="text-[#dbc994] hover:text-white" />
       </Carousel>
     </div>
   )
