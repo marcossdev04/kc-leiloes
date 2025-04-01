@@ -4,6 +4,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from '@/components/ui/carousel'
 import { Card, CardContent, CardHeader, CardFooter } from '@/components/ui/card'
 import { Calendar, Clock, Eye } from 'lucide-react'
