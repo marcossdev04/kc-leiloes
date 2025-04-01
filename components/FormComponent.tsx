@@ -33,7 +33,7 @@ export function FormComponent() {
     AOS.init({ duration: 1200, once: false })
   }, [])
   return (
-    <div className="max-w-[1200px] min-h-[100vh] mx-auto py-12">
+    <div className="max-w-[1200px] min-h-[100vh] mx-auto py-12 mobile:mb-80">
       <div className="flex flex-col h-[100vh] lg:flex-row items-center gap-12 px-6">
         <div className="lg:w-5/12 relative flex items-end">
           {/* Darker smoke effects */}

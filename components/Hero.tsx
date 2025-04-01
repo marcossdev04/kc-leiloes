@@ -72,11 +72,11 @@ export function Hero() {
         </div>
       </div>
       <div
-        className="absolute bottom-12 left-1/2 flex flex-col items-center gap-4 cursor-pointer hover:scale-110 transition-transform duration-300"
+        className="absolute bottom-12 z-50 left-1/2 flex flex-col items-center gap-4 cursor-pointer hover:scale-110 transition-transform duration-300"
         style={{ animation: 'scroll-indicator 2s ease-in-out infinite' }}
         onClick={() => {
           window.scrollTo({
-            top: window.innerHeight * 0.3,
+            top: window.innerHeight * 1,
             behavior: 'smooth',
           })
         }}
