@@ -31,14 +31,11 @@ export function Instagram() {
         <div className="w-1/2 mobile:w-full">
           <div className="max-w-[450px]">
             <h2 className="text-3xl font-light text-[#dbc994] mb-3">
-              Acompanhe minha jornada
+              Me acompanhe no Instagram!
             </h2>
             <div className="w-20 h-px bg-gradient-to-r from-[#dbc994] to-transparent mb-6"></div>
             <p className="text-zinc-400 text-lg leading-relaxed">
-              Siga <span className="text-[#dbc994]">@katiacasaes</span> e faça
-              parte dessa comunidade de investidores e entusiastas de leilões.
-              Compartilho diariamente conteúdos exclusivos e oportunidades
-              únicas.
+              Compartilho dicas sobre leilões e autoconhecimento diariamente.
             </p>
           </div>
         </div>

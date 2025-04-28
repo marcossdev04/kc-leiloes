@@ -12,19 +12,19 @@ const achievements = [
     icon: <Gavel className="w-6 h-6" />,
     title: 'Leiloeira Oficial',
     description:
-      '6 anos de experiência como leiloeira pública oficial, conduzindo leilões de sucesso em diversos segmentos.',
+      'Leiloeira pública oficial com mais de 08 anos de experiência.',
   },
   {
     icon: <Trophy className="w-6 h-6" />,
     title: 'Casos de Sucesso',
     description:
-      'Histórico comprovado de leilões bem-sucedidos, com alto índice de satisfação de compradores e vendedores.',
+      'Além de conduzir leilões, também compartilho o meu conhecimentos com os arrematantes.',
   },
   {
     icon: <BookOpen className="w-6 h-6" />,
     title: 'Educadora',
     description:
-      'Compartilha conhecimento e experiência através de mentorias e cursos especializados em leilões.',
+      'Acredito que é possível mudar de vida através dos leilões. Conhecimento e visão estratégica são a chave.',
   },
 ]
 
@@ -70,7 +70,7 @@ export function FormComponent() {
         <div className="lg:w-7/12 lg:-mt-28 lg:translate-x-12">
           <div className="mb-10">
             <h2 className="text-3xl font-light text-[#dbc994] mb-3">
-              Quem é Katia?
+              Prazer, Katia!
             </h2>
             <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#dbc994] to-transparent mb-6"></div>
           </div>

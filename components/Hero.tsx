@@ -64,8 +64,10 @@ export function Hero() {
 
             <div className="flex flex-col gap-2 justify-center items-center">
               <div className="text-2xl mini:text-xs px-3 laptop:text-2xl mobile:text-base text-center text-[#dbc994] font-extralight">
-                Conhecimento é poder, e nos leilões não seria diferente, aprenda
-                sobre leilões e tenha mais segurança para seus lances
+                <div>A moeda mais valiosa nos leilões é o conhecimento!</div>
+                <div>
+                  Vem comigo desvendar os segredos por trás de cada lance.
+                </div>
               </div>
             </div>
           </div>
