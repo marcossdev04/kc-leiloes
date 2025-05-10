@@ -12,9 +12,15 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Image from 'next/image'
 
-const BlogCard = ({ description1, title, created_at, id, image1 }: BlogPostInterface) => {
-  const formattedDate = formatToMMYY(created_at)
-  const formattedTime = formatToHHMM(created_at)
+const BlogCard = ({
+  description1,
+  title,
+  created_at: createdAt,
+  id,
+  image1,
+}: BlogPostInterface) => {
+  const formattedDate = formatToMMYY(createdAt)
+  const formattedTime = formatToHHMM(createdAt)
   const view = getRandomNumber()
 
   return (
@@ -35,12 +41,12 @@ const BlogCard = ({ description1, title, created_at, id, image1 }: BlogPostInter
             <div className="absolute inset-0 m-3 border-r border-b border-[#dbc994]/50"></div>
             <div className="w-full h-full overflow-hidden relative">
               {image1 ? (
-                <Image 
-                  src={image1} 
-                  alt={title} 
+                <Image
+                  src={image1}
+                  alt={title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               ) : (
                 <div className="w-full h-full bg-gradient-to-br from-black/40 to-black/20 flex items-center justify-center">
@@ -99,7 +105,10 @@ export default function BlogPage() {
     return response.data
   }
 
-  const { data: posts, isLoading } = useQuery<BlogPostInterface[]>('getAllPosts', fetchPosts)
+  const { data: posts, isLoading } = useQuery<BlogPostInterface[]>(
+    'getAllPosts',
+    fetchPosts,
+  )
 
   return (
     <div className="flex w-full flex-col overflow-x-hidden min-h-screen bg-gradient-to-b from-[#000000] to-[#0F0F0F]">
@@ -121,7 +130,10 @@ export default function BlogPage() {
           {isLoading ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {[...Array(8)].map((_, index) => (
-                <div key={index} className="h-[360px] bg-black/20 animate-pulse rounded-lg" />
+                <div
+                  key={index}
+                  className="h-[360px] bg-black/20 animate-pulse rounded-lg"
+                />
               ))}
             </div>
           ) : (
