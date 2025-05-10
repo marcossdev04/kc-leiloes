@@ -91,7 +91,7 @@ export default function Blog({ params }: Props) {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#000000] to-[#0F0F0F] text-white flex flex-col relative overflow-hidden">
       <BlogHeader />
-      
+
       {/* Elementos decorativos fixos */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute -top-20 -left-20 w-72 h-72 bg-gradient-to-r from-[#8B7355]/20 to-transparent rotate-[25deg] blur-3xl"></div>
@@ -99,9 +99,9 @@ export default function Blog({ params }: Props) {
         <div className="absolute right-1/4 top-1/3 w-96 h-96 bg-gradient-to-t from-[#dbc994]/10 via-[#dbc994]/5 to-transparent blur-3xl opacity-60"></div>
         <div className="absolute left-1/4 bottom-1/4 w-80 h-80 bg-gradient-to-b from-[#dbc994]/10 via-[#dbc994]/5 to-transparent rotate-45 blur-3xl opacity-60"></div>
       </div>
-      
+
       {/* Barra lateral removida conforme solicitado */}
-      
+
       {/* Botão para voltar ao topo */}
       {scrollPosition > 300 && (
         <div
@@ -130,10 +130,7 @@ export default function Blog({ params }: Props) {
         <article className="max-w-4xl mx-auto relative">
           {/* Breadcrumbs navigation */}
           <div className="mb-8 flex items-center gap-2 text-sm text-zinc-500">
-            <Link
-              href="/"
-              className="hover:text-[#dbc994] transition-colors"
-            >
+            <Link href="/" className="hover:text-[#dbc994] transition-colors">
               Home
             </Link>
             <span>/</span>
@@ -155,7 +152,7 @@ export default function Blog({ params }: Props) {
               {post.title}
             </h1>
             <div className="w-32 h-px bg-gradient-to-r from-[#dbc994] to-transparent mb-6"></div>
-            
+
             <div className="flex items-center gap-6 text-zinc-300">
               <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm px-3 py-1.5 rounded-md border border-[#dbc994]/20">
                 <Calendar size={16} className="text-[#dbc994]" />
@@ -179,7 +176,7 @@ export default function Blog({ params }: Props) {
                   </p>
                 </div>
               </div>
-              
+
               {post.image2 && (
                 <div className="lg:w-1/2 transform group lg:hover:translate-y-2 transition-all duration-500 relative">
                   {/* Decorative frame */}
@@ -190,7 +187,7 @@ export default function Blog({ params }: Props) {
                   <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-[#dbc994] to-transparent z-0"></div>
                   <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#dbc994] to-transparent z-0"></div>
                   <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-[#dbc994] to-transparent z-0"></div>
-                  
+
                   {/* Image with overlay and effects */}
                   <div className="relative w-full h-[400px] overflow-hidden p-3 z-10">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-500"></div>
@@ -215,7 +212,7 @@ export default function Blog({ params }: Props) {
             <div className="backdrop-blur-sm bg-black/10 p-8 rounded-md relative">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-l from-[#dbc994]/10 to-transparent rotate-45 blur-2xl"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-r from-[#dbc994]/10 to-transparent rotate-45 blur-2xl"></div>
-              
+
               <p className="text-lg leading-relaxed relative z-10">
                 {post.description2}
               </p>
@@ -233,7 +230,7 @@ export default function Blog({ params }: Props) {
                     </div>
                   )}
                 </div>
-                
+
                 <div className="lg:w-1/2 transform group lg:hover:translate-y-2 transition-all duration-500 relative">
                   {/* Decorative frame */}
                   <div className="absolute -inset-x-3 -inset-y-3 border-y border-[#dbc994]/30 z-0"></div>
@@ -243,7 +240,7 @@ export default function Blog({ params }: Props) {
                   <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-[#dbc994] to-transparent z-0"></div>
                   <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#dbc994] to-transparent z-0"></div>
                   <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-[#dbc994] to-transparent z-0"></div>
-                  
+
                   {/* Image with overlay and effects */}
                   <div className="relative w-full h-[400px] overflow-hidden p-3 z-10">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-500"></div>
@@ -258,14 +255,14 @@ export default function Blog({ params }: Props) {
                 </div>
               </div>
             )}
-            
+
             {/* If there's a third description but no image1, show it in a styled container */}
             {!post.image1 && post.description3 && (
               <div className="backdrop-blur-sm bg-black/10 p-8 rounded-md border border-[#dbc994]/30">
                 <p className="text-lg leading-relaxed">{post.description3}</p>
               </div>
             )}
-            
+
             {/* Footer section */}
             <footer className="mt-16 pt-8 border-t border-[#dbc994]/20 text-center">
               <div className="text-[#dbc994] opacity-70 font-light hover:opacity-100 transition-opacity">

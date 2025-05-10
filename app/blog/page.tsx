@@ -123,7 +123,8 @@ export default function BlogPage() {
               <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#dbc994] to-transparent mx-auto mt-1"></div>
             </div>
             <p className="text-zinc-300 mt-6 max-w-xl mx-auto text-sm">
-              Confira os últimos leilões, oportunidades exclusivas e novidades do mercado
+              Confira os últimos leilões, oportunidades exclusivas e novidades
+              do mercado
             </p>
           </div>
 
