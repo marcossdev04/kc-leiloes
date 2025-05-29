@@ -118,7 +118,11 @@ export function BlogPostss() {
               key={post.id}
               className="md:basis-1/2 lg:basis-1/4"
             >
-              <Link className="w-full" href={`/blog/${post.id}`} key={post.id}>
+              <Link
+                className="w-full"
+                href={`/blog/${post.title}`}
+                key={post.id}
+              >
                 <div className="p-2">
                   <BlogPosts
                     created_at={post.created_at}

@@ -16,7 +16,6 @@ const BlogCard = ({
   description1,
   title,
   created_at: createdAt,
-  id,
   image1,
 }: BlogPostInterface) => {
   const formattedDate = formatToMMYY(createdAt)
@@ -24,7 +23,7 @@ const BlogCard = ({
   const view = getRandomNumber()
 
   return (
-    <Link href={`/blog/${id}`}>
+    <Link href={`/blog/${title}`}>
       <Card className="h-[280px] relative overflow-hidden bg-gradient-to-b from-black/20 to-black/10 backdrop-blur-sm border border-[#dbc994]/40 text-white group hover:border-[#dbc994] duration-300 transition-all">
         {/* Smoke effects for depth */}
         <div className="absolute inset-0 overflow-hidden z-0">
