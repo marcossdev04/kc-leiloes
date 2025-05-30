@@ -6,15 +6,23 @@ WORKDIR /app
 # Build da aplicação usando yarn
 FROM base AS builder
 WORKDIR /app
+
+# Aceitar argumentos de build para otimização extrema
+ARG NODE_OPTIONS="--max-old-space-size=400"
+ARG UV_THREADPOOL_SIZE=2
+
 COPY package.json yarn.lock* ./
 RUN yarn install --frozen-lockfile
 COPY . .
+
 # Definir variáveis de ambiente para o build
 ENV NEXT_PUBLIC_API_BASE_URL=https://api.katiacasaes.com.br/
-# Limitar uso de memória do Node.js para 400MB
-ENV NODE_OPTIONS="--max-old-space-size=400"
-# Limitar workers do Next.js para economizar memória
-ENV UV_THREADPOOL_SIZE=2
+# Aplicar limites de memória extremos
+ENV NODE_OPTIONS=${NODE_OPTIONS}
+ENV UV_THREADPOOL_SIZE=${UV_THREADPOOL_SIZE}
+# Cache do yarn em RAM para economizar I/O
+ENV YARN_CACHE_FOLDER=/dev/shm/yarn_cache
+
 RUN yarn build
 
 # Instalar apenas dependências de produção

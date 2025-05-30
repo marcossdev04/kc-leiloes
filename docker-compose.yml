@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: kc-leiloes-app  # Usar imagem já buildada quando disponível
     container_name: kc-leiloes-app
     ports:
       - "3000:3000"  # Expõe na porta 3000 para seu tunnel
@@ -10,6 +11,15 @@ services:
       - NODE_ENV=production
       - NEXT_PUBLIC_API_BASE_URL=https://api.katiacasaes.com.br/
     restart: unless-stopped
+    # Limites de recursos para runtime
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+        reservations:
+          memory: 256M
+          cpus: '0.25'
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/"]
       interval: 30s
