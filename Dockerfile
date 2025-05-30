@@ -32,10 +32,10 @@ RUN yarn build
 # Verificar se os arquivos foram gerados corretamente
 RUN echo "=== Build output verification ===" && \
     ls -la .next/ && \
-    echo "=== Standalone check ===" && \
-    ls -la .next/standalone 2>/dev/null || echo "No standalone directory found" && \
-    echo "=== Static check ===" && \
-    ls -la .next/static 2>/dev/null || echo "No static directory found"
+    echo "=== Build files ===" && \
+    find .next -name "BUILD_ID" 2>/dev/null || echo "No BUILD_ID found" && \
+    echo "=== Server files ===" && \
+    ls -la .next/server 2>/dev/null || echo "No server directory found"
 
 # Instalar apenas dependências de produção
 FROM base AS deps
@@ -60,6 +60,13 @@ RUN adduser --system --uid 1001 nextjs
 COPY --from=deps --chown=nextjs:nodejs /app/node_modules ./node_modules
 COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
 COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
+COPY --from=builder --chown=nextjs:nodejs /app/next.config.mjs ./next.config.mjs
+
+# Verificar se os arquivos foram copiados corretamente
+RUN echo "=== Final verification ===" && \
+    ls -la .next/ && \
+    echo "=== BUILD_ID check ===" && \
+    cat .next/BUILD_ID 2>/dev/null || echo "No BUILD_ID file"
 
 USER nextjs
 
