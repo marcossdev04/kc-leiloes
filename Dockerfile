@@ -12,7 +12,10 @@ ARG NODE_OPTIONS="--max-old-space-size=400"
 ARG UV_THREADPOOL_SIZE=2
 
 COPY package.json yarn.lock* ./
-RUN yarn install --frozen-lockfile
+# Configurar yarn para usar menos memória durante instalação
+ENV YARN_CACHE_FOLDER=/dev/shm/yarn_cache
+ENV NODE_OPTIONS="--max-old-space-size=200"
+RUN yarn install --frozen-lockfile --network-timeout 100000
 COPY . .
 
 # Definir variáveis de ambiente para o build

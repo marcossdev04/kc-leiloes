@@ -72,7 +72,6 @@ case "${1:-help}" in
             --no-cache \
             --memory=400m \
             --memory-swap=2g \
-            --cpus=0.5 \
             --build-arg NODE_OPTIONS="--max-old-space-size=256" \
             --build-arg UV_THREADPOOL_SIZE=1 \
             -t kc-leiloes-app .
