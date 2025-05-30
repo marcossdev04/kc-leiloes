@@ -12,10 +12,11 @@ ARG NODE_OPTIONS="--max-old-space-size=400"
 ARG UV_THREADPOOL_SIZE=2
 
 COPY package.json yarn.lock* ./
-# Configurar yarn para usar menos memória durante instalação
-ENV YARN_CACHE_FOLDER=/dev/shm/yarn_cache
+# Configurar yarn para usar menos memória e espaço em disco
+ENV YARN_CACHE_FOLDER=/tmp/yarn_cache_mini
 ENV NODE_OPTIONS="--max-old-space-size=200"
-RUN yarn install --frozen-lockfile --network-timeout 100000
+# Instalar apenas as dependências necessárias para build
+RUN yarn install --frozen-lockfile --network-timeout 100000 --prefer-offline --production=false
 COPY . .
 
 # Definir variáveis de ambiente para o build
@@ -31,9 +32,10 @@ RUN yarn build
 # Instalar apenas dependências de produção
 FROM base AS deps
 COPY package.json yarn.lock* ./
-# Configurar yarn para usar menos memória
-ENV YARN_CACHE_FOLDER=/dev/shm/yarn_cache
-RUN yarn install --production --frozen-lockfile --network-timeout 100000
+# Configurar yarn para usar menos memória e cache mínimo
+ENV YARN_CACHE_FOLDER=/tmp/yarn_cache_prod
+ENV NODE_OPTIONS="--max-old-space-size=150"
+RUN yarn install --production --frozen-lockfile --network-timeout 100000 --prefer-offline
 
 # Imagem final
 FROM node:18-alpine AS runner

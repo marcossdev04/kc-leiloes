@@ -38,20 +38,47 @@ case "${1:-help}" in
     "deploy-extreme")
         echo "🚀 EXTREME LOW MEMORY DEPLOY - Aggressive optimization..."
         
+        # LIMPEZA ULTRA-AGRESSIVA DE DISCO
+        echo "🧹 ULTRA disk cleanup..."
+        
         # Matar todos os processos desnecessários
         echo "💀 Killing unnecessary processes..."
         sudo pkill -f node || true
         sudo pkill -f yarn || true
+        
+        # Limpar Docker completamente
+        echo "🐳 Complete Docker cleanup..."
         docker system prune -af --volumes
+        docker builder prune -af
+        docker image prune -af
+        docker container prune -f
+        docker volume prune -af
+        docker network prune -f
+        
+        # Limpar caches do sistema
+        echo "🗑️ Cleaning system caches..."
+        sudo rm -rf /tmp/* 2>/dev/null || true
+        sudo rm -rf /var/tmp/* 2>/dev/null || true
+        sudo rm -rf ~/.cache/* 2>/dev/null || true
+        sudo rm -rf ~/.yarn/cache/* 2>/dev/null || true
+        sudo rm -rf ~/.npm/_cacache/* 2>/dev/null || true
+        
+        # Limpar logs antigos
+        sudo journalctl --vacuum-time=1d 2>/dev/null || true
+        sudo rm -rf /var/log/*.log.* 2>/dev/null || true
+        
+        # Verificar espaço em disco
+        DISK_AVAILABLE=$(df / | awk 'NR==2{print $4}')
+        echo "💾 Available disk space: ${DISK_AVAILABLE}KB"
         
         # Verificar memória disponível
         MEM_AVAILABLE=$(free -m | awk 'NR==2{printf "%.0f", $7}')
         echo "📊 Available memory: ${MEM_AVAILABLE}MB"
         
-        # Criar swap massivo de 2GB
-        echo "📁 Creating 2GB emergency swap..."
+        # Criar swap menor de 1GB para economizar espaço
+        echo "📁 Creating 1GB emergency swap..."
         sudo swapoff -a 2>/dev/null || true
-        sudo dd if=/dev/zero of=/tmp/emergency_swap bs=1M count=2048 status=progress
+        sudo dd if=/dev/zero of=/tmp/emergency_swap bs=1M count=1024 status=progress
         sudo chmod 600 /tmp/emergency_swap
         sudo mkswap /tmp/emergency_swap
         sudo swapon /tmp/emergency_swap
@@ -61,20 +88,26 @@ case "${1:-help}" in
         echo 1 | sudo tee /proc/sys/vm/overcommit_memory
         echo 50 | sudo tee /proc/sys/vm/swappiness
         
-        # Build com configurações extremas
-        echo "🔨 Building with EXTREME memory constraints..."
-        export NODE_OPTIONS="--max-old-space-size=256 --gc-interval=100"
+        # Build com configurações ultra-extremas
+        echo "🔨 Building with ULTRA EXTREME constraints..."
+        export NODE_OPTIONS="--max-old-space-size=200 --gc-interval=50"
         export UV_THREADPOOL_SIZE=1
-        export YARN_CACHE_FOLDER=/dev/shm/yarn_cache
+        export YARN_CACHE_FOLDER=/tmp/yarn_cache_mini
         
-        # Build direto com Docker, não compose
+        # Criar diretório de cache temporário pequeno
+        mkdir -p /tmp/yarn_cache_mini
+        
+        # Build direto com Docker com limites ainda menores
         docker build \
             --no-cache \
-            --memory=400m \
-            --memory-swap=2g \
-            --build-arg NODE_OPTIONS="--max-old-space-size=256" \
+            --memory=350m \
+            --memory-swap=1g \
+            --build-arg NODE_OPTIONS="--max-old-space-size=200" \
             --build-arg UV_THREADPOOL_SIZE=1 \
             -t kc-leiloes-app .
+        
+        # Limpar cache imediatamente após build
+        rm -rf /tmp/yarn_cache_mini
         
         # Parar tudo e limpar novamente
         docker compose down 2>/dev/null || true
@@ -92,8 +125,8 @@ case "${1:-help}" in
         sudo swapoff /tmp/emergency_swap
         sudo rm /tmp/emergency_swap
         
-        echo "✅ EXTREME deploy complete! App running on port 3000"
-        echo "⚠️  If this worked, your server is running on fumes!"
+        echo "✅ ULTRA EXTREME deploy complete! App running on port 3000"
+        echo "⚠️  Your server is literally running on life support!"
         ;;
     "deploy")
         echo "🚀 Full deploy (build + start)..."
