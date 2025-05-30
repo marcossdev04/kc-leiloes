@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone', // Necessário para Docker
+  // output: 'standalone', // Comentado para build tradicional
   images: {
     loader: 'default', // ou 'imgix' se precisar de mais controle
     remotePatterns: [
