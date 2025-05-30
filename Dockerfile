@@ -29,6 +29,14 @@ ENV YARN_CACHE_FOLDER=/dev/shm/yarn_cache
 
 RUN yarn build
 
+# Verificar se os arquivos foram gerados corretamente
+RUN echo "=== Build output verification ===" && \
+    ls -la .next/ && \
+    echo "=== Standalone check ===" && \
+    ls -la .next/standalone 2>/dev/null || echo "No standalone directory found" && \
+    echo "=== Static check ===" && \
+    ls -la .next/static 2>/dev/null || echo "No static directory found"
+
 # Instalar apenas dependências de produção
 FROM base AS deps
 COPY package.json yarn.lock* ./
