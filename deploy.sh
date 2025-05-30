@@ -8,37 +8,37 @@ echo "🐳 KC Leilões - Deploy Script"
 case "${1:-help}" in
     "build")
         echo "🔨 Building Docker image..."
-        docker-compose build --no-cache
+        docker compose build --no-cache
         echo "✅ Build complete!"
         ;;
     "start")
         echo "🚀 Starting application..."
-        docker-compose up -d
+        docker compose up -d
         echo "✅ Application started on port 3000!"
         echo "🌐 Ready for tunnel: cloudflared tunnel run --url http://localhost:3000 your-tunnel"
         ;;
     "stop")
         echo "🛑 Stopping application..."
-        docker-compose down
+        docker compose down
         echo "✅ Application stopped!"
         ;;
     "restart")
         echo "🔄 Restarting application..."
-        docker-compose restart
+        docker compose restart
         echo "✅ Application restarted!"
         ;;
     "logs")
         echo "📋 Showing logs..."
-        docker-compose logs -f
+        docker compose logs -f
         ;;
     "status")
         echo "📊 Application status:"
-        docker-compose ps
+        docker compose ps
         ;;
     "deploy")
         echo "🚀 Full deploy (build + start)..."
-        docker-compose build --no-cache
-        docker-compose up -d
+        docker compose build --no-cache
+        docker compose up -d
         echo "✅ Deploy complete! App running on port 3000"
         ;;
     *)
