@@ -178,7 +178,7 @@ export default function Blog({ params }: Props) {
               </div>
 
               {post.image2 && (
-                <div className="lg:w-1/2 transform group lg:hover:translate-y-2 transition-all duration-500 relative">
+                <div className="lg:w-1/2 transform w-full group lg:hover:translate-y-2 transition-all duration-500 relative">
                   {/* Decorative frame */}
                   <div className="absolute -inset-x-3 -inset-y-3 border-y border-[#dbc994]/30 z-0"></div>
                   <div className="absolute -inset-x-3 -inset-y-3 border-x border-[#dbc994]/30 z-0"></div>
@@ -231,7 +231,7 @@ export default function Blog({ params }: Props) {
                   )}
                 </div>
 
-                <div className="lg:w-1/2 transform group lg:hover:translate-y-2 transition-all duration-500 relative">
+                <div className="lg:w-1/2 w-full transform group lg:hover:translate-y-2 transition-all duration-500 relative">
                   {/* Decorative frame */}
                   <div className="absolute -inset-x-3 -inset-y-3 border-y border-[#dbc994]/30 z-0"></div>
                   <div className="absolute -inset-x-3 -inset-y-3 border-x border-[#dbc994]/30 z-0"></div>
@@ -248,7 +248,6 @@ export default function Blog({ params }: Props) {
                       src={post.image1}
                       alt={post.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-700 z-0"
                     />
                   </div>
