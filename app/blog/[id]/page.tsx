@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import BlogHeader from '@/components/BlogHeader'
 import { useQuery } from 'react-query'
 import { api } from '@/api/api'
@@ -9,7 +9,6 @@ import { Calendar, Clock, Loader2 } from 'lucide-react'
 import Image from 'next/image'
 import { formatToHHMM, formatToMMYY } from '@/lib/utils'
 import Link from 'next/link'
-import { processContent } from '../../../lib/processContent'
 
 export interface BlogPost {
   id: number
@@ -55,11 +54,6 @@ export default function Blog({ params }: Props) {
     isLoading,
     isError,
   } = useQuery<BlogPost>(['getPost', id], fetchPost)
-
-  const processedContent1 = useMemo(
-    () => processContent(post?.image1),
-    [post?.image1],
-  )
 
   if (isLoading) {
     return (
@@ -172,12 +166,7 @@ export default function Blog({ params }: Props) {
           </header>
 
           {/* Content */}
-          <div
-            dangerouslySetInnerHTML={{
-              __html: processedContent1,
-            }}
-            className="text-zinc-100 space-y-12"
-          >
+          <div className="prose prose-lg prose-invert max-w-none text-zinc-100 space-y-12">
             {/* First section - Text and image side by side if available */}
             <div className="flex flex-col lg:flex-row gap-10 items-center">
               <div className="lg:w-1/2 space-y-6">
