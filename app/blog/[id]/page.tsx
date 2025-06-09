@@ -166,7 +166,7 @@ export default function Blog({ params }: Props) {
           </header>
 
           {/* Content */}
-          <div className="prose prose-lg prose-invert max-w-none text-zinc-100 space-y-12">
+          <div className="text-zinc-100 space-y-12">
             {/* First section - Text and image side by side if available */}
             <div className="flex flex-col lg:flex-row gap-10 items-center">
               <div className="lg:w-1/2 space-y-6">
