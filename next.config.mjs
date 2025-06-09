@@ -2,13 +2,19 @@
 const nextConfig = {
   // output: 'standalone', // Comentado para build tradicional
   images: {
-    loader: 'default', // ou 'imgix' se precisar de mais controle
+    loader: 'default',
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**', // Aceita qualquer hostname com HTTPS
+        hostname: '**',
+      },
+      {
+        protocol: 'http', // Adicione esta parte
+        hostname: '**',
       },
     ],
+    dangerouslyAllowSVG: true, // Se você tem SVGs
+    contentDispositionType: 'attachment',
   },
 }
 export default nextConfig
