@@ -17,14 +17,14 @@ export function BlogPosts() {
           </h2>
           <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#dbc994] to-transparent mx-auto mb-6"></div>
           <p className="text-zinc-400 max-w-2xl">
-            Siga @katiacasaes e faça parte dessa comunidade de investidores e
+            Siga @kcleiloes e faça parte dessa comunidade de investidores e
             entusiastas de leilões.
           </p>
         </div>
 
         <div className="w-full max-w-[550px]">
           <iframe
-            src="https://www.instagram.com/katiacasaes/embed"
+            src="https://www.instagram.com/kcleiloes/embed"
             className="w-full h-[750px] bg-transparent rounded-xl"
             frameBorder="0"
             scrolling="no"

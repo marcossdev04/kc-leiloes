@@ -41,7 +41,7 @@ export function Tutorial() {
       <div className="absolute inset-y-0 mobile:hidden  mobile:top-[350px] mobile:h-[190px] mini:hidden mobile:rounded-none mobile:-right-[100px] mobile:w-[270px] blur-md mobile:blur-sm  z-50 laptop:w-[800px] laptop:h-[350px] laptop:top-[800px]  bg-[#0F0F0F] top-[1050px] laptop:right-[30px]  rounded-full  h-[500px] right-[90px] w-[800px]"></div>
       <Link
         target="blank"
-        href={'https://www.instagram.com/katiacasaes/'}
+        href={'https://www.instagram.com/kcleiloes/'}
         className="w-full  desktop:ml-40 desktop:w-[800px] laptop:w-[500px] laptop:ml-20 h-full flex justify-center gap-10 mobile:gap-2 mini:gap-2 flex-col"
       >
         <div className="bg-white/20 flex flex-col">

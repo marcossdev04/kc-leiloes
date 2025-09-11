@@ -14,7 +14,7 @@ export function Instagram() {
         <div className="w-1/2 mobile:w-full">
           <div className="max-w-[450px] bg-zinc-950 rounded-xl overflow-hidden">
             <iframe
-              src="https://www.instagram.com/katiacasaes/embed?theme=dark"
+              src="https://www.instagram.com/kcleiloes/embed?theme=dark"
               className="w-full h-[384px]"
               style={{
                 background: '#09090b',
